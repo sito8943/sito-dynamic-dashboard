@@ -1,0 +1,55 @@
+{
+  "name": "sito-dynamic-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/css": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/poppins": "^4.5.10",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.2",
+    "@mui/x-date-pickers": "^5.0.12",
+    "axios": "^1.2.2",
+    "dayjs": "^1.11.7",
+    "env-cmd": "^10.1.0",
+    "framer-motion": "^8.0.2",
+    "md5": "^2.3.0",
+    "react": "^18.2.0",
+    "react-cool-onclickoutside": "^1.7.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.41.3",
+    "react-scripts": "5.0.1",
+    "sito-mui-error-component": "^0.3.7",
+    "sito-mui-notification": "^0.2.8",
+    "some-javascript-utils": "^0.2.1"
+  },
+  "scripts": {
+    "start": "env-cmd -f .env react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "firebase-deploy": "firebase deploy",
+    "init": "firebase init",
+    "login": "firebase login"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
