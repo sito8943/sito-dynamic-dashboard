@@ -1,0 +1,43 @@
+{
+  "centers": {
+    "a240c6df-0fe6-41f8-9d79-812eb80f3094": {
+      "id": "a240c6df-0fe6-41f8-9d79-812eb80f3094",
+      "name": "Casa Almacén Habana",
+      "date": 1673903291252
+    }
+  },
+  "types": {
+    "ab5b03d5-7a3a-4b57-a46a-1effca77501b": {
+      "id": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "name": "Colirios",
+      "date": 1673903291252
+    },
+    "e46a48f3-d8b3-4fa0-b504-96e7f22e0789": {
+      "id": "e46a48f3-d8b3-4fa0-b504-96e7f22e0789",
+      "name": "Otros",
+      "date": 1673903291252
+    }
+  },
+  "medicines": {
+    "1c8d9a1b-2d05-4a73-a070-df807968d5bc": {
+      "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc",
+      "name": "PrevengoHo Vir",
+      "date": 1673903291252
+    },
+    "e509418b-aac7-4269-be1d-d60d4857931b": {
+      "id": "e509418b-aac7-4269-be1d-d60d4857931b",
+      "name": "Timolol",
+      "date": 1673903291252
+    },
+    "4fed2058-89dd-4a1e-b35e-7b3b6d383b76": {
+      "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76",
+      "name": "Prednisolona",
+      "date": 1673903291252
+    },
+    "46d50d9f-3669-40f3-937c-763455c17f4a": {
+      "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
+      "name": "Dorzolamida/Timolol",
+      "date": 1673903291252
+    }
+  }
+}

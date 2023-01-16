@@ -1,0 +1,39 @@
+.container {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  transition: opacity 800ms ease;
+}
+
+.drawer {
+  gap: 15px;
+  display: flex;
+  height: 100%;
+  width: 300px;
+  padding: 20px;
+  padding-top: 80px;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 700ms ease;
+}
+
+.off {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close {
+  transform: translateX(-300px);
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,74 @@
+{
+  "en": {
+    "AppName": "APP TITLE",
+    "Navbar": {
+      "Search": {
+        "placeholder": "Search..."
+      },
+      "Links": []
+    },
+    "Login": {
+      "Remember": "Remember me",
+      "Forgot": "Press here if you forgot your password",
+      "Submit": "Sign in",
+      "Title": "Login",
+      "Inputs": {
+        "User": {
+          "label": "User",
+          "placeholder": "ex: josereyes98"
+        },
+        "Password": {
+          "label": "Password",
+          "placeholder": "ex: ******"
+        }
+      }
+    },
+    "Home": {
+      "Hero": {
+        "Title": "Claudia Blog",
+        "Body": [
+          "Publish your passions your way. ",
+          "Share your knowledge, experiences or your latest news.",
+          "With us you will create a unique and beautiful blog."
+        ],
+        "Catch": "Start now!"
+      }
+    }
+  },
+  "es": {
+    "AppName": "APP TITLE",
+    "Navbar": {
+      "Search": {
+        "placeholder": "Buscar..."
+      },
+      "Links": []
+    },
+    "Login": {
+      "Remember": "Recordarme",
+      "Forgot": "Presiona aquí si olvidaste tu contraseña",
+      "Submit": "Enviar",
+      "Title": "Iniciar sesión",
+      "Inputs": {
+        "User": {
+          "label": "Usuario",
+          "placeholder": "ej: josereyes98"
+        },
+        "Password": {
+          "label": "Contraseña",
+          "placeholder": "ej: ******"
+        }
+      }
+    },
+    "Home": {
+      "Hero": {
+        "Title": "Claudia Blog",
+        "Body": [
+          "Publica tus pasiones a tu manera.",
+          "Comparte tus conocimientos, experiencias o tus últimas noticias. ",
+          "Con nosotros crearás un blog único y hermoso."
+        ],
+        "Catch": "¡Comenzar ahora!"
+      }
+    }
+  }
+}
