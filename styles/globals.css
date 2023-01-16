@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
 /* clears the ‘X’ from Internet Explorer */
 input[type="search"]::-ms-clear {
   display: none;

@@ -1,20 +1,30 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+
+import { getUserLanguage } from "some-javascript-utils/browser";
 
 // styles
-import styles from "../styles/Login.module.css";
+import styles from "../../styles/Login.module.css";
 
 // contexts
-import { useLanguage } from "../context/LanguageProvider";
+import { useLanguage } from "../../context/LanguageProvider";
 
 // components
-import Link from "./components/Link/Link";
+import Link from "../../components/Link/Link";
 
 // layouts
-import Head from "./layout/Head";
-import Body from "./layout/Body";
+import Head from "../../layout/Head";
+import Body from "../../layout/Body";
 
 const Login = () => {
-  const { languageState } = useLanguage();
+  const { languageState, setLanguageState } = useLanguage();
+
+  useEffect(() => {
+    try {
+      setLanguageState({ type: "set", lang: getUserLanguage(config.language) });
+    } catch (err) {
+      console.error(err);
+    }
+  }, [setLanguageState]);
 
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -78,7 +88,7 @@ const Login = () => {
                       {loginText.Remember}
                     </label>
                   </div>
-                  <div className="flex" items-center>
+                  <div className="flex items-center">
                     <button className="p-active rounded-20px bg-dodger transition ease duration-150 hover:text-white hover:bg-dark-dodger">
                       {loginText.Submit}
                     </button>

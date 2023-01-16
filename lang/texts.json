@@ -24,15 +24,16 @@
       }
     },
     "Home": {
-      "Hero": {
-        "Title": "Claudia Blog",
-        "Body": [
-          "Publish your passions your way. ",
-          "Share your knowledge, experiences or your latest news.",
-          "With us you will create a unique and beautiful blog."
-        ],
-        "Catch": "Start now!"
-      }
+      "Sidebar": [
+        {
+          "action": "/centers",
+          "label": "Centers"
+        },
+        {
+          "action": "/medicines",
+          "label": "Medicines"
+        }
+      ]
     }
   },
   "es": {
@@ -60,15 +61,16 @@
       }
     },
     "Home": {
-      "Hero": {
-        "Title": "Claudia Blog",
-        "Body": [
-          "Publica tus pasiones a tu manera.",
-          "Comparte tus conocimientos, experiencias o tus últimas noticias. ",
-          "Con nosotros crearás un blog único y hermoso."
-        ],
-        "Catch": "¡Comenzar ahora!"
-      }
+      "Sidebar": [
+        {
+          "action": "/centers",
+          "label": "Centros"
+        },
+        {
+          "action": "/medicines",
+          "label": "Medicamentos"
+        }
+      ]
     }
   }
 }

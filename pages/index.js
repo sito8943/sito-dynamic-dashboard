@@ -1,6 +1,7 @@
 // @ts-check
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
+import { useRouter } from "next/router";
 
 import { getUserLanguage } from "some-javascript-utils/browser";
 
@@ -8,14 +9,21 @@ import { getUserLanguage } from "some-javascript-utils/browser";
 import { useLanguage } from "../context/LanguageProvider";
 
 // layouts
-import Head from "./layout/Head";
-import Body from "./layout/Body";
+import Head from "../layout/Head";
+import Body from "../layout/Body";
 
 // config
 import config from "../lib/config";
 
+// styles
+import styles from "../styles/Home.module.css";
+
 export default function Home() {
   const { languageState, setLanguageState } = useLanguage();
+
+  const homeText = useMemo(() => {
+    return languageState.texts.Home;
+  }, [languageState]);
 
   useEffect(() => {
     try {
@@ -27,10 +35,10 @@ export default function Home() {
 
   return (
     <>
-      <div>
-        <Head />
-        <Body />
-      </div>
+      <Head />
+      <Body>
+        <div></div>
+      </Body>
     </>
   );
 }

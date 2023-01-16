@@ -9,10 +9,10 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "../../Link/Link";
 
 // styles
-import styles from "../../../../styles/Drawer.module.css";
+import styles from "../../../styles/Drawer.module.css";
 
 // contexts
-import { useLanguage } from "../../../../context/LanguageProvider";
+import { useLanguage } from "../../../context/LanguageProvider";
 
 const Drawer = ({ visible, onClose }) => {
   const router = useRouter();

@@ -3,7 +3,7 @@
 import React, { createContext, useReducer, useContext } from "react";
 
 // texts
-import texts from "../pages/lang/texts.json";
+import texts from "../lang/texts.json";
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";

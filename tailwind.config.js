@@ -20,6 +20,7 @@ module.exports = {
       dodger: "#1e90ff",
       white: "#ffffff",
       black: "#000000",
+      sidebar: "#020817",
       "dark-blood": "#050914",
       "dark-dodger": "#0e4881",
     },

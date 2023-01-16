@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 // styles
-import styles from "../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 
 const Body = ({ children }) => (
   <main className={styles.main}>

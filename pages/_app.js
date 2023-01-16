@@ -1,5 +1,8 @@
 import "../styles/globals.css";
 
+import "@fontsource/poppins";
+import "@fontsource/roboto";
+
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;

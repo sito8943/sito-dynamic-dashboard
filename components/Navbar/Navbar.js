@@ -10,10 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 
 // styles
-import styles from "../../../styles/Navbar.module.css";
+import styles from "../../styles/Navbar.module.css";
 
 // lang
-import { useLanguage } from "../../../context/LanguageProvider";
+import { useLanguage } from "../../context/LanguageProvider";
 import Drawer from "./Drawer/Drawer";
 
 const Navbar = () => {
@@ -38,7 +38,9 @@ const Navbar = () => {
         <button onClick={() => setShowDrawer(true)} className={styles.toggle}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <span className="text-dodger w-app-name">{appName}</span>
+        <Link href="/" className="w-app-name">
+          <span className="text-dodger">{appName}</span>
+        </Link>
         <div className={`${styles.links} flex`}>
           {navbarText.Links.map((item) => (
             <Link
