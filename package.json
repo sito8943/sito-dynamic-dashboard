@@ -21,10 +21,11 @@
   },
   "scripts": {
     "dev": "next dev",
+    "export": "next export",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "firebase-deploy": "firebase deploy --only hosting:claudia-blog",
+    "firebase-deploy": "firebase deploy --only hosting:app-dashboard",
     "firebase-add": "firebase use --add",
     "init": "firebase init hosting",
     "login": "firebase login",

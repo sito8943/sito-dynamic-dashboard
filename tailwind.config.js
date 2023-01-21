@@ -25,6 +25,10 @@ module.exports = {
       "dark-dodger": "#0e4881",
     },
     extend: {
+      gap: {
+        10: "10px",
+        20: "20px",
+      },
       borderRadius: {
         "20px": "20px",
         circle: "100%",
@@ -44,7 +48,8 @@ module.exports = {
         icon: "2px 2px 0 0",
         active: "5px 15px",
         pc: "40px 10rem",
-        mobil: "40px",
+        tablet: "40px",
+        mobil: "20px",
       },
       fontWeight: {
         h1: "bold",

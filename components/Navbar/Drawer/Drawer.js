@@ -19,8 +19,11 @@ const Drawer = ({ visible, onClose }) => {
 
   const { languageState } = useLanguage();
 
-  const navbarText = useMemo(() => {
-    return languageState.texts.Navbar;
+  const { navbarText, appName } = useMemo(() => {
+    return {
+      navbarText: languageState.texts.Navbar,
+      appName: languageState.texts.AppName,
+    };
   }, [languageState]);
 
   const onResize = useCallback(() => {
@@ -37,12 +40,14 @@ const Drawer = ({ visible, onClose }) => {
   return (
     <div className={`${styles.container}  ${!visible ? styles.off : ""}`}>
       <div
-        className={`${styles.drawer} bg-white ${!visible ? styles.close : ""}`}
+        className={`${styles.drawer} bg-blood ${!visible ? styles.close : ""}`}
       >
         <button onClick={onClose} className={styles.button}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
-
+        <Link href="/" className="w-app-name">
+          <span className="text-dodger">{appName}</span>
+        </Link>
         {navbarText.Links.map((item) => (
           <Link
             className={`transition w-full ease duration-150 hover:bg-dodger-700 hover:text-white p-active rounded-20px ${

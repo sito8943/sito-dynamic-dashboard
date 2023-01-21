@@ -5,7 +5,12 @@
       "Search": {
         "placeholder": "Search..."
       },
-      "Links": []
+      "Links": [
+        {
+          "label": "Sign in",
+          "href": "/auth"
+        }
+      ]
     },
     "Login": {
       "Remember": "Remember me",
@@ -24,16 +29,23 @@
       }
     },
     "Home": {
-      "Sidebar": [
-        {
-          "action": "/centers",
-          "label": "Centers"
-        },
-        {
-          "action": "/medicines",
-          "label": "Medicines"
-        }
-      ]
+      "Sidebar": {
+        "title": "Operations",
+        "links": [
+          {
+            "href": "/dashboard",
+            "label": "Dashboard"
+          },
+          {
+            "href": "/dashboard?seeing=centers",
+            "label": "Centers"
+          },
+          {
+            "href": "/dashboard?seeing=medicines",
+            "label": "Medicines"
+          }
+        ]
+      }
     }
   },
   "es": {
@@ -42,7 +54,12 @@
       "Search": {
         "placeholder": "Buscar..."
       },
-      "Links": []
+      "Links": [
+        {
+          "label": "Iniciar sesión",
+          "href": "/auth"
+        }
+      ]
     },
     "Login": {
       "Remember": "Recordarme",
@@ -61,16 +78,23 @@
       }
     },
     "Home": {
-      "Sidebar": [
-        {
-          "action": "/centers",
-          "label": "Centros"
-        },
-        {
-          "action": "/medicines",
-          "label": "Medicamentos"
-        }
-      ]
+      "Sidebar": {
+        "title": "Operaciones",
+        "links": [
+          {
+            "href": "/",
+            "label": "Panel Administrativo"
+          },
+          {
+            "href": "/centers",
+            "label": "Centros"
+          },
+          {
+            "href": "/medicines",
+            "label": "Medicamentos"
+          }
+        ]
+      }
     }
   }
 }

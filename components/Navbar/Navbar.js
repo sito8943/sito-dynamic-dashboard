@@ -14,6 +14,8 @@ import styles from "../../styles/Navbar.module.css";
 
 // lang
 import { useLanguage } from "../../context/LanguageProvider";
+
+// components
 import Drawer from "./Drawer/Drawer";
 
 const Navbar = () => {
@@ -41,6 +43,9 @@ const Navbar = () => {
         <Link href="/" className="w-app-name">
           <span className="text-dodger">{appName}</span>
         </Link>
+      </div>
+
+      <div className={styles.right}>
         <div className={`${styles.links} flex`}>
           {navbarText.Links.map((item) => (
             <Link
@@ -54,9 +59,6 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-      </div>
-
-      <div className={styles.right}>
         <button
           onClick={() => setShowSearch(true)}
           className="p-icon rounded-circle w-icon h-icon transition ease duration-150 text-dodger hover:text-white hover:bg-dodger"

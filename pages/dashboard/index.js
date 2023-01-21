@@ -1,4 +1,5 @@
-import React, { useMemo, useEffect } from "react";
+import React, { useMemo, useEffect, useCallback } from "react";
+import { useRouter } from "next/router";
 
 import { getUserLanguage } from "some-javascript-utils/browser";
 
@@ -15,7 +16,10 @@ import Link from "../../components/Link/Link";
 import Head from "../../layout/Head";
 import Body from "../../layout/Body";
 
+import config from "../../lib/config";
+
 const Login = () => {
+  const router = useRouter();
   const { languageState, setLanguageState } = useLanguage();
 
   useEffect(() => {
@@ -27,12 +31,23 @@ const Login = () => {
   }, [setLanguageState]);
 
   const dashboardText = useMemo(() => {
-    return languageState.texts.Login;
+    return languageState.texts.Home;
   }, [languageState]);
 
   const submit = (e) => {
     e.preventDefault();
   };
+
+  console.log(router);
+
+  const seeingLink = useCallback(
+    (action) => {
+      if (action === "/dashboard/" && router.asPath === "/dashboard/")
+        return true;
+      else return router.asPath === `/dashboard?seeing=${action}`;
+    },
+    [router]
+  );
 
   return (
     <>
@@ -40,10 +55,17 @@ const Login = () => {
       <Body>
         <div className="bg-dark-blood flex w-viewport h-viewport">
           <div
-            className={`${styles.sidebar} bg-sidebar h-viewport flex flex-col`}
+            className={`${styles.sidebar} bg-sidebar h-viewport flex flex-col p-tablet gap-10`}
           >
-            {dashboardText.sidebar.map((item) => (
-              <Link key={item.label} href={item.action}>
+            <h2 className="text-h4">{dashboardText.Sidebar.title}</h2>
+            {dashboardText.Sidebar.links.map((item) => (
+              <Link
+                className={`cursor-pointer transition w-full ease duration-150 hover:bg-dodger hover:text-white p-active rounded-20px ${
+                  router.asPath === item.href ? "bg-dodger" : ""
+                }`}
+                key={item.label}
+                href={item.href}
+              >
                 {item.label}
               </Link>
             ))}

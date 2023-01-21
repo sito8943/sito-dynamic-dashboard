@@ -15,6 +15,8 @@ import Link from "../../components/Link/Link";
 import Head from "../../layout/Head";
 import Body from "../../layout/Body";
 
+import config from "../../lib/config";
+
 const Login = () => {
   const { languageState, setLanguageState } = useLanguage();
 
@@ -44,10 +46,8 @@ const Login = () => {
       <Head />
       <Body>
         <div className="bg-dark-blood flex items-center justify-center w-viewport h-viewport">
-          <form onSubmit={submit}>
-            <div
-              className={`${styles.form} bg-blood rounded-20px flex flex-col justify-between p-mobil`}
-            >
+          <form class={`${styles.form}`} onSubmit={submit}>
+            <div className="bg-blood rounded-20px flex flex-col justify-between xs:p-mobil md:p-tablet h-full">
               <div className="flex flex-col gap-2.5">
                 <h1 className="text-dodger text-h1-xs">{loginText.Title}</h1>
                 <div>
@@ -95,7 +95,7 @@ const Login = () => {
                   </div>
                 </div>
               </div>
-              <Link href="/forgot-password" className="text-dodger underline">
+              <Link href="/forgot-password" className="text-dodger underline xs:mt-10">
                 {loginText.Forgot}
               </Link>
             </div>
