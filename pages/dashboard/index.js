@@ -15,6 +15,9 @@ import Link from "../../components/Link/Link";
 // layouts
 import Head from "../../layout/Head";
 import Body from "../../layout/Body";
+import Medicines from "../../layout/dashboard/Medicines";
+import Centers from "../../layout/dashboard/Centers";
+import Dashboard from "../../layout/dashboard/Dashboard";
 
 import config from "../../lib/config";
 
@@ -38,16 +41,19 @@ const Login = () => {
     e.preventDefault();
   };
 
-  console.log(router);
-
-  const seeingLink = useCallback(
-    (action) => {
-      if (action === "/dashboard/" && router.asPath === "/dashboard/")
-        return true;
-      else return router.asPath === `/dashboard?seeing=${action}`;
-    },
-    [router]
-  );
+  const getLayout = useCallback(() => {
+    console.log(router);
+    const { query } = router;
+    const { seeing } = query;
+    switch (seeing) {
+      case "medicines":
+        return <Medicines />;
+      case "centers":
+        return <Centers />;
+      default:
+        return <Dashboard />;
+    }
+  }, [router]);
 
   return (
     <>
@@ -70,7 +76,7 @@ const Login = () => {
               </Link>
             ))}
           </div>
-          Dashboard
+          {getLayout()}
         </div>
       </Body>
     </>
