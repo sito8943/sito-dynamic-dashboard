@@ -112,7 +112,8 @@
     "a240c6df-0fe6-41f8-9d79-812eb80f3094": {
       "id": "a240c6df-0fe6-41f8-9d79-812eb80f3094",
       "address": "Calle ## // Entre 1 y Entre 2",
-      "name": "Casa Almacén Habana",
+      "name": "Casa Almacén 1",
+      "municipalities": "da704234-3d05-4b42-8557-68c98d3e5aef",
       "medicines": [
         { "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc", "count": 1 },
         { "id": "e509418b-aac7-4269-be1d-d60d4857931b", "count": 1 },
@@ -141,25 +142,25 @@
     "1c8d9a1b-2d05-4a73-a070-df807968d5bc": {
       "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc",
       "name": "PrevengoHo Vir",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "date": 1673903291252
     },
     "e509418b-aac7-4269-be1d-d60d4857931b": {
       "id": "e509418b-aac7-4269-be1d-d60d4857931b",
       "name": "Timolol",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "date": 1673903291252
     },
     "4fed2058-89dd-4a1e-b35e-7b3b6d383b76": {
       "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76",
       "name": "Prednisolona",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "date": 1673903291252
     },
     "46d50d9f-3669-40f3-937c-763455c17f4a": {
       "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
       "name": "Dorzolamida/Timolol",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "date": 1673903291252
     }
   }

@@ -40,9 +40,9 @@ const List = (props) => {
   return (
     <div className="w-full h-full">
       {isLoading ? (
-        <Loading />
+        <Loading type="400" />
       ) : (
-        <div className="flex w-full h-full align-center justify-center">
+        <div className="flex w-full h-full items-center justify-center">
           {data?.length ? (
             <table className={`${styles.bordered} w-full h-full`}>
               <tbody>

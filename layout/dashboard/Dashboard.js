@@ -46,7 +46,7 @@ const Centers = () => {
   return (
     <div className="w-full h-full md:p-tablet xs:p-mobil">
       <h4 className="text-h4">{dashboardText.Title}</h4>
-      <div className="tabs flex align-center gap-10">
+      <div className="tabs flex items-center gap-10">
         <button
           type="button"
           onClick={() => setActive("list")}

@@ -9,7 +9,10 @@
     },
     "Labels": {
       "name": "Name",
-      "provinces": "Provincia"
+      "types": "Type",
+      "medicine": "Medicines",
+      "provinces": "Province",
+      "municipalities": "Municipality"
     },
     "Empty": {
       "title": "There are not results"
@@ -57,6 +60,9 @@
       },
       "municipalities": {
         "Title": "Municipalities"
+      },
+      "types": {
+        "Title": "Medicine Types"
       },
       "Forms": {
         "centers": {
@@ -120,6 +126,10 @@
           {
             "href": "/dashboard?seeing=medicines",
             "label": "Medicines"
+          },
+          {
+            "href": "/dashboard?seeing=types",
+            "label": "Tipos de Medicamentos"
           }
         ]
       }
@@ -134,7 +144,11 @@
       "clear": "Limpiar"
     },
     "Labels": {
-      "name": "Nombre"
+      "name": "Nombre",
+      "types": "Tipo",
+      "medicine": "Medicamentos",
+      "provinces": "Provincia",
+      "municipalities": "Municipios"
     },
     "Empty": {
       "title": "No hay resultados"
@@ -183,6 +197,7 @@
       "municipalities": {
         "Title": "Municipios"
       },
+      "types": { "Title": "Tipos de Medicamentos" },
       "Forms": {
         "centers": {
           "name": {
@@ -233,12 +248,16 @@
             "label": "Municipios"
           },
           {
-            "href": "/centers",
+            "href": "/dashboard?seeing=centers",
             "label": "Centros"
           },
           {
-            "href": "/medicines",
+            "href": "/dashboard?seeing=medicines",
             "label": "Medicamentos"
+          },
+          {
+            "href": "/dashboard?seeing=types",
+            "label": "Tipos de Medicamentos"
           }
         ]
       }

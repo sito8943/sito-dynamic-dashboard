@@ -19,7 +19,7 @@ const Empty = () => {
 
   return (
     <div
-      className={`${styles.container} gap-10 flex flex-col justify-center align-center w-full h-full`}
+      className={`${styles.container} gap-10 flex flex-col justify-center items-center w-full h-full`}
     >
       <FontAwesomeIcon icon={faMeh} className={styles.empty} />
       <p className="text-center">{emptyText.title}</p>
