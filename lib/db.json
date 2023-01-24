@@ -34,7 +34,7 @@
     },
     "89d3c278-0875-4e2d-9356-512e3c2a4ca9": {
       "id": "89d3c278-0875-4e2d-9356-512e3c2a4ca9",
-      "name,": "Ciego de Ávila"
+      "name": "Ciego de Ávila"
     },
     "9e30e88a-948a-4f3d-8891-8c75a505f041": {
       "id": "9e30e88a-948a-4f3d-8891-8c75a505f041",
@@ -61,7 +61,53 @@
       "name": "Isla de la Juventud"
     }
   },
-  "municipalities": {},
+  "municipalities": {
+    "da704234-3d05-4b42-8557-68c98d3e5aef": {
+      "id": "da704234-3d05-4b42-8557-68c98d3e5aef",
+      "name": "Santiago de Cuba",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "6f6bbf84-7ad1-449c-be68-d08978d6815c": {
+      "id": "6f6bbf84-7ad1-449c-be68-d08978d6815c",
+      "name": "Contramaestre",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "4a26a232-ccff-4ecc-aab8-45199a5a2b8c": {
+      "id": "4a26a232-ccff-4ecc-aab8-45199a5a2b8c",
+      "name": "Guamá",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "81cda884-bd30-4da2-9e68-0e4022515027": {
+      "id": "81cda884-bd30-4da2-9e68-0e4022515027",
+      "name": "Mella",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "746187c0-2ae3-4008-8d2c-0aecee3af7ef": {
+      "id": "746187c0-2ae3-4008-8d2c-0aecee3af7ef",
+      "name": "Palma Soriano",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "ef6e1edd-b03d-46f7-bdea-c069bc5838f8": {
+      "id": "ef6e1edd-b03d-46f7-bdea-c069bc5838f8",
+      "name": "San Luis",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "858b7b04-6fc0-4e91-9bc1-6e96d5abfbdb": {
+      "id": "858b7b04-6fc0-4e91-9bc1-6e96d5abfbdb",
+      "name": "Segundo Frente",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "6a559771-c042-4076-ba93-326cf292b8fd": {
+      "id": "6a559771-c042-4076-ba93-326cf292b8fd",
+      "name": "Songo-La Maya",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    },
+    "4642089f-f9ce-46d6-9e45-af0f4bc92ef9": {
+      "id": "4642089f-f9ce-46d6-9e45-af0f4bc92ef9FD",
+      "name": "Tercer Frente",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8"
+    }
+  },
   "centers": {
     "a240c6df-0fe6-41f8-9d79-812eb80f3094": {
       "id": "a240c6df-0fe6-41f8-9d79-812eb80f3094",

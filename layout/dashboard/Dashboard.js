@@ -30,15 +30,17 @@ const Centers = () => {
 
   const getLayout = useCallback(
     (active) => {
+      const { query } = router;
+      const { seeing } = query;
       switch (active) {
         case "insert":
           return <Form model={formText} />;
-
         default:
-          return <List />;
+          if (seeing) return <List model={seeing} />;
+          return <div></div>;
       }
     },
-    [formText]
+    [formText, router]
   );
 
   return (
@@ -48,7 +50,7 @@ const Centers = () => {
         <button
           type="button"
           onClick={() => setActive("list")}
-          className={`${styles["tab-button"]} ${
+          className={`${styles["tab-button"]} transition ease duration-150  ${
             active === "list" ? "bg-dodger" : styles["no-active"]
           }`}
         >
@@ -57,7 +59,9 @@ const Centers = () => {
         <button
           type="button"
           onClick={() => setActive("insert")}
-          className={`${styles["tab-button"]} ${
+          className={`${
+            styles["tab-button"]
+          } transition ease duration-150 text-white hover:bg-dodger hover:text-white ${
             active === "insert" ? "bg-dodger" : styles["no-active"]
           }`}
         >

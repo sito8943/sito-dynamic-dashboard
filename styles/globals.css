@@ -8,8 +8,15 @@ h6,
 p,
 span,
 a,
-svg {
+button,
+li,
+th,
+td {
   font-family: "Roboto", sans-serif;
+  color: aliceblue !important;
+}
+
+button svg {
   color: aliceblue !important;
 }
 

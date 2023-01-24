@@ -8,7 +8,11 @@
       "clear": "Clear"
     },
     "Labels": {
-      "name": "Name"
+      "name": "Name",
+      "provinces": "Provincia"
+    },
+    "Empty": {
+      "title": "There are not results"
     },
     "AppName": "APP TITLE",
     "Navbar": {
@@ -131,6 +135,9 @@
     },
     "Labels": {
       "name": "Nombre"
+    },
+    "Empty": {
+      "title": "No hay resultados"
     },
     "AppName": "APP TITLE",
     "Navbar": {

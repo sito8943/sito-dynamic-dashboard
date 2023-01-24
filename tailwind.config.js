@@ -38,6 +38,13 @@ module.exports = {
         full: "100%",
         viewport: "100vw",
         icon: "35px",
+        operation: "65px",
+      },
+      minWidth: {
+        viewport: "100vw",
+      },
+      minHeight: {
+        viewport: "100vh",
       },
       height: {
         icon: "35px",

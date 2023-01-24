@@ -34,7 +34,6 @@ const Form = ({ model }) => {
 
   return (
     <div>
-      {console.log(model)}
       {Object.values(model).map((item) => (
         <div key={item.id}>
           {item.type === "text" ? (
