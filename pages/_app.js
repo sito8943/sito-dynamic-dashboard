@@ -15,8 +15,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCs1;
 
-s = false;
-
 import Script from "next/script";
 
 // contexts

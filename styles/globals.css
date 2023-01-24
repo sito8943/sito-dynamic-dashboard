@@ -6,14 +6,18 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+a,
+svg {
   font-family: "Roboto", sans-serif;
+  color: aliceblue !important;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Poppins", sans-serif;
+  color: aliceblue;
 }
 
 /* clears the ‘X’ from Internet Explorer */
