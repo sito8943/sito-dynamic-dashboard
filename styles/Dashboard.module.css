@@ -1,3 +1,18 @@
 .sidebar {
   width: 400px;
 }
+
+.tab-button {
+  padding: 5px 10px;
+  min-width: 100px;
+  border-radius: 20px;
+}
+
+.no-active {
+  border: 1px solid;
+}
+
+.container {
+  padding: 20px;
+  max-width: 400px;
+}

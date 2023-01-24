@@ -1,5 +1,15 @@
 {
   "en": {
+    "Buttons": {
+      "list": "List",
+      "insert": "Insert",
+      "modify": "Modify",
+      "save": "Save",
+      "clear": "Clear"
+    },
+    "Labels": {
+      "name": "Name"
+    },
     "AppName": "APP TITLE",
     "Navbar": {
       "Search": {
@@ -29,12 +39,75 @@
       }
     },
     "Home": {
+      "centers": {
+        "Title": "Centers"
+      },
+      "dashboard": {
+        "Title": "Dashboard"
+      },
+      "medicines": {
+        "Title": "Medicines"
+      },
+      "provinces": {
+        "Title": "Provinces"
+      },
+      "municipalities": {
+        "Title": "Municipalities"
+      },
+      "Forms": {
+        "centers": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Casa de Alberto"
+          }
+        },
+        "medicines": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Aspirina"
+          }
+        },
+        "provinces": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Santiago de Cuba"
+          }
+        },
+        "municipalities": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: San Luis"
+          },
+          "provinces": {
+            "id": "provinces",
+            "type": "autocomplete",
+            "required": true,
+            "model": "province"
+          }
+        }
+      },
       "Sidebar": {
-        "title": "Operations",
-        "links": [
+        "Title": "Operations",
+        "Links": [
           {
             "href": "/dashboard",
             "label": "Dashboard"
+          },
+          {
+            "href": "/dashboard?seeing=provinces",
+            "label": "Provinces"
+          },
+          {
+            "href": "/dashboard?seeing=municipalities",
+            "label": "Municipalities"
           },
           {
             "href": "/dashboard?seeing=centers",
@@ -49,6 +122,16 @@
     }
   },
   "es": {
+    "Buttons": {
+      "list": "Lista",
+      "insert": "Insertar",
+      "modify": "Modificar",
+      "save": "Guardar",
+      "clear": "Limpiar"
+    },
+    "Labels": {
+      "name": "Nombre"
+    },
     "AppName": "APP TITLE",
     "Navbar": {
       "Search": {
@@ -78,12 +161,69 @@
       }
     },
     "Home": {
+      "centers": {
+        "Title": "Centros"
+      },
+      "dashboard": {
+        "Title": "Panel administrativo"
+      },
+      "medicines": {
+        "Title": "Medicinas"
+      },
+      "provinces": {
+        "Title": "Provincias"
+      },
+      "municipalities": {
+        "Title": "Municipios"
+      },
+      "Forms": {
+        "centers": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ej: Casa de Alberto"
+          }
+        },
+        "medicines": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ej: Aspirina"
+          }
+        },
+        "provinces": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ej: Santiago de Cuba"
+          }
+        },
+        "municipalities": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ej: San Luis"
+          }
+        }
+      },
       "Sidebar": {
-        "title": "Operaciones",
-        "links": [
+        "Title": "Operaciones",
+        "Links": [
           {
             "href": "/",
             "label": "Panel Administrativo"
+          },
+          {
+            "href": "/dashboard?seeing=provinces",
+            "label": "Provincias"
+          },
+          {
+            "href": "/dashboard?seeing=municipalities",
+            "label": "Municipios"
           },
           {
             "href": "/centers",

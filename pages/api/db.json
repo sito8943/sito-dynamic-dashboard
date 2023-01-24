@@ -1,0 +1,120 @@
+{
+  "provinces": {
+    "2591d66a-3ab9-4095-8685-2c4fc904bc4f": {
+      "id": "2591d66a-3ab9-4095-8685-2c4fc904bc4f",
+      "name": "Pinar del Río"
+    },
+    "5623a89d-b3b7-476d-82d7-8a076f7534aa": {
+      "id": "5623a89d-b3b7-476d-82d7-8a076f7534aa",
+      "name": "Artemisa"
+    },
+    "dc0127a6-7e7a-43a7-bb20-ef8d4356efcf": {
+      "id": "dc0127a6-7e7a-43a7-bb20-ef8d4356efcf",
+      "name": "La Habana"
+    },
+    "8fc79654-76df-47f5-b779-cda931a84153": {
+      "id": "8fc79654-76df-47f5-b779-cda931a84153",
+      "name": "Mayabeque"
+    },
+    "311bbc49-dc1b-4cb2-866c-00c750b55196": {
+      "id": "311bbc49-dc1b-4cb2-866c-00c750b55196",
+      "name": "Matanzas"
+    },
+    "9796b5cd-de46-4484-abc8-d5c64959f183": {
+      "id": "9796b5cd-de46-4484-abc8-d5c64959f183",
+      "name": "Cienfuegos"
+    },
+    "183de919-032d-482d-980f-c9b9f6a45407": {
+      "id": "183de919-032d-482d-980f-c9b9f6a45407",
+      "name": "Villa Clara"
+    },
+    "0a560ae7-5dc1-4efa-8322-18a4b69ed6d6": {
+      "id": "0a560ae7-5dc1-4efa-8322-18a4b69ed6d6",
+      "name": "Sancti Spíritus"
+    },
+    "89d3c278-0875-4e2d-9356-512e3c2a4ca9": {
+      "id": "89d3c278-0875-4e2d-9356-512e3c2a4ca9",
+      "name,": "Ciego de Ávila"
+    },
+    "9e30e88a-948a-4f3d-8891-8c75a505f041": {
+      "id": "9e30e88a-948a-4f3d-8891-8c75a505f041",
+      "name": "Camagüey"
+    },
+    "28940394-a0a7-4c1e-8f7f-43ac7b97b333": {
+      "id": "28940394-a0a7-4c1e-8f7f-43ac7b97b333",
+      "name": "Las Tunas"
+    },
+    "b685045e-cea3-4df1-b68f-c87353599cb3": {
+      "id": "b685045e-cea3-4df1-b68f-c87353599cb3",
+      "name": "Granma"
+    },
+    "4d5f802c-621f-44d3-aeed-bcf6ac0ae039": {
+      "id": "4d5f802c-621f-44d3-aeed-bcf6ac0ae039",
+      "name": "Holguín"
+    },
+    "234df1e2-e2f3-49aa-ab99-809d8a3b66d8": {
+      "id": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "name": "Santiago de Cuba"
+    },
+    "8499dd72-7bed-4c5a-9180-68baa4d2bbef": {
+      "id": "8499dd72-7bed-4c5a-9180-68baa4d2bbef",
+      "name": "Isla de la Juventud"
+    }
+  },
+  "municipalities": {},
+  "centers": {
+    "a240c6df-0fe6-41f8-9d79-812eb80f3094": {
+      "id": "a240c6df-0fe6-41f8-9d79-812eb80f3094",
+      "address": "Calle ## // Entre 1 y Entre 2",
+      "name": "Casa Almacén Habana",
+      "medicines": [
+        { "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc", "count": 1 },
+        { "id": "e509418b-aac7-4269-be1d-d60d4857931b", "count": 1 },
+        { "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76", "count": 1 },
+        {
+          "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
+          "count": 1
+        }
+      ],
+      "date": 1673903291252
+    }
+  },
+  "types": {
+    "ab5b03d5-7a3a-4b57-a46a-1effca77501b": {
+      "id": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "name": "Colirios",
+      "date": 1673903291252
+    },
+    "e46a48f3-d8b3-4fa0-b504-96e7f22e0789": {
+      "id": "e46a48f3-d8b3-4fa0-b504-96e7f22e0789",
+      "name": "Otros",
+      "date": 1673903291252
+    }
+  },
+  "medicines": {
+    "1c8d9a1b-2d05-4a73-a070-df807968d5bc": {
+      "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc",
+      "name": "PrevengoHo Vir",
+      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252
+    },
+    "e509418b-aac7-4269-be1d-d60d4857931b": {
+      "id": "e509418b-aac7-4269-be1d-d60d4857931b",
+      "name": "Timolol",
+      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252
+    },
+    "4fed2058-89dd-4a1e-b35e-7b3b6d383b76": {
+      "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76",
+      "name": "Prednisolona",
+      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252
+    },
+    "46d50d9f-3669-40f3-937c-763455c17f4a": {
+      "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
+      "name": "Dorzolamida/Timolol",
+      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252
+    }
+  }
+}

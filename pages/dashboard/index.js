@@ -15,8 +15,6 @@ import Link from "../../components/Link/Link";
 // layouts
 import Head from "../../layout/Head";
 import Body from "../../layout/Body";
-import Medicines from "../../layout/dashboard/Medicines";
-import Centers from "../../layout/dashboard/Centers";
 import Dashboard from "../../layout/dashboard/Dashboard";
 
 import config from "../../lib/config";
@@ -37,24 +35,6 @@ const Login = () => {
     return languageState.texts.Home;
   }, [languageState]);
 
-  const submit = (e) => {
-    e.preventDefault();
-  };
-
-  const getLayout = useCallback(() => {
-    console.log(router);
-    const { query } = router;
-    const { seeing } = query;
-    switch (seeing) {
-      case "medicines":
-        return <Medicines />;
-      case "centers":
-        return <Centers />;
-      default:
-        return <Dashboard />;
-    }
-  }, [router]);
-
   return (
     <>
       <Head />
@@ -63,8 +43,8 @@ const Login = () => {
           <div
             className={`${styles.sidebar} bg-sidebar h-viewport flex flex-col p-tablet gap-10`}
           >
-            <h2 className="text-h4">{dashboardText.Sidebar.title}</h2>
-            {dashboardText.Sidebar.links.map((item) => (
+            <h2 className="text-h4">{dashboardText.Sidebar.Title}</h2>
+            {dashboardText.Sidebar.Links.map((item) => (
               <Link
                 className={`cursor-pointer transition w-full ease duration-150 hover:bg-dodger hover:text-white p-active rounded-20px ${
                   router.asPath === item.href ? "bg-dodger" : ""
@@ -76,7 +56,7 @@ const Login = () => {
               </Link>
             ))}
           </div>
-          {getLayout()}
+          <Dashboard />
         </div>
       </Body>
     </>
