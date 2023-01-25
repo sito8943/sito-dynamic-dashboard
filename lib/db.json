@@ -126,7 +126,7 @@
       "date": 1673903291252
     }
   },
-  "types": {
+  "presentationShapess": {
     "ab5b03d5-7a3a-4b57-a46a-1effca77501b": {
       "id": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "name": "Colirios",
@@ -138,30 +138,44 @@
       "date": 1673903291252
     }
   },
+  "pharmacologicalCategories": {
+    "0702ee14-2a33-492d-ba44-e7d7da25383d": {
+      "id": "0702ee14-2a33-492d-ba44-e7d7da25383d",
+      "name": "Anticoagulantes"
+    },
+    "59b27959-dc80-4b12-b061-04b8698c3c51": {
+      "id": "59b27959-dc80-4b12-b061-04b8698c3c51",
+      "name": "Antiinflamatorio"
+    }
+  },
   "medicines": {
     "1c8d9a1b-2d05-4a73-a070-df807968d5bc": {
       "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc",
       "name": "PrevengoHo Vir",
-      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
+      "presentationShapes": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252,
+      "pharmacologicalCategories": ""
     },
     "e509418b-aac7-4269-be1d-d60d4857931b": {
       "id": "e509418b-aac7-4269-be1d-d60d4857931b",
       "name": "Timolol",
-      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
+      "presentationShapes": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252,
+      "pharmacologicalCategories": ""
     },
     "4fed2058-89dd-4a1e-b35e-7b3b6d383b76": {
       "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76",
       "name": "Prednisolona",
-      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
+      "presentationShapes": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252,
+      "pharmacologicalCategories": "59b27959-dc80-4b12-b061-04b8698c3c51"
     },
     "46d50d9f-3669-40f3-937c-763455c17f4a": {
       "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
       "name": "Dorzolamida/Timolol",
-      "types": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
+      "presentationShapes": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "date": 1673903291252,
+      "pharmacologicalCategories": ""
     }
   }
 }

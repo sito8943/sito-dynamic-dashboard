@@ -9,10 +9,11 @@
     },
     "Labels": {
       "name": "Name",
-      "types": "Type",
       "medicine": "Medicines",
       "provinces": "Province",
-      "municipalities": "Municipality"
+      "municipalities": "Municipality",
+      "presentationShapes": "Presentation Shape",
+      "pharmacologicalCategories": "Pharmacological Category"
     },
     "Empty": {
       "title": "There are not results"
@@ -61,8 +62,11 @@
       "municipalities": {
         "Title": "Municipalities"
       },
-      "types": {
-        "Title": "Medicine Types"
+      "presentationShapes": {
+        "Title": "Presentation Shapes"
+      },
+      "pharmacologicalCategories": {
+        "Title": "Pharmacological Categories"
       },
       "Forms": {
         "centers": {
@@ -102,6 +106,22 @@
             "required": true,
             "model": "province"
           }
+        },
+        "presentationShapes": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Colirios"
+          }
+        },
+        "pharmacologicalCategories": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Antiinflamatorio"
+          }
         }
       },
       "Sidebar": {
@@ -128,8 +148,12 @@
             "label": "Medicines"
           },
           {
-            "href": "/dashboard?seeing=types",
-            "label": "Tipos de Medicamentos"
+            "href": "/dashboard?seeing=presentationShapes",
+            "label": "Presentation Shape"
+          },
+          {
+            "href": "/dashboard?seeing=pharmacologicalCategories",
+            "label": "Pharmacological Categories"
           }
         ]
       }
@@ -145,10 +169,11 @@
     },
     "Labels": {
       "name": "Nombre",
-      "types": "Tipo",
       "medicine": "Medicamentos",
       "provinces": "Provincia",
-      "municipalities": "Municipios"
+      "municipalities": "Municipios",
+      "presentationShapes": "Forma de Presentación",
+      "pharmacologicalCategory": "Categoria Farmacológica"
     },
     "Empty": {
       "title": "No hay resultados"
@@ -197,7 +222,10 @@
       "municipalities": {
         "Title": "Municipios"
       },
-      "types": { "Title": "Tipos de Medicamentos" },
+      "presentationShapes": { "Title": "Forma de Presentación" },
+      "pharmacologicalCategories": {
+        "Title": "Categoria Farmacológica"
+      },
       "Forms": {
         "centers": {
           "name": {
@@ -230,6 +258,22 @@
             "required": true,
             "placeholder": "ej: San Luis"
           }
+        },
+        "presentationShapes": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Colirios"
+          }
+        },
+        "pharmacologicalCategories": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Antiinflamatorio"
+          }
         }
       },
       "Sidebar": {
@@ -256,8 +300,12 @@
             "label": "Medicamentos"
           },
           {
-            "href": "/dashboard?seeing=types",
-            "label": "Tipos de Medicamentos"
+            "href": "/dashboard?seeing=presentationShapes",
+            "label": "Formas de Presentación"
+          },
+          {
+            "href": "/dashboard?seeing=pharmacologicalCategories",
+            "label": "Categorias Farmacológicas"
           }
         ]
       }
