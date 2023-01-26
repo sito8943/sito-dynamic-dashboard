@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+form input {
+  height: 40px;
+  color: aliceblue;
+  border: 1px solid #222;
+}
+
 h4,
 h5,
 h6,

@@ -105,7 +105,8 @@
             "id": "provinces",
             "type": "autocomplete",
             "required": true,
-            "model": "province"
+            "model": "province",
+            "placeholder": "ex: Santiago de Cuba"
           }
         },
         "presentations": {
@@ -259,6 +260,13 @@
             "type": "text",
             "required": true,
             "placeholder": "ej: San Luis"
+          },
+          "provinces": {
+            "id": "provinces",
+            "type": "autocomplete",
+            "required": true,
+            "model": "province",
+            "placeholder": "ex: Santiago de Cuba"
           }
         },
         "presentations": {
