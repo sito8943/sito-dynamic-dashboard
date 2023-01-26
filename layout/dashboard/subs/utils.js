@@ -15,6 +15,25 @@ export const prefabs = {
     ["name", "presentationShape"],
     ["name", "pharmacologicalCategory"],
   ],
-  presentationShape: ["id", "date", "name"],
-  presentationCategory: ["id", "date", "name"],
+  presentations: ["id", "date", "name"],
+  categories: ["id", "date", "name"],
+};
+
+export const parseAttributesWidth = (attribute) => {
+  switch (attribute) {
+    default: // going left
+      return "first";
+  }
+};
+
+export const parseAttributes = (attribute, value) => {
+  switch (attribute) {
+    case "date": {
+      const date = new Date();
+      date.setTime(value);
+      return date.toLocaleString("es-es");
+    }
+    default:
+      return value;
+  }
 };

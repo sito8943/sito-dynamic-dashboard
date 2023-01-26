@@ -20,7 +20,7 @@ import Loading from "../../../components/Loading/Loading";
 import styles from "../../../styles/Dashboard.module.css";
 
 // utils
-import { prefabs } from "./utils";
+import { parseAttributes, parseAttributesWidth, prefabs } from "./utils";
 
 const List = (props) => {
   const { model } = props;
@@ -52,9 +52,7 @@ const List = (props) => {
                     .map((item, i) => (
                       <th
                         key={item}
-                        className={
-                          typeof data[0][item] === "string" ? styles.first : ""
-                        }
+                        className={styles[parseAttributesWidth(item)]}
                       >
                         {labels[item]}
                       </th>
@@ -67,7 +65,7 @@ const List = (props) => {
                     {Object.keys(item)
                       .filter((jtem) => jtem !== "id")
                       .map((jtem) => (
-                        <td key={jtem}>{item[jtem]}</td>
+                        <td key={jtem}>{parseAttributes(jtem, item[jtem])}</td>
                       ))}
 
                     <td

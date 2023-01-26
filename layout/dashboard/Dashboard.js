@@ -1,10 +1,11 @@
-import React, { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
 
 // contexts
 import { useLanguage } from "../../context/LanguageProvider";
 
 // components
+import Link from "../../components/Link/Link";
 import List from "./subs/List";
 import Form from "./subs/Form";
 
@@ -43,30 +44,52 @@ const Centers = () => {
     [formText, router]
   );
 
+  const toNavigate = useCallback(
+    (param) => {
+      const { query } = router;
+      const { seeing } = query;
+      return `/dashboard?seeing=${seeing}&doing=${param}`;
+    },
+    [router]
+  );
+
+  useEffect(() => {
+    const { doing } = router.query;
+    switch (doing) {
+      case "insert":
+        setActive("insert");
+        break;
+      default:
+        setActive("list");
+        break;
+    }
+    return () => {};
+  }, [router]);
+
   return (
     <div className="w-full h-full md:p-tablet xs:p-mobil">
       <h4 className="text-h4">{dashboardText.Title}</h4>
       <div className="tabs flex items-center gap-10">
-        <button
-          type="button"
-          onClick={() => setActive("list")}
-          className={`${styles["tab-button"]} transition ease duration-150  ${
+        <Link
+          href={`${toNavigate("list")}`}
+          className={`${
+            styles["tab-button"]
+          } text-center transition ease duration-150  ${
             active === "list" ? "bg-dodger" : styles["no-active"]
           }`}
         >
           {buttons.list}
-        </button>
-        <button
-          type="button"
-          onClick={() => setActive("insert")}
+        </Link>
+        <Link
+          href={`${toNavigate("insert")}`}
           className={`${
             styles["tab-button"]
-          } transition ease duration-150 text-white hover:bg-dodger hover:text-white ${
+          } text-center transition ease duration-150 text-white hover:bg-dodger hover:text-white ${
             active === "insert" ? "bg-dodger" : styles["no-active"]
           }`}
         >
           {buttons.insert}
-        </button>
+        </Link>
       </div>
       <div className={`${styles.container}`}>{getLayout(active)}</div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer } from "react";
+import React, { useCallback, useMemo, useReducer } from "react";
 
 // contexts
 import { useLanguage } from "../../../context/LanguageProvider";
@@ -32,8 +32,16 @@ const Form = ({ model }) => {
 
   const [inputs, setInputs] = useReducer(inputsReducer, {});
 
+  const sendInputs = useCallback(
+    (e) => {
+      e.preventDefault();
+      console.log(inputs);
+    },
+    [inputs]
+  );
+
   return (
-    <div>
+    <form onSubmit={sendInputs}>
       {Object.values(model).map((item) => (
         <div key={item.id}>
           {item.type === "text" ? (
@@ -67,7 +75,7 @@ const Form = ({ model }) => {
           {buttons.save}
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 

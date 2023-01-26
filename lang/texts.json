@@ -9,11 +9,12 @@
     },
     "Labels": {
       "name": "Name",
+      "date": "Modified",
       "medicine": "Medicines",
       "provinces": "Province",
       "municipalities": "Municipality",
-      "presentationShapes": "Presentation Shape",
-      "pharmacologicalCategories": "Pharmacological Category"
+      "presentations": "Presentations",
+      "categories": "Category"
     },
     "Empty": {
       "title": "There are not results"
@@ -62,11 +63,11 @@
       "municipalities": {
         "Title": "Municipalities"
       },
-      "presentationShapes": {
-        "Title": "Presentation Shapes"
+      "presentations": {
+        "Title": "Presentations"
       },
-      "pharmacologicalCategories": {
-        "Title": "Pharmacological Categories"
+      "categories": {
+        "Title": "Categories"
       },
       "Forms": {
         "centers": {
@@ -107,7 +108,7 @@
             "model": "province"
           }
         },
-        "presentationShapes": {
+        "presentations": {
           "name": {
             "id": "name",
             "type": "text",
@@ -115,7 +116,7 @@
             "placeholder": "ex: Colirios"
           }
         },
-        "pharmacologicalCategories": {
+        "categories": {
           "name": {
             "id": "name",
             "type": "text",
@@ -148,12 +149,12 @@
             "label": "Medicines"
           },
           {
-            "href": "/dashboard?seeing=presentationShapes",
-            "label": "Presentation Shape"
+            "href": "/dashboard?seeing=presentations",
+            "label": "Presentations"
           },
           {
-            "href": "/dashboard?seeing=pharmacologicalCategories",
-            "label": "Pharmacological Categories"
+            "href": "/dashboard?seeing=categories",
+            "label": "Categories"
           }
         ]
       }
@@ -171,9 +172,10 @@
       "name": "Nombre",
       "medicine": "Medicamentos",
       "provinces": "Provincia",
+      "date": "Última modificación",
       "municipalities": "Municipios",
-      "presentationShapes": "Forma de Presentación",
-      "pharmacologicalCategory": "Categoria Farmacológica"
+      "presentations": "Forma de Presentación",
+      "categories": "Categoria Farmacológica"
     },
     "Empty": {
       "title": "No hay resultados"
@@ -222,8 +224,8 @@
       "municipalities": {
         "Title": "Municipios"
       },
-      "presentationShapes": { "Title": "Forma de Presentación" },
-      "pharmacologicalCategories": {
+      "presentations": { "Title": "Forma de Presentación" },
+      "categories": {
         "Title": "Categoria Farmacológica"
       },
       "Forms": {
@@ -259,7 +261,7 @@
             "placeholder": "ej: San Luis"
           }
         },
-        "presentationShapes": {
+        "presentations": {
           "name": {
             "id": "name",
             "type": "text",
@@ -267,7 +269,7 @@
             "placeholder": "ex: Colirios"
           }
         },
-        "pharmacologicalCategories": {
+        "categories": {
           "name": {
             "id": "name",
             "type": "text",
@@ -300,11 +302,11 @@
             "label": "Medicamentos"
           },
           {
-            "href": "/dashboard?seeing=presentationShapes",
+            "href": "/dashboard?seeing=presentations",
             "label": "Formas de Presentación"
           },
           {
-            "href": "/dashboard?seeing=pharmacologicalCategories",
+            "href": "/dashboard?seeing=categories",
             "label": "Categorias Farmacológicas"
           }
         ]
