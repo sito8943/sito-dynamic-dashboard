@@ -9,6 +9,11 @@ import { fetchTable } from "../../../lib/driver";
  * @param {*} res
  */
 export default async function handler(req, res) {
-  const medicines = await fetchTable("medicines");
-  res.status(200).json({ medicines: Object.values(medicines) });
+  try {
+    const medicines = await fetchTable("medicines");
+    res.status(200).json({ medicines: Object.values(medicines) });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: String(err) });
+  }
 }

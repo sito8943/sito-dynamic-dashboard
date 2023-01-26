@@ -49,7 +49,7 @@ const Form = ({ model }) => {
               <label htmlFor={item.id}>{labels[item.id]}</label>
               <input
                 type={item.text}
-                value={inputs[item.id]}
+                value={inputs[item.id] || ""}
                 className="rounded-20px p-active"
                 placeholder={item.placeholder}
                 onChange={(e) =>
