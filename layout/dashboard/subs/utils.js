@@ -12,11 +12,11 @@ export const prefabs = {
     "id",
     "date",
     "name",
-    ["name", "presentationShape"],
-    ["name", "pharmacologicalCategory"],
+    ["name", "descriptionShape"],
+    ["name", "pharmaceuticGroup"],
   ],
-  presentations: ["id", "date", "name"],
-  categories: ["id", "date", "name"],
+  descriptions: ["id", "date", "name"],
+  pharmaceuticGroups: ["id", "date", "name"],
 };
 
 export const parseAttributesWidth = (attribute) => {

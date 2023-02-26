@@ -11,7 +11,7 @@ import { saveModel } from "../../../lib/driver";
 export default async function handler(req, res) {
   try {
     const { model } = req.body;
-    const result = await saveModel("categories", model);
+    const result = await saveModel("pharmaceuticGroups", model);
     res.status(200).json({ message: result });
   } catch (err) {
     console.error(err);

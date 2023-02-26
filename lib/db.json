@@ -126,7 +126,7 @@
       "date": 1673903291252
     }
   },
-  "presentations": {
+  "descriptions": {
     "ab5b03d5-7a3a-4b57-a46a-1effca77501b": {
       "id": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "name": "Colirios",
@@ -138,7 +138,99 @@
       "date": 1673903291252
     }
   },
-  "categories": {
+  "pharmaceuticShape": {
+    "": {
+      "id": "",
+      "name": "Soluciones",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Suspenciones",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Emulsiones",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Jarabes",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Elíxires",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Lociones",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Ungüento (Pomadas)",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Pastas",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Cremas",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Jaleas (Gel)",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Parches",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Polvos",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Granulados",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Cápsulas",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Tabletas (Comprimidos)",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Pastillas",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Píldoras",
+      "date": 1677440832569
+    },
+    "": {
+      "id": "",
+      "name": "Supositorios",
+      "date": 1677440832569
+    }
+  },
+  "pharmaceuticGroups": {
     "0702ee14-2a33-492d-ba44-e7d7da25383d": {
       "id": "0702ee14-2a33-492d-ba44-e7d7da25383d",
       "name": "Anticoagulantes"
@@ -151,31 +243,12 @@
   "medicines": {
     "1c8d9a1b-2d05-4a73-a070-df807968d5bc": {
       "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc",
-      "name": "PrevengoHo Vir",
-      "presentations": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "name": "Nombre del Medicamento",
+      "descriptions": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "uses": "Alguna descripción",
       "date": 1673903291252,
-      "categories": ""
-    },
-    "e509418b-aac7-4269-be1d-d60d4857931b": {
-      "id": "e509418b-aac7-4269-be1d-d60d4857931b",
-      "name": "Timolol",
-      "presentations": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252,
-      "categories": ""
-    },
-    "4fed2058-89dd-4a1e-b35e-7b3b6d383b76": {
-      "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76",
-      "name": "Prednisolona",
-      "presentations": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1674700739348,
-      "categories": "59b27959-dc80-4b12-b061-04b8698c3c51"
-    },
-    "46d50d9f-3669-40f3-937c-763455c17f4a": {
-      "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
-      "name": "Dorzolamida/Timolol",
-      "presentations": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1674700739348,
-      "categories": ""
+      "pharmaceuticGroups": "59b27959-dc80-4b12-b061-04b8698c3c51",
+      "pharmaceuticShape": "59b27959-dc80-4b12-b061-04b8698c3c51"
     }
   }
 }

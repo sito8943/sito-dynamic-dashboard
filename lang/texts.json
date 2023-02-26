@@ -13,8 +13,8 @@
       "medicine": "Medicines",
       "provinces": "Province",
       "municipalities": "Municipality",
-      "presentations": "Presentations",
-      "categories": "Category"
+      "descriptions": "Descriptions",
+      "pharmaceuticGroups": "pharmaceuticGroup"
     },
     "Empty": {
       "title": "There are not results"
@@ -63,11 +63,11 @@
       "municipalities": {
         "Title": "Municipalities"
       },
-      "presentations": {
-        "Title": "Presentations"
+      "descriptions": {
+        "Title": "Descriptions"
       },
-      "categories": {
-        "Title": "Categories"
+      "pharmaceuticGroups": {
+        "Title": "Pharmaceutic Groups"
       },
       "Forms": {
         "centers": {
@@ -109,7 +109,7 @@
             "placeholder": "ex: Santiago de Cuba"
           }
         },
-        "presentations": {
+        "descriptions": {
           "name": {
             "id": "name",
             "type": "text",
@@ -117,7 +117,7 @@
             "placeholder": "ex: Colirios"
           }
         },
-        "categories": {
+        "pharmaceuticGroups": {
           "name": {
             "id": "name",
             "type": "text",
@@ -150,12 +150,12 @@
             "label": "Medicines"
           },
           {
-            "href": "/dashboard?seeing=presentations",
-            "label": "Presentations"
+            "href": "/dashboard?seeing=descriptions",
+            "label": "Descriptions"
           },
           {
-            "href": "/dashboard?seeing=categories",
-            "label": "Categories"
+            "href": "/dashboard?seeing=pharmaceuticGroups",
+            "label": "Grupo Farmacológico"
           }
         ]
       }
@@ -175,8 +175,8 @@
       "provinces": "Provincia",
       "date": "Última modificación",
       "municipalities": "Municipios",
-      "presentations": "Forma de Presentación",
-      "categories": "Categoria Farmacológica"
+      "descriptions": "Forma de Descripción",
+      "pharmaceuticGroups": "Grupo Farmacológico"
     },
     "Empty": {
       "title": "No hay resultados"
@@ -225,9 +225,9 @@
       "municipalities": {
         "Title": "Municipios"
       },
-      "presentations": { "Title": "Forma de Presentación" },
-      "categories": {
-        "Title": "Categoria Farmacológica"
+      "descriptions": { "Title": "Forma de Descripción" },
+      "pharmaceuticGroups": {
+        "Title": "Grupo Farmacológico"
       },
       "Forms": {
         "centers": {
@@ -269,7 +269,7 @@
             "placeholder": "ex: Santiago de Cuba"
           }
         },
-        "presentations": {
+        "descriptions": {
           "name": {
             "id": "name",
             "type": "text",
@@ -277,7 +277,7 @@
             "placeholder": "ex: Colirios"
           }
         },
-        "categories": {
+        "pharmaceuticGroups": {
           "name": {
             "id": "name",
             "type": "text",
@@ -310,11 +310,11 @@
             "label": "Medicamentos"
           },
           {
-            "href": "/dashboard?seeing=presentations",
-            "label": "Formas de Presentación"
+            "href": "/dashboard?seeing=descriptions",
+            "label": "Formas de Descripción"
           },
           {
-            "href": "/dashboard?seeing=categories",
+            "href": "/dashboard?seeing=pharmaceuticGroups",
             "label": "Categorias Farmacológicas"
           }
         ]
