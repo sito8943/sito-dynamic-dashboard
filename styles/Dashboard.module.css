@@ -18,6 +18,15 @@
   height: 100%;
 }
 
+.filters {
+  margin-bottom: 4px;
+}
+
+.pagination {
+  margin-top: 4px;
+  justify-content: flex-end;
+}
+
 .bordered {
 }
 

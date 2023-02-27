@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import { dehydrate, QueryClient } from "@tanstack/react-query";
 
 // @fortawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +8,7 @@ import {
   faTrash,
   faChevronRight,
   faChevronLeft,
+  faFilter,
 } from "@fortawesome/free-solid-svg-icons";
 
 // services
@@ -33,6 +33,10 @@ const List = (props) => {
 
   const [page, setPage] = useState(0);
 
+  const [showFilters, setShowFilters] = useState(false);
+
+  const toggleFilters = () => setShowFilters(!showFilters);
+
   const { data, isLoading, isFetching } = useModel(
     model,
     page,
@@ -50,7 +54,14 @@ const List = (props) => {
         <Loading type="400" />
       ) : (
         <div className="flex w-full h-full items-center justify-center flex-col">
-          {console.log(data)}
+          <div className={`w-full flex items-center ${styles.filters}`}>
+            <button
+              onClick={toggleFilters}
+              className="transition hover:bg-dodger rounded-circle w-icon h-icon"
+            >
+              <FontAwesomeIcon icon={faFilter} />
+            </button>
+          </div>
           {data?.list.length ? (
             <table className={`${styles.bordered} w-full h-full min-h-full`}>
               <tbody>
@@ -79,10 +90,10 @@ const List = (props) => {
                     <td
                       className={`${styles.operation} flex gap-10 w-operation`}
                     >
-                      <button>
+                      <button className="transition hover:bg-dodger rounded-circle w-icon h-icon">
                         <FontAwesomeIcon icon={faPencil} />
                       </button>
-                      <button>
+                      <button className="transition hover:bg-dodger rounded-circle w-icon h-icon">
                         <FontAwesomeIcon icon={faTrash} />
                       </button>
                     </td>
@@ -94,14 +105,21 @@ const List = (props) => {
             <Empty />
           )}
           {data?.totalPages > 1 ? (
-            <div className="w-full flex items-center justify-end gap-2 mt-1">
-              <button onClick={() => setPage(page - 1)} disabled={page === 0}>
+            <div
+              className={`w-full flex items-center gap-2 ${styles.pagination}`}
+            >
+              <button
+                className="transition hover:bg-dodger rounded-circle w-icon h-icon"
+                onClick={() => setPage(page - 1)}
+                disabled={page === 0}
+              >
                 <FontAwesomeIcon icon={faChevronLeft} />
               </button>
               <span>{page + 1}</span>
               <button
                 onClick={() => setPage(page + 1)}
                 disabled={page === data?.totalPages - 1}
+                className="transition hover:bg-dodger rounded-circle w-icon h-icon"
               >
                 <FontAwesomeIcon icon={faChevronRight} />
               </button>
