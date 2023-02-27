@@ -25,6 +25,7 @@ export const fetchModel = async (
   const result = parsed[model];
   if (result) {
     const toReturn = [];
+    const totalPages = Math.ceil(result.length / count);
     for (
       let i = page * count;
       i < count * (page + 1) && i < result.length;
@@ -33,7 +34,7 @@ export const fetchModel = async (
       const parsedItem = await parseAttributes(result[i], attributes);
       toReturn.push(parsedItem);
     }
-    return toReturn;
+    return { list: toReturn, totalPages };
   }
 
   return undefined;

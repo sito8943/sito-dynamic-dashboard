@@ -22,7 +22,7 @@ const Login = () => {
 
   useEffect(() => {
     try {
-      setLanguageState({ type: "set", lang: getUserLanguage(config.language) });
+      // setLanguageState({ type: "set", lang: getUserLanguage(config.language) });
     } catch (err) {
       console.error(err);
     }

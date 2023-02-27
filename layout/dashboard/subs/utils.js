@@ -17,6 +17,7 @@ export const prefabs = {
   ],
   descriptions: ["id", "date", "name"],
   pharmaceuticGroups: ["id", "date", "name"],
+  pharmaceuticShapes: ["id", "date", "name"],
 };
 
 export const parseAttributesWidth = (attribute) => {

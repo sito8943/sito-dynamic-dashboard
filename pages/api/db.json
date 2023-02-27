@@ -2,71 +2,142 @@
   "provinces": {
     "2591d66a-3ab9-4095-8685-2c4fc904bc4f": {
       "id": "2591d66a-3ab9-4095-8685-2c4fc904bc4f",
-      "name": "Pinar del Río"
+      "name": "Pinar del Río",
+      "date": 1677440832569
     },
     "5623a89d-b3b7-476d-82d7-8a076f7534aa": {
       "id": "5623a89d-b3b7-476d-82d7-8a076f7534aa",
-      "name": "Artemisa"
+      "name": "Artemisa",
+      "date": 1677440832569
     },
     "dc0127a6-7e7a-43a7-bb20-ef8d4356efcf": {
       "id": "dc0127a6-7e7a-43a7-bb20-ef8d4356efcf",
-      "name": "La Habana"
+      "name": "La Habana",
+      "date": 1677440832569
     },
     "8fc79654-76df-47f5-b779-cda931a84153": {
       "id": "8fc79654-76df-47f5-b779-cda931a84153",
-      "name": "Mayabeque"
+      "name": "Mayabeque",
+      "date": 1677440832569
     },
     "311bbc49-dc1b-4cb2-866c-00c750b55196": {
       "id": "311bbc49-dc1b-4cb2-866c-00c750b55196",
-      "name": "Matanzas"
+      "name": "Matanzas",
+      "date": 1677440832569
     },
     "9796b5cd-de46-4484-abc8-d5c64959f183": {
       "id": "9796b5cd-de46-4484-abc8-d5c64959f183",
-      "name": "Cienfuegos"
+      "name": "Cienfuegos",
+      "date": 1677440832569
     },
     "183de919-032d-482d-980f-c9b9f6a45407": {
       "id": "183de919-032d-482d-980f-c9b9f6a45407",
-      "name": "Villa Clara"
+      "name": "Villa Clara",
+      "date": 1677440832569
     },
     "0a560ae7-5dc1-4efa-8322-18a4b69ed6d6": {
       "id": "0a560ae7-5dc1-4efa-8322-18a4b69ed6d6",
-      "name": "Sancti Spíritus"
+      "name": "Sancti Spíritus",
+      "date": 1677440832569
     },
     "89d3c278-0875-4e2d-9356-512e3c2a4ca9": {
       "id": "89d3c278-0875-4e2d-9356-512e3c2a4ca9",
-      "name,": "Ciego de Ávila"
+      "name": "Ciego de Ávila",
+      "date": 1677440832569
     },
     "9e30e88a-948a-4f3d-8891-8c75a505f041": {
       "id": "9e30e88a-948a-4f3d-8891-8c75a505f041",
-      "name": "Camagüey"
+      "name": "Camagüey",
+      "date": 1677440832569
     },
     "28940394-a0a7-4c1e-8f7f-43ac7b97b333": {
       "id": "28940394-a0a7-4c1e-8f7f-43ac7b97b333",
-      "name": "Las Tunas"
+      "name": "Las Tunas",
+      "date": 1677440832569
     },
     "b685045e-cea3-4df1-b68f-c87353599cb3": {
       "id": "b685045e-cea3-4df1-b68f-c87353599cb3",
-      "name": "Granma"
+      "name": "Granma",
+      "date": 1677440832569
     },
     "4d5f802c-621f-44d3-aeed-bcf6ac0ae039": {
       "id": "4d5f802c-621f-44d3-aeed-bcf6ac0ae039",
-      "name": "Holguín"
+      "name": "Holguín",
+      "date": 1677440832569
     },
     "234df1e2-e2f3-49aa-ab99-809d8a3b66d8": {
       "id": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
-      "name": "Santiago de Cuba"
+      "name": "Santiago de Cuba",
+      "date": 1677440832569
     },
     "8499dd72-7bed-4c5a-9180-68baa4d2bbef": {
       "id": "8499dd72-7bed-4c5a-9180-68baa4d2bbef",
-      "name": "Isla de la Juventud"
+      "name": "Isla de la Juventud",
+      "date": 1677440832569
     }
   },
-  "municipalities": {},
+  "municipalities": {
+    "da704234-3d05-4b42-8557-68c98d3e5aef": {
+      "id": "da704234-3d05-4b42-8557-68c98d3e5aef",
+      "name": "Santiago de Cuba",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "6f6bbf84-7ad1-449c-be68-d08978d6815c": {
+      "id": "6f6bbf84-7ad1-449c-be68-d08978d6815c",
+      "name": "Contramaestre",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "4a26a232-ccff-4ecc-aab8-45199a5a2b8c": {
+      "id": "4a26a232-ccff-4ecc-aab8-45199a5a2b8c",
+      "name": "Guamá",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "81cda884-bd30-4da2-9e68-0e4022515027": {
+      "id": "81cda884-bd30-4da2-9e68-0e4022515027",
+      "name": "Mella",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "746187c0-2ae3-4008-8d2c-0aecee3af7ef": {
+      "id": "746187c0-2ae3-4008-8d2c-0aecee3af7ef",
+      "name": "Palma Soriano",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "ef6e1edd-b03d-46f7-bdea-c069bc5838f8": {
+      "id": "ef6e1edd-b03d-46f7-bdea-c069bc5838f8",
+      "name": "San Luis",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "858b7b04-6fc0-4e91-9bc1-6e96d5abfbdb": {
+      "id": "858b7b04-6fc0-4e91-9bc1-6e96d5abfbdb",
+      "name": "Segundo Frente",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "6a559771-c042-4076-ba93-326cf292b8fd": {
+      "id": "6a559771-c042-4076-ba93-326cf292b8fd",
+      "name": "Songo-La Maya",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    },
+    "4642089f-f9ce-46d6-9e45-af0f4bc92ef9": {
+      "id": "4642089f-f9ce-46d6-9e45-af0f4bc92ef9FD",
+      "name": "Tercer Frente",
+      "provinces": "234df1e2-e2f3-49aa-ab99-809d8a3b66d8",
+      "date": 1677440832569
+    }
+  },
   "centers": {
     "a240c6df-0fe6-41f8-9d79-812eb80f3094": {
       "id": "a240c6df-0fe6-41f8-9d79-812eb80f3094",
       "address": "Calle ## // Entre 1 y Entre 2",
-      "name": "Casa Almacén Habana",
+      "name": "Casa Almacén 1",
+      "municipalities": "da704234-3d05-4b42-8557-68c98d3e5aef",
       "medicines": [
         { "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc", "count": 1 },
         { "id": "e509418b-aac7-4269-be1d-d60d4857931b", "count": 1 },
@@ -79,7 +150,7 @@
       "date": 1673903291252
     }
   },
-  "types": {
+  "descriptions": {
     "ab5b03d5-7a3a-4b57-a46a-1effca77501b": {
       "id": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
       "name": "Colirios",
@@ -91,30 +162,119 @@
       "date": 1673903291252
     }
   },
+  "pharmaceuticShapes": {
+    "9c666e32-6f10-49ab-a1df-eacd2075e693": {
+      "id": "9c666e32-6f10-49ab-a1df-eacd2075e693",
+      "name": "Soluciones",
+      "date": 1677440832569
+    },
+    "4595f548-3900-484b-8cc0-61b88e52f71c": {
+      "id": "4595f548-3900-484b-8cc0-61b88e52f71c",
+      "name": "Suspenciones",
+      "date": 1677440832569
+    },
+    "1a51bda1-6852-43af-999d-8d073c70aa99": {
+      "id": "1a51bda1-6852-43af-999d-8d073c70aa99",
+      "name": "Emulsiones",
+      "date": 1677440832569
+    },
+    "2f769a04-98b4-4736-a1a2-9007555da8de": {
+      "id": "2f769a04-98b4-4736-a1a2-9007555da8de",
+      "name": "Jarabes",
+      "date": 1677440832569
+    },
+    "737ccc39-b38a-45f9-bce4-a2ef5b60f3a4": {
+      "id": "737ccc39-b38a-45f9-bce4-a2ef5b60f3a4",
+      "name": "Elíxires",
+      "date": 1677440832569
+    },
+    "31e3f967-0c2d-40ae-8b57-4d251e345b30": {
+      "id": "31e3f967-0c2d-40ae-8b57-4d251e345b30",
+      "name": "Lociones",
+      "date": 1677440832569
+    },
+    "e9419f9a-123b-42c1-a911-13a91433dad9": {
+      "id": "e9419f9a-123b-42c1-a911-13a91433dad9",
+      "name": "Ungüento (Pomadas)",
+      "date": 1677440832569
+    },
+    "56d713e4-2d07-4c64-8986-ed32f6a12f20": {
+      "id": "56d713e4-2d07-4c64-8986-ed32f6a12f20",
+      "name": "Pastas",
+      "date": 1677440832569
+    },
+    "60d8b017-6a26-4edb-bfee-0b47e33e8b25": {
+      "id": "60d8b017-6a26-4edb-bfee-0b47e33e8b25",
+      "name": "Cremas",
+      "date": 1677440832569
+    },
+    "a6dd37a8-9e42-4123-926b-06ff87635820": {
+      "id": "a6dd37a8-9e42-4123-926b-06ff87635820",
+      "name": "Jaleas (Gel)",
+      "date": 1677440832569
+    },
+    "b23dd664-ea37-4cb2-b2d1-75b076524c31": {
+      "id": "b23dd664-ea37-4cb2-b2d1-75b076524c31",
+      "name": "Parches",
+      "date": 1677440832569
+    },
+    "9564e04b-9ee1-4e4b-bd8b-2db960e23166": {
+      "id": "9564e04b-9ee1-4e4b-bd8b-2db960e23166",
+      "name": "Polvos",
+      "date": 1677440832569
+    },
+    "afdd1392-1082-4226-8e97-36b96888a2bc": {
+      "id": "afdd1392-1082-4226-8e97-36b96888a2bc",
+      "name": "Granulados",
+      "date": 1677440832569
+    },
+    "9d931026-0332-4db7-81aa-dbae064f0f8d": {
+      "id": "9d931026-0332-4db7-81aa-dbae064f0f8d",
+      "name": "Cápsulas",
+      "date": 1677440832569
+    },
+    "97d1acda-08f1-4c8c-b952-c678536cca42": {
+      "id": "97d1acda-08f1-4c8c-b952-c678536cca42",
+      "name": "Tabletas (Comprimidos)",
+      "date": 1677440832569
+    },
+    "2e978179-1fa3-4594-9b72-729a408d337b": {
+      "id": "2e978179-1fa3-4594-9b72-729a408d337b",
+      "name": "Pastillas",
+      "date": 1677440832569
+    },
+    "0bf8eb7f-78cc-45b6-8c66-6723fee71202": {
+      "id": "0bf8eb7f-78cc-45b6-8c66-6723fee71202",
+      "name": "Píldoras",
+      "date": 1677440832569
+    },
+    "f3423a70-11fd-472e-a1dd-bc4db8e06ab4": {
+      "id": "f3423a70-11fd-472e-a1dd-bc4db8e06ab4",
+      "name": "Supositorios",
+      "date": 1677440832569
+    }
+  },
+  "pharmaceuticGroups": {
+    "0702ee14-2a33-492d-ba44-e7d7da25383d": {
+      "id": "0702ee14-2a33-492d-ba44-e7d7da25383d",
+      "name": "Anticoagulantes",
+      "date": 1677440832569
+    },
+    "59b27959-dc80-4b12-b061-04b8698c3c51": {
+      "id": "59b27959-dc80-4b12-b061-04b8698c3c51",
+      "name": "Antiinflamatorio",
+      "date": 1677440832569
+    }
+  },
   "medicines": {
     "1c8d9a1b-2d05-4a73-a070-df807968d5bc": {
       "id": "1c8d9a1b-2d05-4a73-a070-df807968d5bc",
-      "name": "PrevengoHo Vir",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
-    },
-    "e509418b-aac7-4269-be1d-d60d4857931b": {
-      "id": "e509418b-aac7-4269-be1d-d60d4857931b",
-      "name": "Timolol",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
-    },
-    "4fed2058-89dd-4a1e-b35e-7b3b6d383b76": {
-      "id": "4fed2058-89dd-4a1e-b35e-7b3b6d383b76",
-      "name": "Prednisolona",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
-    },
-    "46d50d9f-3669-40f3-937c-763455c17f4a": {
-      "id": "46d50d9f-3669-40f3-937c-763455c17f4a",
-      "name": "Dorzolamida/Timolol",
-      "type": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
-      "date": 1673903291252
+      "name": "Nombre del Medicamento",
+      "descriptions": "ab5b03d5-7a3a-4b57-a46a-1effca77501b",
+      "uses": "Alguna descripción",
+      "date": 1673903291252,
+      "pharmaceuticGroups": "59b27959-dc80-4b12-b061-04b8698c3c51",
+      "pharmaceuticShape": "59b27959-dc80-4b12-b061-04b8698c3c51"
     }
   }
 }

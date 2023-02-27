@@ -13,8 +13,9 @@
       "medicine": "Medicines",
       "provinces": "Province",
       "municipalities": "Municipality",
-      "descriptions": "Descriptions",
-      "pharmaceuticGroups": "pharmaceuticGroup"
+      "descriptions": "Description",
+      "pharmaceuticGroups": "Pharmaceutic Group",
+      "pharmaceuticShapes": "Pharmaceutic Shape"
     },
     "Empty": {
       "title": "There are not results"
@@ -68,6 +69,9 @@
       },
       "pharmaceuticGroups": {
         "Title": "Pharmaceutic Groups"
+      },
+      "pharmaceuticShapes": {
+        "Title": "Pharmaceutic Shapes"
       },
       "Forms": {
         "centers": {
@@ -124,6 +128,14 @@
             "required": true,
             "placeholder": "ex: Antiinflamatorio"
           }
+        },
+        "pharmaceuticShapes": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Soluciones"
+          }
         }
       },
       "Sidebar": {
@@ -155,7 +167,11 @@
           },
           {
             "href": "/dashboard?seeing=pharmaceuticGroups",
-            "label": "Grupo Farmacológico"
+            "label": "Pharmaceutic Groups"
+          },
+          {
+            "href": "/dashboard?seeing=pharmaceuticShapes",
+            "label": "Pharmaceutic Shapes"
           }
         ]
       }
@@ -176,7 +192,8 @@
       "date": "Última modificación",
       "municipalities": "Municipios",
       "descriptions": "Forma de Descripción",
-      "pharmaceuticGroups": "Grupo Farmacológico"
+      "pharmaceuticGroups": "Grupo Farmaceútico",
+      "pharmaceuticShapes": "Forma Farmaceútica"
     },
     "Empty": {
       "title": "No hay resultados"
@@ -217,7 +234,7 @@
         "Title": "Panel administrativo"
       },
       "medicines": {
-        "Title": "Medicinas"
+        "Title": "Medicamentos"
       },
       "provinces": {
         "Title": "Provincias"
@@ -225,9 +242,12 @@
       "municipalities": {
         "Title": "Municipios"
       },
-      "descriptions": { "Title": "Forma de Descripción" },
+      "descriptions": { "Title": "Descripciones" },
       "pharmaceuticGroups": {
-        "Title": "Grupo Farmacológico"
+        "Title": "Grupos Farmaceúticos"
+      },
+      "pharmaceuticShapes": {
+        "Title": "Formas Farmaceúticas"
       },
       "Forms": {
         "centers": {
@@ -284,13 +304,21 @@
             "required": true,
             "placeholder": "ex: Antiinflamatorio"
           }
+        },
+        "pharmaceuticShapes": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Soluciones"
+          }
         }
       },
       "Sidebar": {
         "Title": "Operaciones",
         "Links": [
           {
-            "href": "/",
+            "href": "/dashboard",
             "label": "Panel Administrativo"
           },
           {
@@ -311,11 +339,15 @@
           },
           {
             "href": "/dashboard?seeing=descriptions",
-            "label": "Formas de Descripción"
+            "label": "Descripciones"
           },
           {
             "href": "/dashboard?seeing=pharmaceuticGroups",
-            "label": "Categorias Farmacológicas"
+            "label": "Grupos Farmaceúticos"
+          },
+          {
+            "href": "/dashboard?seeing=pharmaceuticShapes",
+            "label": "Formas Farmaceúticas"
           }
         ]
       }

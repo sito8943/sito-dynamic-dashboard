@@ -1,10 +1,15 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { dehydrate, QueryClient } from "@tanstack/react-query";
 
 // @fortawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPencil,
+  faTrash,
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 // services
 import { fetchModel, useModel } from "../../../services/services";
@@ -26,9 +31,11 @@ const List = (props) => {
   const { model } = props;
   const { languageState } = useLanguage();
 
+  const [page, setPage] = useState(0);
+
   const { data, isLoading, isFetching } = useModel(
     model,
-    0,
+    page,
     10,
     prefabs[model]
   );
@@ -42,12 +49,13 @@ const List = (props) => {
       {isLoading ? (
         <Loading type="400" />
       ) : (
-        <div className="flex w-full h-full items-center justify-center">
-          {data?.length ? (
-            <table className={`${styles.bordered} w-full h-full`}>
+        <div className="flex w-full h-full items-center justify-center flex-col">
+          {console.log(data)}
+          {data?.list.length ? (
+            <table className={`${styles.bordered} w-full h-full min-h-full`}>
               <tbody>
                 <tr>
-                  {Object.keys(data[0])
+                  {Object.keys(data?.list[0])
                     .filter((item) => item !== "id")
                     .map((item, i) => (
                       <th
@@ -60,7 +68,7 @@ const List = (props) => {
 
                   <th className={`${styles.operation} w-operation`}></th>
                 </tr>
-                {data?.map((item) => (
+                {data?.list.map((item) => (
                   <tr key={item.id}>
                     {Object.keys(item)
                       .filter((jtem) => jtem !== "id")
@@ -85,6 +93,20 @@ const List = (props) => {
           ) : (
             <Empty />
           )}
+          {data?.totalPages > 1 ? (
+            <div className="w-full flex items-center justify-end gap-2 mt-1">
+              <button onClick={() => setPage(page - 1)} disabled={page === 0}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              <span>{page + 1}</span>
+              <button
+                onClick={() => setPage(page + 1)}
+                disabled={page === data?.totalPages - 1}
+              >
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
+          ) : null}
         </div>
       )}
     </div>

@@ -16,7 +16,7 @@ import Body from "../layout/Body";
 import config from "../lib/config";
 
 // styles
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const { languageState, setLanguageState } = useLanguage();
@@ -27,7 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      setLanguageState({ type: "set", lang: getUserLanguage(config.language) });
+      // setLanguageState({ type: "set", lang: getUserLanguage(config.language) });
     } catch (err) {
       console.error(err);
     }
