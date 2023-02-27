@@ -35,6 +35,13 @@ const List = (props) => {
 
   const [showFilters, setShowFilters] = useState(false);
 
+  const [name, setName] = useState("");
+
+  const handleFilters = (e) => {
+    const { target } = e;
+    const { value } = target;
+  };
+
   const toggleFilters = () => setShowFilters(!showFilters);
 
   const { data, isLoading, isFetching } = useModel(
@@ -54,13 +61,28 @@ const List = (props) => {
         <Loading type="400" />
       ) : (
         <div className="flex w-full h-full items-center justify-center flex-col">
-          <div className={`w-full flex items-center ${styles.filters}`}>
+          <div className="w-full flex items-center">
             <button
               onClick={toggleFilters}
               className="transition hover:bg-dodger rounded-circle w-icon h-icon"
             >
               <FontAwesomeIcon icon={faFilter} />
             </button>
+          </div>
+          <div
+            className={`${showFilters ? styles.expanded : ""} ${
+              styles.filters
+            }`}
+          >
+            <div className="flex flex-col gap-10">
+              <label>{}</label>
+              <input
+                id="name"
+                className="bg-dark-blood rounded-20px p-active bg-none w-full"
+                value={name}
+                onChange={handleFilters}
+              />
+            </div>
           </div>
           {data?.list.length ? (
             <table className={`${styles.bordered} w-full h-full min-h-full`}>
