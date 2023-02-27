@@ -46,7 +46,7 @@ const Login = () => {
       <Head />
       <Body>
         <div className="bg-dark-blood flex items-center justify-center w-viewport h-viewport">
-          <form class={`${styles.form}`} onSubmit={submit}>
+          <form className={`${styles.form}`} onSubmit={submit}>
             <div className="bg-blood rounded-20px flex flex-col justify-between xs:p-mobil md:p-tablet h-full">
               <div className="flex flex-col gap-2.5">
                 <h1 className="text-dodger text-h1-xs">{loginText.Title}</h1>
@@ -95,7 +95,10 @@ const Login = () => {
                   </div>
                 </div>
               </div>
-              <Link href="/forgot-password" className="text-dodger underline xs:mt-10">
+              <Link
+                href="/forgot-password"
+                className="text-dodger underline xs:mt-10"
+              >
                 {loginText.Forgot}
               </Link>
             </div>

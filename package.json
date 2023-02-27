@@ -1,6 +1,6 @@
 {
   "name": "sito-dynamic-dashboard",
-  "version": "0.2.10",
+  "version": "0.3.3",
   "private": false,
   "dependencies": {
     "@builder.io/partytown": "^0.7.4",
@@ -14,11 +14,13 @@
     "@tanstack/react-query": "^4.22.4",
     "eslint": "^8.32.0",
     "eslint-config-next": "^13.1.2",
+    "ky": "^0.33.2",
+    "ky-universal": "^0.11.0",
     "next": "13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "some-javascript-utils": "^0.2.1",
-    "uuidv4": "^6.2.13"
+    "uuid": "^9.0.0"
   },
   "scripts": {
     "dev": "next dev",

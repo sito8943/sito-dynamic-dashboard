@@ -8,7 +8,16 @@
       "clear": "Clear"
     },
     "Labels": {
-      "name": "Name"
+      "name": "Name",
+      "date": "Modified",
+      "medicine": "Medicines",
+      "provinces": "Province",
+      "municipalities": "Municipality",
+      "descriptions": "Descriptions",
+      "pharmaceuticGroups": "pharmaceuticGroup"
+    },
+    "Empty": {
+      "title": "There are not results"
     },
     "AppName": "APP TITLE",
     "Navbar": {
@@ -54,6 +63,12 @@
       "municipalities": {
         "Title": "Municipalities"
       },
+      "descriptions": {
+        "Title": "Descriptions"
+      },
+      "pharmaceuticGroups": {
+        "Title": "Pharmaceutic Groups"
+      },
       "Forms": {
         "centers": {
           "name": {
@@ -90,7 +105,24 @@
             "id": "provinces",
             "type": "autocomplete",
             "required": true,
-            "model": "province"
+            "model": "province",
+            "placeholder": "ex: Santiago de Cuba"
+          }
+        },
+        "descriptions": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Colirios"
+          }
+        },
+        "pharmaceuticGroups": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Antiinflamatorio"
           }
         }
       },
@@ -116,6 +148,14 @@
           {
             "href": "/dashboard?seeing=medicines",
             "label": "Medicines"
+          },
+          {
+            "href": "/dashboard?seeing=descriptions",
+            "label": "Descriptions"
+          },
+          {
+            "href": "/dashboard?seeing=pharmaceuticGroups",
+            "label": "Grupo Farmacológico"
           }
         ]
       }
@@ -130,7 +170,16 @@
       "clear": "Limpiar"
     },
     "Labels": {
-      "name": "Nombre"
+      "name": "Nombre",
+      "medicine": "Medicamentos",
+      "provinces": "Provincia",
+      "date": "Última modificación",
+      "municipalities": "Municipios",
+      "descriptions": "Forma de Descripción",
+      "pharmaceuticGroups": "Grupo Farmacológico"
+    },
+    "Empty": {
+      "title": "No hay resultados"
     },
     "AppName": "APP TITLE",
     "Navbar": {
@@ -176,6 +225,10 @@
       "municipalities": {
         "Title": "Municipios"
       },
+      "descriptions": { "Title": "Forma de Descripción" },
+      "pharmaceuticGroups": {
+        "Title": "Grupo Farmacológico"
+      },
       "Forms": {
         "centers": {
           "name": {
@@ -207,6 +260,29 @@
             "type": "text",
             "required": true,
             "placeholder": "ej: San Luis"
+          },
+          "provinces": {
+            "id": "provinces",
+            "type": "autocomplete",
+            "required": true,
+            "model": "province",
+            "placeholder": "ex: Santiago de Cuba"
+          }
+        },
+        "descriptions": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Colirios"
+          }
+        },
+        "pharmaceuticGroups": {
+          "name": {
+            "id": "name",
+            "type": "text",
+            "required": true,
+            "placeholder": "ex: Antiinflamatorio"
           }
         }
       },
@@ -226,12 +302,20 @@
             "label": "Municipios"
           },
           {
-            "href": "/centers",
+            "href": "/dashboard?seeing=centers",
             "label": "Centros"
           },
           {
-            "href": "/medicines",
+            "href": "/dashboard?seeing=medicines",
             "label": "Medicamentos"
+          },
+          {
+            "href": "/dashboard?seeing=descriptions",
+            "label": "Formas de Descripción"
+          },
+          {
+            "href": "/dashboard?seeing=pharmaceuticGroups",
+            "label": "Categorias Farmacológicas"
           }
         ]
       }

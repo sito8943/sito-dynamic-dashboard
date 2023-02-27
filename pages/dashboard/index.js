@@ -39,14 +39,14 @@ const Login = () => {
     <>
       <Head />
       <Body>
-        <div className="bg-dark-blood flex w-viewport h-viewport">
+        <div className="bg-dark-blood flex w-viewport min-h-viewport">
           <div
             className={`${styles.sidebar} bg-sidebar h-viewport flex flex-col p-tablet gap-10`}
           >
             <h2 className="text-h4">{dashboardText.Sidebar.Title}</h2>
             {dashboardText.Sidebar.Links.map((item) => (
               <Link
-                className={`cursor-pointer transition w-full ease duration-150 hover:bg-dodger hover:text-white p-active rounded-20px ${
+                className={`cursor-pointer w-full transition ease duration-150 hover:bg-dodger hover:text-white p-active rounded-20px ${
                   router.asPath === item.href ? "bg-dodger" : ""
                 }`}
                 key={item.label}

@@ -10,8 +10,8 @@ import { fetchTable } from "../../../lib/driver";
  */
 export default async function handler(req, res) {
   try {
-    const provinces = await fetchTable("provinces");
-    res.status(200).json({ provinces: Object.values(provinces) });
+    const pharmaceuticGroups = await fetchTable("pharmaceuticGroups");
+    res.status(200).json({ pharmaceuticGroups: Object.values(pharmaceuticGroups) });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: String(err) });
