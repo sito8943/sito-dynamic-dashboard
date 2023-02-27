@@ -9,6 +9,13 @@
   justify-content: space-between;
 }
 
+.icon-button {
+  min-width: 35px;
+  min-height: 35px;
+  width: 35px;
+  height: 35px;
+}
+
 .left {
   gap: 20px;
   display: flex;

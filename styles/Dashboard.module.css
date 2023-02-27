@@ -2,6 +2,13 @@
   width: 400px;
 }
 
+.icon-button {
+  min-width: 35px;
+  min-height: 35px;
+  width: 35px;
+  height: 35px;
+}
+
 .tab-button {
   padding: 5px 10px;
   min-width: 100px;
@@ -41,7 +48,7 @@
 }
 
 .operation {
-  width: 65px;
+  width: 100px;
 }
 
 .first {

@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -41,9 +45,11 @@ module.exports = {
         operation: "65px",
       },
       minWidth: {
+        icon: "35px",
         viewport: "100vw",
       },
       minHeight: {
+        icon: "35px",
         viewport: "100vh",
       },
       height: {

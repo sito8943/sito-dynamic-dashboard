@@ -87,13 +87,15 @@ const List = (props) => {
                         <td key={jtem}>{parseAttributes(jtem, item[jtem])}</td>
                       ))}
 
-                    <td
-                      className={`${styles.operation} flex gap-10 w-operation`}
-                    >
-                      <button className="transition hover:bg-dodger rounded-circle w-icon h-icon">
+                    <td className={`${styles.operation} flex gap-10`}>
+                      <button
+                        className={`transition hover:bg-dodger rounded-circle ${styles["icon-button"]}`}
+                      >
                         <FontAwesomeIcon icon={faPencil} />
                       </button>
-                      <button className="transition hover:bg-dodger rounded-circle w-icon h-icon">
+                      <button
+                        className={`transition hover:bg-dodger rounded-circle ${styles["icon-button"]}`}
+                      >
                         <FontAwesomeIcon icon={faTrash} />
                       </button>
                     </td>
