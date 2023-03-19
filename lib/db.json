@@ -139,93 +139,93 @@
     }
   },
   "pharmaceuticShape": {
-    "": {
-      "id": "",
+    "a17e7fc5-3605-45b9-92f2-4d11be5065e9": {
+      "id": "a17e7fc5-3605-45b9-92f2-4d11be5065e9",
       "name": "Soluciones",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "8c7faf72-e961-428b-9efd-269f354b431d": {
+      "id": "8c7faf72-e961-428b-9efd-269f354b431d",
       "name": "Suspenciones",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "680dbc0f-c253-4e8e-b5a2-3ac85562ff41": {
+      "id": "680dbc0f-c253-4e8e-b5a2-3ac85562ff41",
       "name": "Emulsiones",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "d6dbe19f-1b74-4c09-be18-3aee98bfad27": {
+      "id": "d6dbe19f-1b74-4c09-be18-3aee98bfad27",
       "name": "Jarabes",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "4e4d1557-16a5-4442-97c7-6d66e9bc3c77": {
+      "id": "4e4d1557-16a5-4442-97c7-6d66e9bc3c77",
       "name": "Elíxires",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "39fc06f8-cd53-4d25-a934-0c5b1c708596": {
+      "id": "39fc06f8-cd53-4d25-a934-0c5b1c708596",
       "name": "Lociones",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "72ee457d-2bff-4a58-8e42-16634690cd96": {
+      "id": "72ee457d-2bff-4a58-8e42-16634690cd96",
       "name": "Ungüento (Pomadas)",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "87ff7f44-6e63-437d-9580-21559d029d54": {
+      "id": "87ff7f44-6e63-437d-9580-21559d029d54",
       "name": "Pastas",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "c637a723-221b-406c-8fd8-558bd178bba0": {
+      "id": "c637a723-221b-406c-8fd8-558bd178bba0",
       "name": "Cremas",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "139d7062-537c-4352-a2ea-1e0d8e558f11": {
+      "id": "139d7062-537c-4352-a2ea-1e0d8e558f11",
       "name": "Jaleas (Gel)",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "1de335a7-b5ec-405d-93ea-932442773808": {
+      "id": "1de335a7-b5ec-405d-93ea-932442773808",
       "name": "Parches",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "c5e8eb95-56d3-4970-a20f-2ab74951e955": {
+      "id": "c5e8eb95-56d3-4970-a20f-2ab74951e955",
       "name": "Polvos",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "d5b3b0e8-9ea3-44a7-8ce2-a87163c21ea0": {
+      "id": "d5b3b0e8-9ea3-44a7-8ce2-a87163c21ea0",
       "name": "Granulados",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "dcd1bd2e-7984-4158-a0d7-bf56a28ccade": {
+      "id": "dcd1bd2e-7984-4158-a0d7-bf56a28ccade",
       "name": "Cápsulas",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "a4850af8-a183-4708-975a-c7d3074de4da": {
+      "id": "a4850af8-a183-4708-975a-c7d3074de4da",
       "name": "Tabletas (Comprimidos)",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "b2639ca3-6fb3-4e2b-a2ca-13d09eb307bb": {
+      "id": "b2639ca3-6fb3-4e2b-a2ca-13d09eb307bb",
       "name": "Pastillas",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "36d4a3cc-97d2-43f6-9aa5-bf52516aa449": {
+      "id": "36d4a3cc-97d2-43f6-9aa5-bf52516aa449",
       "name": "Píldoras",
       "date": 1677440832569
     },
-    "": {
-      "id": "",
+    "aafe5dc8-442c-4310-8fd9-a0c608e5cda0": {
+      "id": "aafe5dc8-442c-4310-8fd9-a0c608e5cda0",
       "name": "Supositorios",
       "date": 1677440832569
     }
@@ -233,11 +233,13 @@
   "pharmaceuticGroups": {
     "0702ee14-2a33-492d-ba44-e7d7da25383d": {
       "id": "0702ee14-2a33-492d-ba44-e7d7da25383d",
-      "name": "Anticoagulantes"
+      "name": "Anticoagulantes",
+      "date": 1677440832569
     },
     "59b27959-dc80-4b12-b061-04b8698c3c51": {
       "id": "59b27959-dc80-4b12-b061-04b8698c3c51",
-      "name": "Antiinflamatorio"
+      "name": "Antiinflamatorio",
+      "date": 1677440832569
     }
   },
   "medicines": {
