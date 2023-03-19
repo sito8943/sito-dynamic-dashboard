@@ -3,10 +3,17 @@
   height: 60px;
   width: 100%;
   display: flex;
-  padding: 0 10rem;
+  padding: 0 40px;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
+}
+
+.icon {
+  min-width: 35px;
+  min-height: 35px;
+  transition: all 150ms ease;
+  @apply p-icon rounded-circle w-icon h-icon text-dodger hover:text-white hover:bg-dodger
 }
 
 .left {

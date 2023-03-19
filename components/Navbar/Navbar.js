@@ -59,10 +59,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <button
-          onClick={() => setShowSearch(true)}
-          className="p-icon rounded-circle w-icon h-icon transition ease duration-150 text-dodger hover:text-white hover:bg-dodger"
-        >
+        <button onClick={() => setShowSearch(true)} className={styles.icon}>
           <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
