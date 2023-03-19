@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from "react";
 
 import { getUserLanguage } from "some-javascript-utils/browser";
+// some-javascript-utils
+import { createCookie } from "some-javascript-utils/browser";
 
 // styles
 import styles from "../../styles/Login.module.css";
@@ -8,8 +10,15 @@ import styles from "../../styles/Login.module.css";
 // contexts
 import { useLanguage } from "../../context/LanguageProvider";
 
+// utils
+import { logUser, userLogged } from "../../utils/auth";
+
+// services
+import { login } from "../../services/auth";
+
 // components
 import Link from "../../components/Link/Link";
+import Loading from "../../components/Loading/Loading";
 
 // layouts
 import Head from "../../layout/Head";
@@ -18,6 +27,7 @@ import Body from "../../layout/Body";
 import config from "../../lib/config";
 
 const Login = () => {
+  const { setNotificationState } = useNotification();
   const { languageState, setLanguageState } = useLanguage();
 
   useEffect(() => {
@@ -31,14 +41,42 @@ const Login = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
+  const [showPassword, setShowPassword] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+  const [ok, setOk] = useState(1);
+
   const [remember, setRemember] = useState(false);
 
   const loginText = useMemo(() => {
     return languageState.texts.Login;
   }, [languageState]);
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await login(user, password, remember);
+      const data = response.data;
+      const { apps } = data;
+      createCookie(
+        config.basicKeyCookie,
+        response.data.expiration,
+        response.data.token
+      );
+      logUser(remember, user.split("@")[0], apps || {});
+      showNotification("success", loginText.loginSuccessful);
+      setTimeout(() => {
+        if (userLogged()) window.location.href = "/";
+      }, 100);
+    } catch (err) {
+      console.error(err);
+      const { response } = err;
+      if (response && response.status === 401)
+        showNotification("error", languageState.texts.errors.wrong);
+      else showNotification("error", String(err));
+    }
+    setLoading(false);
   };
 
   return (
