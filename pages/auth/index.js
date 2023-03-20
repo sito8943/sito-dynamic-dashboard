@@ -11,7 +11,7 @@ import styles from "../../styles/Login.module.css";
 import { useLanguage } from "../../context/LanguageProvider";
 
 // utils
-import { logUser, userLogged } from "../../utils/auth";
+import { logUser, userLogged } from "../../lib/auth";
 
 // services
 import { login } from "../../services/auth";
