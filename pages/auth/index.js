@@ -1,14 +1,14 @@
 import React, { useState, useMemo, useEffect } from "react";
 
-import { getUserLanguage } from "some-javascript-utils/browser";
+import { getUserLanguage, createCookie } from "some-javascript-utils/browser";
 // some-javascript-utils
-import { createCookie } from "some-javascript-utils/browser";
 
 // styles
 import styles from "../../styles/Login.module.css";
 
 // contexts
 import { useLanguage } from "../../context/LanguageProvider";
+import { useNotification } from "../../context/NotificationProvider";
 
 // utils
 import { logUser, userLogged } from "../../lib/auth";
@@ -28,6 +28,14 @@ import config from "../../lib/config";
 
 const Login = () => {
   const { setNotificationState } = useNotification();
+
+  const showNotification = (ntype, message) =>
+  setNotificationState({
+    type: "set",
+    ntype,
+    message,
+  });
+
   const { languageState, setLanguageState } = useLanguage();
 
   useEffect(() => {

@@ -19,6 +19,7 @@ import Script from "next/script";
 
 // contexts
 import { LanguageProvider } from "../context/LanguageProvider";
+import { NotificationProvider } from "../context/NotificationProvider";
 
 export default function App({ Component, pageProps }) {
   // This ensures that data is not shared
@@ -35,7 +36,9 @@ export default function App({ Component, pageProps }) {
           strategy="worker"
         />
         <LanguageProvider>
-          <Component {...pageProps} />
+          <NotificationProvider>
+            <Component {...pageProps} />
+          </NotificationProvider>
         </LanguageProvider>
       </Hydrate>
     </QueryClientProvider>

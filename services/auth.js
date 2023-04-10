@@ -1,6 +1,6 @@
 import axios from "axios";
-import { getAuth } from "../auth/auth";
-import config from "../config";
+import { getAuth } from "../lib/auth";
+import config from "../lib/config";
 
 // some-javascript-utils
 import { getCookie } from "some-javascript-utils/browser";
