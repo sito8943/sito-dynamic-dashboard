@@ -19,6 +19,7 @@ import { login } from "../../services/auth";
 // components
 import Link from "../../components/Link/Link";
 import Loading from "../../components/Loading/Loading";
+import Notification from "../../components/Notification/Notification";
 
 // layouts
 import Head from "../../layout/Head";
@@ -30,11 +31,11 @@ const Login = () => {
   const { setNotificationState } = useNotification();
 
   const showNotification = (ntype, message) =>
-  setNotificationState({
-    type: "set",
-    ntype,
-    message,
-  });
+    setNotificationState({
+      type: "set",
+      ntype,
+      message,
+    });
 
   const { languageState, setLanguageState } = useLanguage();
 
@@ -81,7 +82,7 @@ const Login = () => {
       console.error(err);
       const { response } = err;
       if (response && response.status === 401)
-        showNotification("error", languageState.texts.errors.wrong);
+        showNotification("error", languageState.texts.Errors.Wrong);
       else showNotification("error", String(err));
     }
     setLoading(false);
@@ -91,6 +92,7 @@ const Login = () => {
     <>
       <Head />
       <Body>
+        <Notification />
         <div className="bg-dark-blood flex items-center justify-center w-viewport h-viewport">
           <form className={`${styles.form}`} onSubmit={submit}>
             <div className="bg-blood rounded-20px flex flex-col justify-between xs:p-mobil md:p-tablet h-full">

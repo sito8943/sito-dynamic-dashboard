@@ -252,5 +252,15 @@
       "pharmaceuticGroups": "59b27959-dc80-4b12-b061-04b8698c3c51",
       "pharmaceuticShape": "59b27959-dc80-4b12-b061-04b8698c3c51"
     }
+  },
+  "users": {
+    "sito8943": {
+      "id": "sito8943",
+      "user": "sito8943",
+      "name": "Carlos Andrés",
+      "lName": "Mora González",
+      "ci": "98122921641",
+      "password": "a8290233b1b29638d626afbda0b40a03"
+    }
   }
 }

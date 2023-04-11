@@ -7,14 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // @emotion/css
 import { css } from "@emotion/css";
 
-// react-cool-onclickoutside
-import useOnclickOutside from "react-cool-onclickoutside";
-
 // contexts
 import { useNotification } from "../../contexts/NotificationProvider";
 
 // styles
-import "./styles.css";
+import styles from "../../styles/Notification.module.css";
 
 export default function Notification() {
   const { notificationState } = useNotification();
@@ -57,23 +54,13 @@ export default function Notification() {
   }, [notificationState]);
 
   return (
-    <div
-      className={`fixed left-1 bottom-1 z-40 ${open ? "appear" : "disappear"}`}
-    >
+    <div className={`${styles.back} ${open ? "appear" : "disappear"}`}>
       {openR ? (
-        <div
-          ref={ref}
-          className={`relative notification rounded-scard p-5 ${getColor()} ${css(
-            {
-              width: "300px",
-              border: "1px solid #8080804a",
-            }
-          )}`}
-        >
-          <button onClick={handleClose} className="absolute top-1 right-2">
-            <FontAwesomeIcon className="text-white" icon={faClose} />
+        <div ref={ref} className={`${styles.notification} ${getColor()}`}>
+          <button onClick={handleClose}>
+            <FontAwesomeIcon icon={faClose} />
           </button>
-          <h4 className="text-body1 text-white">{notificationState.message}</h4>
+          <h4>{notificationState.message}</h4>
         </div>
       ) : null}
     </div>

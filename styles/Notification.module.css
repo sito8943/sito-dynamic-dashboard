@@ -1,0 +1,37 @@
+.notification {
+  width: 300px;
+  border: 1px solid #8080804a;
+  @apply relative notification rounded-scard p-5;
+}
+
+.notification button {
+  @apply absolute top-1 right-2;
+}
+
+.notification button svg {
+  @apply text-white;
+}
+
+.notification h4 {
+  @apply text-body1 text-white;
+}
+
+.back {
+  @apply fixed left-1 bottom-1 z-40;
+}
+
+.info {
+  @apply bg-info;
+}
+
+.warning {
+  @apply bg-warning;
+}
+
+.success {
+  @apply bg-success;
+}
+
+.error {
+  @apply bg-error;
+}

@@ -159,6 +159,10 @@
           }
         ]
       }
+    },
+    "Errors": {
+      "Fatal": "Something went wrong",
+      "Wrong": "Wrong username or password"
     }
   },
   "es": {
@@ -319,6 +323,10 @@
           }
         ]
       }
+    },
+    "Errors": {
+      "Fatal": "Algo ha salido mal",
+      "Wrong": "Usuario o contraseña incorrectos"
     }
   }
 }
