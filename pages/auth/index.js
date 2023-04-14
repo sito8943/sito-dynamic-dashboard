@@ -88,7 +88,6 @@ const Login = () => {
         showNotification("error", languageState.texts.Errors.Wrong);
       else showNotification("error", String(err));
     }
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -101,7 +100,9 @@ const Login = () => {
       <Head />
       <Body>
         <Notification />
-        {loading ? <Loading className="fixed h-screen top-0 left-0 bg-blood" /> : null}
+        {loading ? (
+          <Loading className="fixed h-screen top-0 left-0 bg-blood" />
+        ) : null}
         <div
           className={`bg-dark-blood flex items-center justify-center w-viewport ${global.fill}`}
         >

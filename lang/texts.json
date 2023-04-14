@@ -24,12 +24,13 @@
       "Search": {
         "placeholder": "Search..."
       },
-      "Links": [
-        {
-          "label": "Sign in",
-          "href": "/auth"
-        }
-      ]
+      "Links": [],
+      "cta": {
+        "label": "Sign in",
+        "href": "/auth",
+        "logged": "Dashboard",
+        "loggedHref": "/dashboard"
+      }
     },
     "Login": {
       "Remember": "Remember me",
@@ -193,12 +194,13 @@
       "Search": {
         "placeholder": "Buscar..."
       },
-      "Links": [
-        {
-          "label": "Iniciar sesión",
-          "href": "/auth"
-        }
-      ]
+      "Links": [],
+      "cta": {
+        "label": "Iniciar sesión",
+        "href": "/auth",
+        "logged": "Panel administrativo",
+        "loggedHref": "/dashboard"
+      }
     },
     "Login": {
       "Remember": "Recordarme",

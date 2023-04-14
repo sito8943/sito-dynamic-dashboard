@@ -46,6 +46,7 @@ module.exports = {
         operation: "65px",
       },
       minWidth: {
+        button: "100px",
         viewport: "100vw",
       },
       minHeight: {
@@ -58,7 +59,7 @@ module.exports = {
       },
       padding: {
         icon: "2px 2px 0 0",
-        active: "5px 15px",
+        active: "5px 20px",
         pc: "40px 10rem",
         tablet: "40px",
         mobil: "20px",

@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 // components
@@ -7,7 +7,11 @@ import Link from "../Link/Link";
 
 // @fortawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faBars,
+  faArrowRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
 
 // styles
 import styles from "../../styles/Navbar.module.css";
@@ -15,11 +19,30 @@ import styles from "../../styles/Navbar.module.css";
 // lang
 import { useLanguage } from "../../context/LanguageProvider";
 
+// utils
+import { logUser, logoutUser, userLogged } from "../../lib/auth";
+
 // components
 import Drawer from "./Drawer/Drawer";
+import Loading from "../Loading/Loading";
 
 const Navbar = () => {
   const router = useRouter();
+
+  const [loading, setLoading] = useState(true);
+
+  const [hasUser, setHasUser] = useState(false);
+  const [logout, setLogout] = useState(false);
+
+  useEffect(() => {
+    if (logout) {
+      logoutUser();
+      setLogout(false);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
+    }
+  }, [logout]);
 
   const { languageState } = useLanguage();
 
@@ -33,8 +56,15 @@ const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
 
+  useEffect(() => {
+    if (userLogged()) setHasUser(true);
+    else setHasUser(false);
+    setLoading(false);
+  }, []);
+
   return (
     <nav className={`${styles.navbar} bg-blood`}>
+      {loading ? <Loading className="fixed top-0 left-0 bg-blood" /> : null}
       <Drawer visible={showDrawer} onClose={() => setShowDrawer(false)} />
       <div className={styles.left}>
         <button onClick={() => setShowDrawer(true)} className={styles.toggle}>
@@ -59,9 +89,31 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <button onClick={() => setShowSearch(true)} className={styles.icon}>
+        <Link
+          className={`cursor-pointer   transition ease duration-150 hover:bg-dark-dodger ${hasUser ? "px-5 py-1" : "bg-dodger px-5 py-1 min-w-button"} rounded-20px flex justify-center ${
+            router.asPath === `/${navbarText.cta.href}` ? "bg-dodger" : ""
+          }`}
+          href={!hasUser ? navbarText.cta.href : navbarText.cta.loggedHref}
+        >
+          {hasUser ? navbarText.cta.logged : navbarText.cta.label}
+        </Link>
+
+        <button
+          id="search"
+          onClick={() => setShowSearch(true)}
+          className={styles.icon}
+        >
           <FontAwesomeIcon icon={faSearch} />
         </button>
+        {hasUser ? (
+          <button
+            id="log-out"
+            onClick={() => setLogout(true)}
+            className={styles.icon}
+          >
+            <FontAwesomeIcon icon={faArrowRightFromBracket} />
+          </button>
+        ) : null}
       </div>
     </nav>
   );
