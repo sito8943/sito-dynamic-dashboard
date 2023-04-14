@@ -21,6 +21,10 @@ module.exports = {
       white: "#ffffff",
       black: "#000000",
       sidebar: "#020817",
+      error: "#CC0000",
+      warning: "#FF8800",
+      success: "#007733",
+      info: "#0099CC",
       "dark-blood": "#050914",
       "dark-dodger": "#0e4881",
     },
@@ -32,6 +36,7 @@ module.exports = {
       borderRadius: {
         "20px": "20px",
         circle: "100%",
+        scard: "2rem",
       },
       width: {
         "app-name": "200px",

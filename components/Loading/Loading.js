@@ -5,13 +5,13 @@ import PropTypes from "prop-types";
 import styles from "../../styles/Loading.module.css";
 
 const Loading = (props) => {
-  const { type } = props;
+  const { type, className } = props;
 
   return (
     <div
       className={`flex w-full h-full items-center justify-center ${
         styles[`type-${type}`]
-      }`}
+      } ${className}`}
     >
       <div className={styles["sk-circle"]}>
         <div className={`${styles["sk-circle1"]} ${styles["sk-child"]}`}></div>

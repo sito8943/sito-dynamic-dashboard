@@ -9,3 +9,7 @@
     height: auto;
   }
 }
+
+.fill {
+  height: calc(100vh - 60px);
+}

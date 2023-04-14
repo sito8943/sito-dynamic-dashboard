@@ -1,7 +1,8 @@
 .notification {
   width: 300px;
   border: 1px solid #8080804a;
-  @apply relative notification rounded-scard p-5;
+  pointer-events: auto !important;
+  @apply relative rounded-2xl p-5;
 }
 
 .notification button {
@@ -13,7 +14,7 @@
 }
 
 .notification h4 {
-  @apply text-body1 text-white;
+  @apply text-sm text-white;
 }
 
 .back {
@@ -34,4 +35,44 @@
 
 .error {
   @apply bg-error;
+}
+
+.canClick {
+  pointer-events: auto;
+}
+
+.noClick {
+  pointer-events: none;
+}
+
+.appear {
+  animation: appear 0.5s ease 1;
+}
+
+.disappear {
+  animation: disappear 0.5s ease 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
 }

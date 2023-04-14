@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { css } from "@emotion/css";
 
 // contexts
-import { useNotification } from "../../contexts/NotificationProvider";
+import { useNotification } from "../../context/NotificationProvider";
 
 // styles
 import styles from "../../styles/Notification.module.css";
@@ -36,10 +36,6 @@ export default function Notification() {
 
   const handleClose = () => setOpen(false);
 
-  const ref = useOnclickOutside(() => {
-    setOpen(false);
-  });
-
   const getColor = useCallback(() => {
     switch (notificationState.type) {
       case "info":
@@ -54,9 +50,14 @@ export default function Notification() {
   }, [notificationState]);
 
   return (
-    <div className={`${styles.back} ${open ? "appear" : "disappear"}`}>
+    <div
+      onClick={handleClose}
+      className={`${styles.back} ${open ? styles.appear : styles.disappear} ${
+        open ? styles.canClick : styles.noClick })
+      }`}
+    >
       {openR ? (
-        <div ref={ref} className={`${styles.notification} ${getColor()}`}>
+        <div className={`${styles.notification} ${getColor()}`}>
           <button onClick={handleClose}>
             <FontAwesomeIcon icon={faClose} />
           </button>

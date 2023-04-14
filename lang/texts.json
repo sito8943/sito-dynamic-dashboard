@@ -163,6 +163,9 @@
     "Errors": {
       "Fatal": "Something went wrong",
       "Wrong": "Wrong username or password"
+    },
+    "Messages": {
+      "LoginSuccessful": "Login successful"
     }
   },
   "es": {
@@ -327,6 +330,9 @@
     "Errors": {
       "Fatal": "Algo ha salido mal",
       "Wrong": "Usuario o contraseña incorrectos"
+    },
+    "Messages": {
+      "LoginSuccessful": "Inicio de sesión correctamente"
     }
   }
 }

@@ -27,6 +27,9 @@ import Body from "../../layout/Body";
 
 import config from "../../lib/config";
 
+// styles
+import global from "../../styles/Login.module.css";
+
 const Login = () => {
   const { setNotificationState } = useNotification();
 
@@ -52,7 +55,7 @@ const Login = () => {
 
   const [showPassword, setShowPassword] = useState(false);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [ok, setOk] = useState(1);
 
   const [remember, setRemember] = useState(false);
@@ -74,7 +77,7 @@ const Login = () => {
         response.data.token
       );
       logUser(remember, user.split("@")[0], apps || {});
-      showNotification("success", loginText.loginSuccessful);
+      showNotification("success", languageState.texts.Messages.LoginSuccessful);
       setTimeout(() => {
         if (userLogged()) window.location.href = "/";
       }, 100);
@@ -88,12 +91,20 @@ const Login = () => {
     setLoading(false);
   };
 
+  useEffect(() => {
+    if (userLogged()) window.location.href = "/";
+    else setLoading(false);
+  }, []);
+
   return (
     <>
       <Head />
       <Body>
         <Notification />
-        <div className="bg-dark-blood flex items-center justify-center w-viewport h-viewport">
+        {loading ? <Loading className="fixed h-screen top-0 left-0 bg-blood" /> : null}
+        <div
+          className={`bg-dark-blood flex items-center justify-center w-viewport ${global.fill}`}
+        >
           <form className={`${styles.form}`} onSubmit={submit}>
             <div className="bg-blood rounded-20px flex flex-col justify-between xs:p-mobil md:p-tablet h-full">
               <div className="flex flex-col gap-2.5">
