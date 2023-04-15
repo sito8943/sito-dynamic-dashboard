@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib,
+.mapboxgl-ctrl-attrib .mapbox-improve-map {
+  display: none !important
+}
+
+.mapboxgl-marker {
+  transition: all 500ms ease;
+  /* animation: appear 0.5s ease 1; */
+}
+
+.mapboxgl-popup-content {
+  background: none !important;
+  transition: all 500ms ease;
+  animation: appear 0.5s ease 1;
+}
+
+.mapboxgl-popup-close-button {
+  width: 17px !important;
+  font-size: 21px !important;
+  color: aliceblue;
+  right: 15px !important;
+  top: 15px !important;
+}
+
+.my-ease {
+  transition: all 500ms ease !important;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  @apply dark:invert;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply dark:bg-dark-background bg-light-background;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  @apply bg-pdark;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+input,
+textarea {
+  @apply dark:placeholder-placeholder-dark placeholder-white-hover;
+}
+
+a,
+option,
+span,
+label,
+textarea,
+input,
+p {
+  @apply text-dark-background2 dark:text-light-background2;
+}
+
+textarea,
+input {
+  @apply dark:bg-dark-background2;
+}
+
+.input-field {
+  @apply flex mt-3 flex-col gap-2;
+}
+
+.half-behavior {
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .half-behavior {
+    width: 100%;
+  }
+}
+
+@media (max-width: 875px) {
+  .half-behavior {
+    width: 100%;
+  }
+}
+
+.save-responsive {
+  padding-bottom: 5px;
+  padding-right: 0px;
+  @apply flex items-center justify-center text-2xl rounded-circle w-9 h-9 pt-1 dark:text-primary  dark:hover:bg-primary hover:bg-primary transition hover:text-white dark:hover:text-white z-50 fixed bottom-5 right-5;
+}
+
+.submit {
+  @apply p-button bg-primary rounded-button text-white font-medium transition hover:bg-pdark;
+}
+
+.secondary {
+  border: 1px solid;
+  @apply p-button rounded-button text-primary font-medium transition border-primary;
+}
+
+.secondary-hover {
+  @apply hover:bg-primary hover:text-white;
+}
+
+.icon-button {
+  @apply text-dark-background dark:text-white-hover text-xl rounded-circle transition hover:text-primary dark:hover:text-primary;
+}
+
+.responsive-image {
+  width: 160px;
+  height: 160px;
+}
+
+@media (max-width: 500px) {
+  .view {
+    @apply flex-col-reverse justify-end;
+  }
+}
+
+@media (max-width: 899px) {
+  .responsive-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 639px) {
+  .responsive-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h5,
+h6,
+p,
+span,
+button,
+label,
+a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.absolute-icon-left {
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  position: absolute;
+}
+
+.absolute-icon-right {
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  position: absolute;
+}
+
+.select-span {
+  display: inherit;
+}
+
+@media (max-width: 720px) {
+  .select-span {
+    display: none;
+  }
+}
+
+.main-content {
+  @apply overflow-auto flex-col flex w-full bg-light-background dark:bg-dark-background rounded-l-2xl p-5 h-full;
+}
+
+.main-content .form {
+  @apply w-full relative p-4 items-start justify-start flex flex-col;
+}
+
+.main-content .loading {
+  @apply absolute w-full h-full dark:bg-dark-background bg-light-background z-20;
+}
+
+.main-content .title {
+  @apply text-h4 font-bold dark:text-white text-dark-background2;
+}
+
+@media (max-width: 500px) {
+  .main-content {
+    margin-top: calc(30px + 1.25rem + 1.25rem);
+  }
+}
+
+.times-rows {
+  @apply flex w-full gap-5 justify-between;
+}
+
+@media (max-width: 475px) {
+  .times-rows {
+    @apply flex-col gap-0;
+  }
+}
+
+
+
+.image-header {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  height: 160px;
+  @apply cursor-pointer relative;
+}
+
+.image-header img {
+  @apply rounded-2xl object-cover;
+}
+
+.image-container {
+  height: 170px;
+  @apply flex items-start gap-2 overflow-x-auto;
+}

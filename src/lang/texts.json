@@ -1,0 +1,797 @@
+{
+  "es": {
+    "appName": "#DeCorazón",
+    "errors": {
+      "notConnected": "No tienes conexión con el servidor",
+      "noProducts": "No hay productos",
+      "noResults": "No hay resultados",
+      "noMenu": "No hay catálogos",
+      "usernameTaken": "Nombre de usuario en uso",
+      "menuNameTaken": "Nombre de catálogo en uso",
+      "invalidMenuName": "Nombre del menú inválido, solo se permiten letras y números",
+      "someWrong": "Ha ocurrido un error",
+      "wrong": "Usuario o contraseña incorrecta",
+      "wrongFile": "Fichero de respaldo inválido",
+      "name": "Debes introducir un nombre",
+      "latRequired": "Debes introducir la latitud",
+      "lngRequired": "Debes introducir la longitud",
+      "priceRequired": "Debes introducir un precio",
+      "fNameRequired": "Debes introducir un nombre",
+      "lNameRequired": "Debes introducir los apellidos",
+      "phoneRequired": "Debes introducir un número celular",
+      "emailRequired": "Debes introducir un correo electrónico",
+      "typeRequired": "Debes introducir una categoría",
+      "invalidPhone": "Número de teléfono inválido",
+      "invalidUrl": "Dirección url inválida",
+      "descriptionRequired": "Debes introducir una descripción",
+      "passwordLengthValidation": "La contraseña debe tener al menos 8 caracteres y no debe pasar de 25 caracteres",
+      "passwordCharacterValidation": "La contraseña debe tener al menos una letra mayúscula, una minúscula y un número",
+      "passwordNameValidation": "La contraseña no debe contener el nombre de usuario",
+      "noEmptyPassword": "La contraseña no puede estar vacía",
+      "differentPassword": "Las contraseñas no coinciden"
+    },
+    "messages": {
+      "loginSuccessful": "Inicio de sesión correctamente",
+      "registerSuccessful": "Registrado correctamente",
+      "saveSuccessful": "Guardado correctamente",
+      "deletedSuccessful": "Eliminado correctamente",
+      "restorePassword": "Se ha restaurado la contraseña",
+      "backupUploaded": "Se ha subido el respaldo correctamente. Id:",
+      "backupCreated": "Se ha creado el respaldo correctamente. Id:"
+    },
+    "auth": {
+      "links": [
+        
+      ],
+      "signIn": "Entrar a Dashboard",
+      "authenticate": {
+        "text": "Ya tengo una cuenta.",
+        "link": "Entrar"
+      },
+      "register": {
+        "text": "¿No tienes cuenta aún?",
+        "link": "¡Crear ya!"
+      },
+      "inputs": {
+        "user": {
+          "id": "user",
+          "type": "text",
+          "label": "Usuario",
+          "placeholder": "ej: jorgerey"
+        },
+        "password": {
+          "id": "password",
+          "type": "password",
+          "label": "Contraseña",
+          "placeholder": "ej:******"
+        },
+        "rPassword": {
+          "id": "rPassword",
+          "type": "password",
+          "label": "Repetir contraseña",
+          "placeholder": "ej:******"
+        },
+        "remember": {
+          "id": "remember",
+          "type": "checkbox",
+          "label": "Recordarme"
+        }
+      }
+    },
+    "cookieBox": {
+      "description": "Nuestro sitio usa cookies para analizar el tráfico de información y así mejorar tu experiencia",
+      "link": "Ver politica de cookies"
+    },
+    "dialogs": {
+      "titles": {
+        "lostChanges": "¡Cambios no guardados!"
+      },
+      "bodies": {
+        "lostChanges": "Los cambios que has realizado tal vez no se guarden"
+      }
+    },
+    "map": {
+      "filters": [
+        {
+          "label": "Centros",
+          "model": "center"
+        }
+      ]
+    },
+    "buttons": {
+      "accept": "Aceptar",
+      "decline": "Denegar",
+      "home": "Ir al inicio",
+      "signIn": "Iniciar sesión",
+      "signUp": "Registrarse",
+      "settings": "Mi Menú",
+      "request": "Solicitar",
+      "send": "Enviar",
+      "save": "Guardar",
+      "insert": "Agregar",
+      "cancel": "Cancelar",
+      "restartPassword": "Restaurar contraseña"
+    },
+    "tooltips": {
+      "edit": "Editar elemento seleccionado",
+      "showSelected": "Habilitar visibilidad",
+      "hideSelected": "Ocultar elementos",
+      "deleteSelected": "Eliminar elementos seleccionados",
+      "notifications": "Ver notificaciones",
+      "logout": "Cerrar sesión",
+      "changeMode": "Cambiar modo",
+      "insert": "Insertando nuevo elemento",
+      "list": "Listar todos los elementos",
+      "modify": "Modificando elemento",
+      "info": "Información general",
+      "promotion": "Información para promoción",
+      "social": "Información para redes sociales",
+      "schedule": "Horario",
+      "map": "Posición en el mapa",
+      "qr": "Código Qr",
+      "security": "Configuración de seguridad",
+      "panoramic": "Imagen panorámica (360°)",
+      "headerImages": "Imagen de cabecera 1000 x 500",
+      "clock": "Historial de acciones en la base de datos",
+      "cloud": "Acciones de respaldo"
+    },
+    "labels": {
+      "promotion": "Activar promoción",
+      "photoPromotion": "Foto para promoción",
+      "descriptionPromotion": "Descripción para promoción"
+    },
+    "sidebar": {
+      "actions": {
+        "/": {
+          "to": "/",
+          "label": "Panel administrativo",
+          "admin": 0
+        },
+        "/activities/": {
+          "to": "/activities/",
+          "label": "Actividades",
+          "admin": 1
+        },
+        "/activityTypes/": {
+          "to": "/activityTypes/",
+          "label": "Tipos de Actividades",
+          "admin": 1
+        },
+        "/map/": { "to": "/map/", "label": "Mapa", "admin": 1 },
+        "/backup/": {
+          "to": "/backup/",
+          "label": "Respaldo",
+          "admin": 0
+        },
+        "/texts/": {
+          "to": "/texts/",
+          "label": "Textos",
+          "admin": 0
+        },
+        "/users/": {
+          "to": "/users/",
+          "label": "Usuarios",
+          "admin": 1
+        },
+        "/profile/": {
+          "to": "/profile/",
+          "label": "Ajustes",
+          "admin": 0
+        },
+        "/auth/sign-out": {
+          "to": "/auth/sign-out",
+          "label": "Cerrar sesión",
+          "admin": 0
+        }
+      }
+    },
+    "settings": {
+      "showLogoOnQr": "Mostrar logo en el QR",
+      "imageSuggestion": "Se recomienda que el logo sea un imagen cuadrada 500x500 píxeles",
+      "promotionImageSuggestion": "Se recomienda que la imagen sea una imagen rectangular 1000x500 píxeles",
+      "titles": {
+        "general": "Información",
+        "security": "Seguridad",
+        "social": "Sociales",
+        "qr": "Código Qr",
+        "schedule": "Horario",
+        "map": "Localización del negocio"
+      },
+      "inputs": {
+        "name": {
+          "id": "name",
+          "type": "text",
+          "label": "Nombre completo"
+        },
+        "fName": {
+          "id": "f-name",
+          "type": "text",
+          "label": "Nombre(s)"
+        },
+        "lName": {
+          "id": "l-name",
+          "type": "text",
+          "label": "Apellidos"
+        },
+        "email": {
+          "id": "email",
+          "type": "email",
+          "label": "Correo electrónico"
+        },
+        "publicName": {
+          "id": "publicName",
+          "label": "Nombre Público"
+        },
+        "phone": {
+          "id": "phone",
+          "label": "Teléfono"
+        },
+        "business": {
+          "id": "business",
+          "label": "Categoria de Negocio",
+          "empty": "No hay tipos de negocios"
+        },
+        "description": {
+          "id": "description",
+          "label": "Descripción de tu negocio",
+          "placeholder": "escribe tu descripción aquí"
+        },
+        "map": {
+          "labels": {
+            "lat": "Latitud",
+            "lng": "Longitud"
+          }
+        },
+        "schedule": {
+          "fullTime": "24 horas",
+          "makeTemplate": "Crear plantilla",
+          "makingTemplate": "Creando plantilla",
+          "empty": "No hay tipos de dias",
+          "labels": {
+            "start": "Hora de apertura",
+            "end": "Hora de cierre",
+            "dayType": "Estado del negocio"
+          },
+          "dayTypes": [
+            {
+              "id": "open",
+              "name": "Abierto"
+            },
+            {
+              "id": "closed",
+              "name": "Cerrado"
+            },
+            {
+              "id": "event",
+              "name": "Evento"
+            },
+            {
+              "id": "maintenance",
+              "name": "Mantenimiento"
+            }
+          ],
+          "days": {
+            "DOM": {
+              "id": "DOM",
+              "reduce": "D",
+              "label": "Domingo"
+            },
+            "LUN": {
+              "id": "LUN",
+              "reduce": "L",
+              "label": "Lunes"
+            },
+            "MAR": {
+              "id": "MAR",
+              "reduce": "M",
+              "label": "Martes"
+            },
+            "MIE": {
+              "id": "MIE",
+              "reduce": "X",
+              "label": "Miércoles"
+            },
+            "JUE": {
+              "id": "JUE",
+              "reduce": "J",
+              "label": "Jueves"
+            },
+            "VIE": {
+              "id": "VIE",
+              "reduce": "V",
+              "label": "Viernes"
+            },
+            "SAB": {
+              "id": "SAB",
+              "reduce": "S",
+              "label": "Sábado"
+            }
+          }
+        },
+        "social": {
+          "id": "currentSocialMedia",
+          "urls": {
+            "any": {
+              "icon": "any",
+              "label": "Web Site",
+              "placeholder": "https://misitioweb.com"
+            },
+            "facebook": {
+              "icon": "facebook",
+              "label": "Facebook",
+              "placeholder": "https://facebook.com.com/misitioweb"
+            },
+            "instagram": {
+              "icon": "instagram",
+              "label": "In  stagram",
+              "placeholder": "https://instagram.com/misitioweb"
+            },
+            "twitter": {
+              "icon": "twitter",
+              "label": "Twitter",
+              "placeholder": "https://twitter.com/misitioweb"
+            },
+            "linkedin": {
+              "icon": "linkedin",
+              "label": "LinkedIn",
+              "placeholder": "https://linkedin.com/in/misitioweb"
+            },
+            "pinterest": {
+              "icon": "pinterest",
+              "label": "Pinterest",
+              "placeholder": "https://www.pinterest.es/misitioweb/"
+            },
+            "youtube": {
+              "icon": "youtube",
+              "label": "YouTube",
+              "placeholder": "https://www.youtube.com/@misitioweb"
+            }
+          }
+        }
+      }
+    },
+    "table": {
+      "singleSelection": "elemento seleccionado",
+      "multiSelection": "elementos seleccionados",
+      "local": {
+        "userStates": {
+          "1": {
+            "id": 1,
+            "name": "Activo"
+          },
+          "2": {
+            "id": 2,
+            "name": "Bloqueado"
+          },
+          "3": {
+            "id": 3,
+            "name": "Eliminado"
+          }
+        },
+      },
+      "values": {
+        "true": "Tiene",
+        "false": "No tiene"
+      },
+      "columns": {
+        "id": {
+          "display": "none"
+        },
+        "photo": {
+          "label": "Foto",
+          "type": "string",
+          "width": "120px",
+          "minWidth": "120px"
+        },
+        "headerImages": {
+          "label": "Foto",
+          "type": "string",
+          "width": "120px",
+          "minWidth": "120px"
+        },
+        "date": {
+          "label": "Última modificación",
+          "type": "number",
+          "width": "200px",
+          "minWidth": "200px"
+        },
+        "visibility": {
+          "label": "Visibilidad",
+          "type": "boolean",
+          "width": "100px",
+          "minWidth": "100px"
+        },
+        "state": {
+          "label": "Estado",
+          "type": "String",
+          "width": "100px",
+          "minWidth": "100px"
+        },
+        "user": {
+          "label": "Usuario",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "150px"
+        },
+        "action": {
+          "label": "Acción",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "collection": {
+          "label": "Colleción",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "220px"
+        },
+        "model": {
+          "label": "Elemento(s)",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "220px"
+        },
+        "title": {
+          "label": "Título",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "name": {
+          "label": "Nombre",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "fName": {
+          "label": "Primer nombre",
+          "type": "string",
+          "width": "50%",
+          "minWidth": "200px"
+        },
+        "lName": {
+          "label": "Apellidos",
+          "type": "string",
+          "width": "50%",
+          "minWidth": "200px"
+        },
+        "apps": {
+          "label": "Aplicaciones",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "category": {
+          "label": "Categoria",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "types": {
+          "label": "Categoria",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "price": {
+          "label": "Precio",
+          "type": "number",
+          "width": "100%",
+          "minWidth": "200px"
+        }
+      }
+    },
+    "models": {
+      "user": {
+        "canPromotion": false,
+        "responsiveList": {
+          "rows": ["user", "state"]
+        },
+        "table": {
+          "columns": ["photo", "state", "user", "fName", "apps", "date", "id"]
+        },
+        "form": {
+          "inputs": {
+            "fName": {
+              "initial": true,
+              "props": {
+                "id": "fName",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Eugenio Rey"
+              },
+              "label": "Nombre"
+            },
+            "lName": {
+              "initial": true,
+              "props": {
+                "id": "lName",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Pérez Pérez"
+              },
+              "label": "Apellidos"
+            },
+            "email": {
+              "initial": true,
+              "props": {
+                "id": "email",
+                "type": "email",
+                "required": true,
+                "placeholder": "ej: eugenio.perez@gmail.com"
+              },
+              "label": "Correo electrónico"
+            },
+            "phone": {
+              "initial": true,
+              "props": {
+                "id": "phone",
+                "type": "phone",
+                "required": true,
+                "placeholder": "ej: +53 5555 5555"
+              },
+              "label": "Teléfono"
+            },
+            "state": {
+              "single": true,
+              "list": "userStates",
+              "local": true,
+              "initial": false,
+              "props": {
+                "id": "state",
+                "type": "text"
+              },
+              "label": "Estado"
+            }
+          }
+        },
+        "empty": "No hay usuarios",
+        "titles": {
+          "modifying": "Modificando usuario",
+          "list": "Lista de Usuarios",
+          "insert": "Insertando nuevo usuario "
+        }
+      },
+      
+      
+      
+      "activityType": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Bar"
+              },
+              "label": "Nombre"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "product-photo", "type": "photo" },
+              "label": "Imagen del tipo de actividad"
+            }
+          }
+        },
+        "empty": "No hay tipos de actividades",
+        "titles": {
+          "modifying": "Modificando tipo de actividades",
+          "list": "Lista de Tipos de actividades",
+          "insert": "Insertando nuevo Tipo de actividad "
+        }
+      },
+      "activity": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Paseo a caballo"
+              },
+              "label": "Nombre"
+            },
+            "activityTypes": {
+              "initial": true,
+              "extensible": true,
+              "remote": ["user", "activityTypes"],
+              "list": "activityTypes",
+              "empty": "No hay tipos de actividades",
+              "props": {
+                "id": "activityTypes",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Paseo al aire libre"
+              },
+              "label": "Tipo de actividad"
+            },
+            "description": {
+              "initial": true,
+              "props": {
+                "id": "description",
+                "type": "textarea",
+                "required": true,
+                "placeholder": "Alguna descripción"
+              },
+              "label": "Descripción corta"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "product-photo", "type": "photo" },
+              "label": "Imagen de la actividad"
+            }
+          }
+        },
+        "empty": "No hay actividades",
+        "titles": {
+          "modifying": "Modificando actividad",
+          "list": "Lista de Actividades",
+          "insert": "Insertando nuevo actividad "
+        }
+      },
+      "log": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["date", "user", "action", "collection", "model", "id"]
+        },
+        "responsiveList": {
+          "rows": ["user", "action", "collection", "model"]
+        },
+        "empty": "No hay registro de actividad",
+        "titles": {
+          "list": "Registro de actividad"
+        }
+      }
+    },
+    "tabs": {
+      "backup": [
+        {
+          "label": "Acciones",
+          "icon": "cloud",
+          "to": "/backup/"
+        },
+        {
+          "label": "Historial",
+          "icon": "clock",
+          "to": "/backup/logs"
+        }
+      ],
+      
+      
+      "activityTypes": [
+        {
+          "label": "Lista",
+          "icon": "list",
+          "to": "/activityTypes/"
+        },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/activityTypes/form"
+        }
+      ],
+      "activities": [
+        {
+          "label": "Lista",
+          "icon": "list",
+          "to": "/activities/"
+        },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/activities/form"
+        }
+      ],
+
+      "users": [
+        { "label": "Lista", "icon": "list", "to": "/users/" },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/users/form"
+        }
+      ]      ,
+      "settings": [
+        {
+          "label": "Información",
+          "icon": "info",
+          "to": "/profile/"
+        }
+      ]
+    },
+    "texts": {
+      "formDialog": {
+        "title": "Editando"
+      },
+      "actions": {
+        "terms": { "title": "Términos y Condiciones" },
+        "about": { "title": "Acerca de" },
+        "privacyPolicy": { "title": "Política de Privacidad" },
+        "cookiesPolicy": { "title": "Política de Cookies" }
+      }
+    },
+    "backup": {
+      "confirmationDialog": {
+        "title": "Restaurar respaldo",
+        "body": "¿Está seguro de que desea restaurar el respaldo seleccionado? Se reemplazarán todos los datos actuales"
+      },
+      "downloadDialog": {
+        "title": "Selecciona el respaldo a descargar"
+      },
+      "restoreDialog": {
+        "title": "Selecciona el respaldo a restaurar",
+        "noBackups": "No hay respaldos",
+        "actionButton": "Crear"
+      },
+      "logs": {
+        "actions": {
+          "save": "Guardar",
+          "delete": "Eliminar",
+          "create": "Crear",
+          "upload": "Subir",
+          "download": "Descargar",
+          "restore": "Restaurar"
+        },
+        "titles": {
+          "backups": "Respaldos",
+          "users": "Usuarios",
+          "places": "Lugares",
+          "routes": "Rutas",
+          "placeTypes": "Tipos de lugares",
+          "events": "Eventos",
+          "news": "Noticias"
+        }
+      },
+      "actions": {
+        "schedule": {
+          "title": "Programar respaldo",
+          "input": "Intervalo de respaldo"
+        },
+        "make": {
+          "title": "Realizar respaldo ahora"
+        },
+        "download": {
+          "title": "Descargar respaldo"
+        },
+        "restore": {
+          "title": "Restaurar respaldo"
+        },
+        "upload": {
+          "title": "Subir respaldo"
+        }
+      }
+    },
+    "error": {
+      "title": "Ha ocurrido un error",
+      "retry": "Recargar"
+    },
+    "notFound": {
+      "title": "Ups",
+      "body": "No encontramos esa página"
+    }
+  }
+}

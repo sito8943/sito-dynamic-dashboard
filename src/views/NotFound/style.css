@@ -1,0 +1,7 @@
+.not-found-container {
+    height: calc(100vh);
+}
+
+.not-found p {
+    font-size: 1.5rem;
+}

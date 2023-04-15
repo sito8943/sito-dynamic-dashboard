@@ -1,0 +1,31 @@
+.sign-in-container {
+  @apply w-full h-viewport flex items-center justify-center;
+}
+
+.sign-in {
+  width: 500px;
+  @apply relative flex items-start justify-start flex-col p-5 gap-5 rounded-scard bg-light-background dark:bg-dark-background;
+}
+
+@media (max-width: 700px) {
+  .no-links {
+    display: none;
+  }
+}
+
+.password-button {
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 540px) {
+  .sign-in {
+    width: 90%;
+  }
+}
+
+.nav-logo {
+  width: 150px;
+  @apply dark:invert-0 invert;
+}

@@ -1,0 +1,46 @@
+.editor {
+  min-height: 400px;
+  cursor: text;
+  @apply dark:bg-dark-background2 bg-light-background2 border-none rounded-lg max-w-full px-5;
+}
+
+.editor-fixed {
+  height: 400px !important;
+}
+
+.rdw-dropdown-optionwrapper,
+.rdw-fontfamily-optionwrapper,
+.rdw-emoji-modal,
+.rdw-embedded-modal,
+.rdw-colorpicker-modal,
+.rdw-link-modal,
+.rdw-image-modal {
+  box-shadow: none;
+  @apply dark:text-light-background2 text-dark-background2 bg-light-background dark:bg-dark-background  border-light-background2 dark:border-dark-background2;
+}
+
+.rdw-dropdownoption-active,
+.rdw-dropdownoption-highlighted,
+.rdw-embedded-modal-btn:hover,
+.rdw-embedded-modal-btn:disabled,
+.rdw-link-modal-btn:disabled,
+.rdw-embedded-modal-btn,
+.rdw-link-modal-btn,
+.rdw-image-modal-btn {
+  @apply dark:text-light-background2 text-dark-background2 bg-light-background2 dark:bg-dark-background2  border-light-background2 dark:border-dark-background2;
+}
+
+.rdw-editor-toolbar,
+.rdw-option-wrapper,
+.rdw-dropdown-wrapper {
+  @apply dark:text-light-background2 text-dark-background2 bg-light-background2 dark:bg-dark-background2  border-light-background2 dark:border-dark-background2;
+}
+
+.rdw-option-wrapper,
+.rdw-dropdown-wrapper {
+  @apply hover:bg-light-background dark:hover:bg-dark-background hover:border-light-background dark:hover:border-dark-background !shadow-none hover:!shadow-none;
+}
+
+.rdw-option-wrapper img {
+  @apply dark:invert invert-0;
+}

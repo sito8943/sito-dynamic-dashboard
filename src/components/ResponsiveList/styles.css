@@ -1,0 +1,7 @@
+.element-image {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  @apply rounded-circle object-cover
+}

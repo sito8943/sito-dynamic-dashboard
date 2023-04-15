@@ -1,0 +1,23 @@
+.backup {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @apply gap-5 pt-5;
+}
+
+@media (max-width: 1150px) {
+  .backup {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 950px) {
+  .backup {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 475px) {
+  .backup {
+    grid-template-columns: 1fr;
+  }
+}

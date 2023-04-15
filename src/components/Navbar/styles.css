@@ -1,0 +1,24 @@
+.navbar-logo {
+  width: 130px;
+}
+
+.nav {
+  z-index: 50;
+  @apply dark:bg-dark-background2 bg-light-background2;
+}
+
+.aux-buttons {
+  @apply flex items-center gap-5 transition-all;
+}
+
+@media (max-width: 500px) {
+  .nav {
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+    @apply fixed top-0 left-0;
+  }
+
+  .model {
+    display: none !important;
+  }
+}

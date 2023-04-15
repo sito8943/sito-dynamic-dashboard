@@ -1,0 +1,5 @@
+.dialog {
+  width: 500px;
+  height: 250px;
+  @apply relative flex gap-4 rounded-2xl p-5 bg-light-background dark:bg-dark-background pointer-events-auto;
+}

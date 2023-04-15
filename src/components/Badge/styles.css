@@ -1,0 +1,7 @@
+.badge {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    @apply absolute -top-1 -right-1 bg-error text-white
+    rounded-circle flex items-center justify-center;
+}

@@ -1,0 +1,25 @@
+.text-h5 {
+    font-size: 1.7rem;
+}
+
+.printer {
+    padding: 50px 15rem;
+}
+
+@media (max-width: 900px) {
+    .printer {
+        padding: 50px 15rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .printer {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .printer {
+        padding: 20px;
+    }
+}
