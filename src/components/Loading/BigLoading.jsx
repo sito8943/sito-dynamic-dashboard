@@ -31,7 +31,8 @@ export default function BigLoading({ visible }) {
     >
       <div className="logo-entrance">
         <div className="logo-container">
-          <img className="image" src={logo} alt="logo trinidad" />
+          {/* <img className="image" src={logo} alt="logo trinidad" /> */}
+          LOGO
         </div>
       </div>
 

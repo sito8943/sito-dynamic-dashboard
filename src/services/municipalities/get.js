@@ -12,7 +12,7 @@ import { getAuth } from "../../auth/auth.js";
 // @ts-ignore
 import { getCookie, getUserLanguage } from "some-javascript-utils/browser";
 
-import config from "../../config";
+import config from "../../config.js";
 
 /**
  *
@@ -22,7 +22,7 @@ import config from "../../config";
  * @param {boolean} cleanCache
  * @returns
  */
-export const activityTypeList = async (
+export const municipalityList = async (
   page = 1,
   count = 10,
   orderBy = "date",
@@ -32,12 +32,12 @@ export const activityTypeList = async (
     return JSON.parse(
       // @ts-ignore
       localStorage.getItem(
-        `axios-cache:${localStorage.getItem("activityType-cache")}`
+        `axios-cache:${localStorage.getItem("municipality-cache")}`
       )
     ).data;
   else {
     localStorage.removeItem(
-      `axios-cache:${localStorage.getItem("activityType-cache")}`
+      `axios-cache:${localStorage.getItem("municipality-cache")}`
     );
     let parameters = "";
     if (page || count || orderBy.length) {
@@ -49,7 +49,7 @@ export const activityTypeList = async (
     }
     // @ts-ignore
     const response = await Axios({
-      url: `${config.apiUrl}activity-type/list${parameters}`,
+      url: `${config.apiUrl}municipality/list${parameters}`,
       method: "get",
       headers: {
         ...getAuth,
@@ -57,7 +57,7 @@ export const activityTypeList = async (
       },
     });
     // @ts-ignore
-    localStorage.setItem("activityType-cache", response.id);
+    localStorage.setItem("municipality-cache", response.id);
     return await response.data;
   }
 };

@@ -40,9 +40,7 @@
       "backupCreated": "Se ha creado el respaldo correctamente. Id:"
     },
     "auth": {
-      "links": [
-        
-      ],
+      "links": [],
       "signIn": "Entrar a Dashboard",
       "authenticate": {
         "text": "Ya tengo una cuenta.",
@@ -147,14 +145,34 @@
           "label": "Panel administrativo",
           "admin": 0
         },
-        "/activities/": {
-          "to": "/activities/",
-          "label": "Actividades",
+        "/provinces/": {
+          "to": "/provinces/",
+          "label": "Provincias",
           "admin": 1
         },
-        "/activityTypes/": {
-          "to": "/activityTypes/",
-          "label": "Tipos de Actividades",
+        "/municipalities/": {
+          "to": "/municipalities/",
+          "label": "Municipios",
+          "admin": 1
+        },
+        "/medicines/": {
+          "to": "/medicines/",
+          "label": "Medicamentos",
+          "admin": 1
+        },
+        "/descriptions/": {
+          "to": "/descriptions/",
+          "label": "Descripciones",
+          "admin": 1
+        },
+        "/pharmaceuticGroups/": {
+          "to": "/pharmaceuticGroups/",
+          "label": "Grupos Farmaceúticos",
+          "admin": 1
+        },
+        "/centers/": {
+          "to": "/centers/",
+          "label": "Centros",
           "admin": 1
         },
         "/map/": { "to": "/map/", "label": "Mapa", "admin": 1 },
@@ -367,7 +385,7 @@
             "id": 3,
             "name": "Eliminado"
           }
-        },
+        }
       },
       "values": {
         "true": "Tiene",
@@ -552,10 +570,7 @@
           "insert": "Insertando nuevo usuario "
         }
       },
-      
-      
-      
-      "activityType": {
+      "province": {
         "canPromotion": false,
         "table": {
           "columns": ["photo", "name", "visibility", "date", "id"]
@@ -571,25 +586,25 @@
                 "id": "name",
                 "type": "text",
                 "required": true,
-                "placeholder": "ej: Bar"
+                "placeholder": "ej: Santiago de Cuba"
               },
               "label": "Nombre"
             },
             "photo": {
               "initial": true,
-              "props": { "id": "product-photo", "type": "photo" },
-              "label": "Imagen del tipo de actividad"
+              "props": { "id": "province-photo", "type": "photo" },
+              "label": "Imagen de la provincia"
             }
           }
         },
-        "empty": "No hay tipos de actividades",
+        "empty": "No hay provincias",
         "titles": {
-          "modifying": "Modificando tipo de actividades",
-          "list": "Lista de Tipos de actividades",
-          "insert": "Insertando nuevo Tipo de actividad "
+          "modifying": "Modificando provincias",
+          "list": "Lista de Provincias",
+          "insert": "Insertando nueva provincia "
         }
       },
-      "activity": {
+      "muncipilality": {
         "canPromotion": false,
         "table": {
           "columns": ["photo", "name", "visibility", "date", "id"]
@@ -605,23 +620,24 @@
                 "id": "name",
                 "type": "text",
                 "required": true,
-                "placeholder": "ej: Paseo a caballo"
+                "placeholder": "ej: Santiago de Cuba"
               },
               "label": "Nombre"
             },
-            "activityTypes": {
+            "provinces": {
               "initial": true,
               "extensible": true,
-              "remote": ["user", "activityTypes"],
-              "list": "activityTypes",
-              "empty": "No hay tipos de actividades",
+              "remote": ["user", "provinces"],
+              "list": "provinces",
+              "empty": "No hay provincias",
+              "single": true,
               "props": {
-                "id": "activityTypes",
+                "id": "provinces",
                 "type": "text",
                 "required": true,
-                "placeholder": "ej: Paseo al aire libre"
+                "placeholder": "ej: Santiago de Cuba"
               },
-              "label": "Tipo de actividad"
+              "label": "Provincia"
             },
             "description": {
               "initial": true,
@@ -635,16 +651,192 @@
             },
             "photo": {
               "initial": true,
-              "props": { "id": "product-photo", "type": "photo" },
-              "label": "Imagen de la actividad"
+              "props": { "id": "muncipilality-photo", "type": "photo" },
+              "label": "Imagen del municipio"
             }
           }
         },
-        "empty": "No hay actividades",
+        "empty": "No hay municipios",
         "titles": {
-          "modifying": "Modificando actividad",
-          "list": "Lista de Actividades",
-          "insert": "Insertando nuevo actividad "
+          "modifying": "Modificando municipios",
+          "list": "Lista de Municipios",
+          "insert": "Insertando nuevo municipio "
+        }
+      },
+      "medicine": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Aspirina"
+              },
+              "label": "Nombre"
+            },
+            "description": {
+              "initial": true,
+              "props": {
+                "id": "description",
+                "type": "textarea",
+                "required": true,
+                "placeholder": "Alguna descripción"
+              },
+              "label": "Descripción corta"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "medicine-photo", "type": "photo" },
+              "label": "Imagen de la medicina"
+            }
+          }
+        },
+        "empty": "No hay medicina",
+        "titles": {
+          "modifying": "Modificando medicina",
+          "list": "Lista de Medicinas",
+          "insert": "Insertando nueva medicina "
+        }
+      },
+      "description": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Colirios"
+              },
+              "label": "Nombre"
+            },
+            "description": {
+              "initial": true,
+              "props": {
+                "id": "description",
+                "type": "textarea",
+                "required": true,
+                "placeholder": "Alguna descripción"
+              },
+              "label": "Descripción corta"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "description-photo", "type": "photo" },
+              "label": "Imagen de la descripción"
+            }
+          }
+        },
+        "empty": "No hay descripción",
+        "titles": {
+          "modifying": "Modificando descripción",
+          "list": "Lista de Descripción",
+          "insert": "Insertando nueva descripción "
+        }
+      },
+      "pharmaceuticGroups": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Antiinflamatorio"
+              },
+              "label": "Nombre"
+            },
+            "description": {
+              "initial": true,
+              "props": {
+                "id": "description",
+                "type": "textarea",
+                "required": true,
+                "placeholder": "Alguna descripción"
+              },
+              "label": "Descripción corta"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "pharmaceuticGroup-photo", "type": "photo" },
+              "label": "Imagen del grupo farmaceútico"
+            }
+          }
+        },
+        "empty": "No hay grupo farmaceútico",
+        "titles": {
+          "modifying": "Modificando grupo farmaceútico",
+          "list": "Lista de Grupos farmaceúticos",
+          "insert": "Insertando nueva grupo farmaceútico "
+        }
+      },
+      "center": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Casa en la Habana"
+              },
+              "label": "Nombre"
+            },
+            "description": {
+              "initial": true,
+              "props": {
+                "id": "description",
+                "type": "textarea",
+                "required": true,
+                "placeholder": "Alguna descripción"
+              },
+              "label": "Descripción corta"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "center-photo", "type": "photo" },
+              "label": "Imagen del centro"
+            }
+          }
+        },
+        "empty": "No hay centros",
+        "titles": {
+          "modifying": "Modificando centro",
+          "list": "Lista de Centros",
+          "insert": "Insertando nuevo centro "
         }
       },
       "log": {
@@ -674,8 +866,6 @@
           "to": "/backup/logs"
         }
       ],
-      
-      
       "activityTypes": [
         {
           "label": "Lista",
@@ -714,7 +904,7 @@
           "altIcon": "modify",
           "to": "/users/form"
         }
-      ]      ,
+      ],
       "settings": [
         {
           "label": "Información",

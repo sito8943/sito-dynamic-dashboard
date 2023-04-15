@@ -129,7 +129,8 @@ export default function Navbar() {
         </span>
       </div>
       <div className="no-model navbar-logo invert dark:invert-0">
-        <SitoImage src={logo} alt="ire-a-santiago logo " />
+        {/* <SitoImage src={logo} alt="ire-a-santiago logo " /> */}
+        LOGO
       </div>
       <div
         className={`aux-buttons ${

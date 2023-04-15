@@ -22,7 +22,7 @@ import config from "../../config";
  * @param {boolean} cleanCache
  * @returns
  */
-export const placeList = async (
+export const municipalityList = async (
   page = 1,
   count = 10,
   orderBy = "date",
@@ -35,24 +35,24 @@ export const placeList = async (
     JSON.parse(
       // @ts-ignore
       localStorage.getItem(
-        `axios-cache:${localStorage.getItem("place-cache")}`
+        `axios-cache:${localStorage.getItem("municipality-cache")}`
       )
     ) !== null
   ) {
     return JSON.parse(
       // @ts-ignore
       localStorage.getItem(
-        `axios-cache:${localStorage.getItem("place-cache")}`
+        `axios-cache:${localStorage.getItem("municipality-cache")}`
       )
     ).data;
   }
   // @ts-ignore
   else {
     localStorage.removeItem(
-      `axios-cache:${localStorage.getItem("place-cache")}`
+      `axios-cache:${localStorage.getItem("municipality-cache")}`
     );
     const response = await axios.post(
-      `${config.apiUrl}place/list`,
+      `${config.apiUrl}municipality/list`,
       {
         page,
         count,
@@ -70,7 +70,7 @@ export const placeList = async (
       }
     );
     // @ts-ignore
-    localStorage.setItem("place-cache", response.id);
+    localStorage.setItem("municipality-cache", response.id);
     return response.data;
   }
 };

@@ -4,22 +4,18 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRightFromBracket,
-  faCalendarDays,
-  faCameraRetro,
   faChartSimple,
-  faGear,
   faHome,
-  faIcons,
-  faRoute,
-  faStore,
   faUser,
-  faBagShopping,
   faMap,
   faCloud,
-  faNewspaper,
-  faBullhorn,
-  faListCheck,
   faFileLines,
+  faMapLocation,
+  faMapLocationDot,
+  faNotesMedical,
+  faFileMedical,
+  faKitMedical,
+  faHouseMedical,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function getIcon(icon, className) {
@@ -31,46 +27,26 @@ export default function getIcon(icon, className) {
     case "/users/":
       theIcon = faUser;
       break;
-    case "/campaigns/":
-      theIcon = faBullhorn;
-      break;
     case "/texts/":
       theIcon = faFileLines;
       break;
-    case "/surveys/":
-      theIcon = faListCheck;
+    case "/provinces/":
+      theIcon = faMapLocation;
       break;
-    case "/events/":
-      theIcon = faCalendarDays;
+    case "/municipalities/":
+      theIcon = faMapLocationDot;
       break;
-    case "/news/":
-      theIcon = faNewspaper;
+    case "/medicine/":
+      theIcon = faKitMedical;
       break;
-    case "/profile/":
-    case "/profile/change-password":
-    case "/profile/map":
-    case "/profile/social":
-    case "/profile/schedule":
-    case "/profile/qr":
-      theIcon = faGear;
+    case "/descriptions/":
+      theIcon = faFileMedical;
       break;
-    case "/places/":
-      theIcon = faHome;
+    case "/pharmaceuticGroups/":
+      theIcon = faNotesMedical;
       break;
-    case "/routes/":
-      theIcon = faRoute;
-      break;
-    case "/activityTypes/":
-      theIcon = faIcons;
-      break;
-    case "/activities/":
-      theIcon = faCameraRetro;
-      break;
-    case "/placeTypes/":
-      theIcon = faStore;
-      break;
-    case "/products/":
-      theIcon = faBagShopping;
+    case "/centers/":
+      theIcon = faHouseMedical;
       break;
     case "/map/":
       theIcon = faMap;

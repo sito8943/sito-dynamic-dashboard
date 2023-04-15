@@ -22,7 +22,8 @@ export default function Nav() {
 
   return (
     <nav className="fixed left-0 top-0 flex w-full h-20 px-10 py-2 justify-between gap-5 bg-light-background dark:bg-dark-background">
-      <img className="nav-logo" src={logo} alt="ireasantiago logo" />
+      {/* <img className="nav-logo" src={logo} alt="ireasantiago logo" /> */}
+      LOGO
       <div className="flex justify-end gap-5 items-center">
         {auth.links.map((item) => (
           <a

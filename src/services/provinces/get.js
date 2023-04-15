@@ -12,7 +12,7 @@ import { getAuth } from "../../auth/auth.js";
 // @ts-ignore
 import { getCookie, getUserLanguage } from "some-javascript-utils/browser";
 
-import config from "../../config";
+import config from "../../config.js";
 
 /**
  *
@@ -22,7 +22,7 @@ import config from "../../config";
  * @param {boolean} cleanCache
  * @returns
  */
-export const placeList = async (
+export const provinceList = async (
   page = 1,
   count = 10,
   orderBy = "date",
@@ -32,12 +32,12 @@ export const placeList = async (
     return JSON.parse(
       // @ts-ignore
       localStorage.getItem(
-        `axios-cache:${localStorage.getItem("place-cache")}`
+        `axios-cache:${localStorage.getItem("province-cache")}`
       )
     ).data;
   else {
     localStorage.removeItem(
-      `axios-cache:${localStorage.getItem("place-cache")}`
+      `axios-cache:${localStorage.getItem("province-cache")}`
     );
     let parameters = "";
     if (page || count || orderBy.length) {
@@ -49,7 +49,7 @@ export const placeList = async (
     }
     // @ts-ignore
     const response = await Axios({
-      url: `${config.apiUrl}place/list${parameters}`,
+      url: `${config.apiUrl}activity-type/list${parameters}`,
       method: "get",
       headers: {
         ...getAuth,
@@ -57,7 +57,7 @@ export const placeList = async (
       },
     });
     // @ts-ignore
-    localStorage.setItem("place-cache", response.id);
+    localStorage.setItem("province-cache", response.id);
     return await response.data;
   }
 };

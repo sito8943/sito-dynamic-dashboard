@@ -14,16 +14,16 @@ import {
   parseRows as logParseRows,
   tableQuery as logTableQuery,
 } from "./views/Dashboard/Backup/parseLogs.js";
-//* activity types
+//* municipalities
 import {
-  parseRows as activityTypeParseRows,
-  tableQuery as activityTypeTableQuery,
-} from "./views/Dashboard/ActivityTypes/parseRows.js";
+  parseRows as municipalitiesParseRows,
+  tableQuery as municipalitiesTableQuery,
+} from "./views/Dashboard/Municipalities/parseRows.js";
 //* activities
 import {
-  parseRows as activityParseRows,
-  tableQuery as activityTableQuery,
-} from "./views/Dashboard/Activities/parseRows.js";
+  parseRows as provincesParseRows,
+  tableQuery as provincesTableQuery,
+} from "./views/Dashboard/Provinces/parseRows.js";
 //* users
 import {
   parseRows as userParseRows,
@@ -47,10 +47,10 @@ import {
 
 // services
 import { validateBasicKey } from "./services/auth";
-//* activity types
-import { activityTypeList } from "./services/activityTypes/post.js";
-//* activities
-import { activityList } from "./services/activities/post.js";
+//* provinces
+import { provincesList } from "./services/provinces/post.js";
+//* municipalities
+import { municipalitiesList } from "./services/municipalities/post.js";
 //* users
 import { userList } from "./services/users/post.js";
 //* logs
@@ -95,13 +95,7 @@ const Home = loadable((props) => import("./views/Dashboard/Home/Home.jsx"));
 const Settings = loadable((props) =>
   import("./views/Dashboard/Settings/Settings.jsx")
 );
-const Profile = loadable((props) =>
-  import("./views/Dashboard/Profile/Profile.jsx")
-);
-const Map = loadable((props) => import("./views/Dashboard/Profile/Map.jsx"));
-const ChangePassword = loadable((props) =>
-  import("./views/Dashboard/Profile/ChangePassword.jsx")
-);
+
 const NotFound = loadable((props) => import("./views/NotFound/NotFound"));
 //* auth
 const SignIn = loadable((props) => import("./views/Auth/SignIn"));
@@ -276,11 +270,11 @@ function App() {
 
                     <Route
                       exact
-                      path="/activityTypes/"
+                      path="/provinces/"
                       element={
                         <Suspense>
                           <SettingsProvider>
-                            <TableContainer tabs={tabsText.activityTypes} />
+                            <TableContainer tabs={tabsText.provinces} />
                           </SettingsProvider>
                         </Suspense>
                       }
@@ -289,26 +283,26 @@ function App() {
                         index
                         element={
                           <List
-                            model="activityType"
-                            modelFetch={activityTypeList}
-                            parseRows={activityTypeParseRows}
-                            tableQuery={activityTypeTableQuery}
+                            model="province"
+                            modelFetch={provincesList}
+                            parseRows={provincesParseRows}
+                            tableQuery={provincesTableQuery}
                           />
                         }
                       />
                       <Route
                         exact
-                        path="/activityTypes/form"
-                        element={<Form model="activityType" />}
+                        path="/provinces/form"
+                        element={<Form model="province" />}
                       />
                     </Route>
                     <Route
                       exact
-                      path="/activities/"
+                      path="/municipalities/"
                       element={
                         <Suspense>
                           <SettingsProvider>
-                            <TableContainer tabs={tabsText.activities} />
+                            <TableContainer tabs={tabsText.municipalities} />
                           </SettingsProvider>
                         </Suspense>
                       }
@@ -317,17 +311,17 @@ function App() {
                         index
                         element={
                           <List
-                            model="activity"
-                            modelFetch={activityList}
-                            parseRows={activityParseRows}
-                            tableQuery={activityTableQuery}
+                            model="municipality"
+                            modelFetch={municipalitiesList}
+                            parseRows={municipalitiesParseRows}
+                            tableQuery={municipalitiesTableQuery}
                           />
                         }
                       />
                       <Route
                         exact
-                        path="/activities/form"
-                        element={<Form model="activity" />}
+                        path="/municipalities/form"
+                        element={<Form model="municipality" />}
                       />
                     </Route>
 

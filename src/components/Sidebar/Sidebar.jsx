@@ -72,7 +72,8 @@ export default function Sidebar(props) {
     <div className="sidebar h-full flex flex-col items-center justify-start mb-5 mx-0">
       <div className="model flex flex-col items-center justify-center gap-2 mb-2">
         <div className="sidebar-logo">
-          <SitoImage src={logo} alt="ire-a-santiago logo" />
+          {/* <SitoImage src={logo} alt="ire-a-santiago logo" /> */}
+          LOGO
         </div>
         <h2 className="text-3xl font-bold text-dark-background2 dark:text-white">
           {appName}
