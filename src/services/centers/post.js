@@ -22,7 +22,7 @@ import config from "../../config";
  * @param {boolean} cleanCache
  * @returns
  */
-export const provinceList = async (
+export const centerList = async (
   page = 1,
   count = 10,
   orderBy = "date",
@@ -35,21 +35,21 @@ export const provinceList = async (
     JSON.parse(
       // @ts-ignore
       localStorage.getItem(
-        `axios-cache:${localStorage.getItem("province-cache")}`
+        `axios-cache:${localStorage.getItem("center-cache")}`
       )
     ) !== null
   ) {
     return JSON.parse(
       // @ts-ignore
       localStorage.getItem(
-        `axios-cache:${localStorage.getItem("province-cache")}`
+        `axios-cache:${localStorage.getItem("center-cache")}`
       )
     ).data;
   }
   // @ts-ignore
   else {
     localStorage.removeItem(
-      `axios-cache:${localStorage.getItem("province-cache")}`
+      `axios-cache:${localStorage.getItem("center-cache")}`
     );
     const response = await axios.post(
       `${config.apiUrl}activity-type/list`,
@@ -70,7 +70,7 @@ export const provinceList = async (
       }
     );
     // @ts-ignore
-    localStorage.setItem("province-cache", response.id);
+    localStorage.setItem("center-cache", response.id);
     return response.data;
   }
 };
