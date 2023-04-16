@@ -12,10 +12,7 @@ import { css } from "@emotion/css";
 
 // services
 import { fetchList } from "../../../services/general";
-import { userList } from "../../../services/users/post";
-import { routeList } from "../../../services/routes/post";
-import { placeList } from "../../../services/places/post";
-import { eventList } from "../../../services/events/post";
+import { centerList } from "../../../services/centers/post";
 
 // contexts
 import { useLanguage } from "../../../contexts/LanguageProvider";
@@ -58,7 +55,7 @@ function MapView() {
   };
 
   const [filters, setFilters] = useReducer(filtersReducer, {
-    places: { value: true, loading: true },
+    centers: { value: true, loading: true },
     menus: { value: true, loading: true },
   });
 
@@ -84,9 +81,9 @@ function MapView() {
       message,
     });
 
-  const initPlaces = async () => {
+  const initCenters = async () => {
     try {
-      const response = await placeList(1, -1, "date", [
+      const response = await centerList(1, -1, "date", [
         "id",
         "name",
         "headerImages",
@@ -102,99 +99,7 @@ function MapView() {
           location,
         })),
       });
-      setFilters({ type: "loading", to: false, id: "places" });
-    } catch (err) {
-      console.error(err);
-      showNotification("error", String(err));
-    }
-  };
-
-  const initMenus = async () => {
-    try {
-      const response = await userList(
-        1,
-        -1,
-        "date",
-        ["id", "publicName", "photo", "location"],
-        ["location", "has"]
-      );
-      const { list } = response;
-      setPoints({
-        type: "add",
-        elements: list.map(({ id, publicName, photo, location }) => ({
-          id,
-          name: publicName,
-          headerImages: [photo],
-          location,
-        })),
-      });
-      setFilters({ type: "loading", to: false, id: "menus" });
-    } catch (err) {
-      console.error(err);
-      showNotification("error", String(err));
-    }
-  };
-
-  const initEvents = async () => {
-    try {
-      const response = await eventList(1, -1, "date", [
-        "id",
-        "title",
-        "headerImages",
-        "longitude",
-        "latitude",
-      ]);
-      const { list } = response;
-      setPoints({
-        type: "add",
-        elements: list.map(
-          ({ id, title, headerImages, longitude, latitude }) => ({
-            id,
-            name: title,
-            headerImages,
-            location: {
-              lng: longitude,
-              lat: latitude,
-            },
-          })
-        ),
-      });
-      setFilters({ type: "loading", to: false, id: "events" });
-    } catch (err) {
-      console.error(err);
-      showNotification("error", String(err));
-    }
-  };
-
-  const initRoutes = async () => {
-    try {
-      const response = await routeList(1, -1, "date", [
-        "id",
-        "name",
-        "headerImages",
-        "places",
-      ]);
-      const { list } = response;
-      const toReturn = [];
-      for (const item of list) {
-        try {
-          const query = {};
-          item.places.forEach(
-            (/** @type {string | number} */ item) => (query[item] = item)
-          );
-          const responseRemote = await fetchList(query, "places", 1, -1, "id", [
-            "id",
-            "name",
-            "location",
-          ]);
-          const remoteList = responseRemote.list;
-          remoteList.forEach((item) => {
-            toReturn.push([[item.location.lng, item.location.lat]]);
-          });
-        } catch (err) {}
-      }
-      setCoordinates(toReturn);
-      setFilters({ type: "loading", to: false, id: "routes" });
+      setFilters({ type: "loading", to: false, id: "centers" });
     } catch (err) {
       console.error(err);
       showNotification("error", String(err));
@@ -202,10 +107,7 @@ function MapView() {
   };
 
   useEffect(() => {
-    if (filters.places && filters.places.loading) initPlaces();
-    if (filters.menus && filters.menus.loading) initMenus();
-    if (filters.events && filters.events.loading) initEvents();
-    if (filters.routes && filters.routes.loading) initRoutes();
+    if (filters.centers && filters.centers.loading) initCenters();
   }, [filters]);
 
   const printButtons = useCallback(

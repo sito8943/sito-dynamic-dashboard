@@ -15,7 +15,6 @@ export const parseRows = async (item, texts) => {
   //* model
   try {
     if (item.model) {
-      console.log(item.model, item.collection);
       const response = await fetchModel(
         item.model,
         item.collection,

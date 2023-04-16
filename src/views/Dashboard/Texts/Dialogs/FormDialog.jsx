@@ -14,9 +14,12 @@ import { css } from "@emotion/css";
 
 // contexts
 import { useLanguage } from "../../../../contexts/LanguageProvider";
+import { useNotification } from "../../../../contexts/NotificationProvider";
 
 // services
 import { fetchModel } from "../../../../services/general";
+import { createModel } from "../../../../services/general";
+import { getUserName } from "../../../../utils/auth";
 
 // components
 import Loading from "../../../../components/Loading/Loading";
@@ -32,6 +35,15 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
 
   const [loading, setLoading] = useState(true);
 
+  const { setNotificationState } = useNotification();
+
+  const showNotification = (ntype, message) =>
+    setNotificationState({
+      type: "set",
+      ntype,
+      message,
+    });
+
   //* Editor
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
@@ -40,10 +52,11 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
     [setEditorState]
   );
 
-  const { texts, buttons } = useMemo(() => {
+  const { texts, buttons, messages } = useMemo(() => {
     return {
       texts: languageState.texts.texts,
       buttons: languageState.texts.buttons,
+      messages: languageState.texts.messages,
     };
   }, [languageState]);
 
@@ -66,7 +79,7 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
               ContentState.createFromBlockArray(htmlToDraft(data.content))
             )
           );
-      }
+      } else setEditorState(EditorState.createEmpty());
     } catch (err) {
       console.error(err);
       if (String(err) === "AxiosError: Network Error")
@@ -76,7 +89,8 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
     setLoading(false);
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
+    setLoading(true);
     if (editorState) {
       let content = "";
       const parsedContent = draftToHtml(
@@ -84,10 +98,21 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
       );
       if (parsedContent !== "<p></p>\n")
         content = draftToHtml(convertToRaw(editorState.getCurrentContent()));
-      onAction(content);
+      try {
+        const response = await createModel("texts", {
+          id: selectedText,
+          content,
+          user: getUserName(),
+        });
+        showNotification("success", messages.saveSuccessful);
+      } catch (err) {
+        console.error(err);
+        if (String(err) === "AxiosError: Network Error")
+          showNotification("error", errors.notConnected);
+        else showNotification("error", String(err));
+      }
     }
-    
-    setEditorState(EditorState.createEmpty());
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -96,13 +121,13 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
 
   return (
     <DialogList
-      className={css({
+      className={`form-dialog ${css({
         height: "auto !important",
         minHeight: "600px !important",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-      })}
+      })}`}
       visible={visible}
       onClose={onClose}
     >
@@ -128,10 +153,10 @@ function ConfirmationDialog({ visible, onClose, onAction, selectedText }) {
             />
             <div className="flex items-center justify-end gap-5">
               <button className="submit" type="button" onClick={onSubmit}>
-                {buttons.accept}
+                {buttons.save}
               </button>
               <button className="secondary" type="button" onClick={onClose}>
-                {buttons.cancel}
+                {buttons.close}
               </button>
             </div>
           </div>

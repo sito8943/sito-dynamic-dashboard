@@ -4,6 +4,22 @@
   @apply gap-5 pt-5;
 }
 
+.form-dialog {
+  width: 80% !important;
+}
+
+@media (max-width: 500px) {
+  .form-dialog {
+    min-height: 400px !important;
+    width: 90% !important;
+  }
+
+  .form-dialog .editor {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+}
+
 @media (max-width: 1150px) {
   .texts {
     grid-template-columns: 1fr 1fr 1fr;

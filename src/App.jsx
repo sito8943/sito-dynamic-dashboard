@@ -39,6 +39,11 @@ import {
   parseRows as pharmaceuticGroupsParseRows,
   tableQuery as pharmaceuticGroupsTableQuery,
 } from "./views/Dashboard/PharmaceuticGroups/parseRows.js";
+//* centers
+import {
+  parseRows as centersParseRows,
+  tableQuery as centersTableQuery,
+} from "./views/Dashboard/Centers/parseRows.js";
 //* users
 import {
   parseRows as userParseRows,
@@ -72,6 +77,8 @@ import { medicineList } from "./services/medicines/post.js";
 import { provinceList } from "./services/provinces/post.js";
 //* municipalities
 import { municipalityList } from "./services/municipalities/post.js";
+//* municipalities
+import { centerList } from "./services/centers/post.js";
 //* users
 import { userList } from "./services/users/post.js";
 //* logs
@@ -202,6 +209,18 @@ function App() {
             <Routes>
               {!userLogged() ? (
                 <>
+                  <Route
+                    exact
+                    path="/"
+                    element={
+                      <Suspense>
+                        <Auth />
+                      </Suspense>
+                    }
+                  >
+                    <Route index element={<SignIn />} />
+                    <Route exact path="/recovery" element={<Recovery />} />
+                  </Route>
                   <Route
                     exact
                     path="/auth/"
@@ -411,7 +430,9 @@ function App() {
                       element={
                         <Suspense>
                           <SettingsProvider>
-                            <TableContainer tabs={tabsText.pharmaceuticGroups} />
+                            <TableContainer
+                              tabs={tabsText.pharmaceuticGroups}
+                            />
                           </SettingsProvider>
                         </Suspense>
                       }
@@ -431,6 +452,34 @@ function App() {
                         exact
                         path="/pharmaceuticGroups/form"
                         element={<Form model="pharmaceuticGroup" />}
+                      />
+                    </Route>
+                    <Route
+                      exact
+                      path="/centers/"
+                      element={
+                        <Suspense>
+                          <SettingsProvider>
+                            <TableContainer tabs={tabsText.centers} />
+                          </SettingsProvider>
+                        </Suspense>
+                      }
+                    >
+                      <Route
+                        index
+                        element={
+                          <List
+                            model="center"
+                            modelFetch={centerList}
+                            parseRows={centersParseRows}
+                            tableQuery={centersTableQuery}
+                          />
+                        }
+                      />
+                      <Route
+                        exact
+                        path="/centers/form"
+                        element={<Form model="center" />}
                       />
                     </Route>
                     <Route

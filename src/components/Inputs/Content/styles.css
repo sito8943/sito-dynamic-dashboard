@@ -4,6 +4,11 @@
   @apply dark:bg-dark-background2 bg-light-background2 border-none rounded-lg max-w-full px-5;
 }
 
+.public-DraftStyleDefault-unorderedListItem,
+.public-DraftStyleDefault-orderedListItem:before {
+  @apply dark:text-light-background2 text-dark-background2;
+}
+
 .editor-fixed {
   height: 400px !important;
 }

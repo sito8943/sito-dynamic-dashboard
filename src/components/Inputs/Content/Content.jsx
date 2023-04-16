@@ -20,11 +20,6 @@ function Content({ className, value, onChange, editorFixed }) {
         editorClassName={`editor ${editorFixed ? "editor-fixed" : ""}`}
         onEditorStateChange={onChange || onEditorStateChange}
       />
-
-      {/*   <textarea
-        disabled
-        value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-      /> */}
     </div>
   );
 }

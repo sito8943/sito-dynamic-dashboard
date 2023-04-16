@@ -245,7 +245,6 @@ export default function List({
     <div className="w-full h-full mt-2 overflow-auto relative">
       <Suspense>
         <h2 className="text-h4 font-bold dark:text-white text-dark-background2">
-          {console.log(model)}
           {models[model].titles.list} {models[model].label}
         </h2>
         {localList.length ? (

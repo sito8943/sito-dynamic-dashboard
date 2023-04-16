@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from "react";
+import React, { useMemo, useCallback, useState } from "react";
 
 import loadable from "@loadable/component";
 
@@ -12,9 +12,6 @@ import {
 
 // contexts
 import { useLanguage } from "../../../contexts/LanguageProvider";
-import { useNotification } from "../../../contexts/NotificationProvider";
-
-// services
 
 // components
 const ActionCard = loadable((props) =>
@@ -24,20 +21,9 @@ const FormDialog = loadable(() => import("./Dialogs/FormDialog"));
 
 // styles
 import "./styles.css";
-import { useState } from "react";
-import { createModel } from "../../../services/general";
 
 function Texts() {
   const { languageState } = useLanguage();
-
-  const { setNotificationState } = useNotification();
-
-  const showNotification = (ntype, message) =>
-    setNotificationState({
-      type: "set",
-      ntype,
-      message,
-    });
 
   const { texts, errors, messages } = useMemo(() => {
     return {
@@ -75,33 +61,12 @@ function Texts() {
     setSelectedText("");
   }, []);
 
-  const onSave = useCallback(
-    async (content) => {
-      setShowDialog(false);
-      try {
-        const response = await createModel("texts", {
-          id: selectedText,
-          content,
-        });
-        console.log(response)
-      } catch (err) {
-        console.error(err);
-        if (String(err) === "AxiosError: Network Error")
-          showNotification("error", errors.notConnected);
-        else showNotification("error", String(err));
-      }
-      setSelectedText("");
-    },
-    [selectedText]
-  );
-
   return (
     <div className="texts">
       <FormDialog
         selectedText={selectedText}
         visible={showDialog}
         onClose={hideDialog}
-        onAction={onSave}
       />
       <ActionCard
         onClick={termsAction}
