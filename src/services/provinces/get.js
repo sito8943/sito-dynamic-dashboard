@@ -28,36 +28,37 @@ export const provinceList = async (
   orderBy = "date",
   cleanCache = false
 ) => {
-  if (!cleanCache)
-    return JSON.parse(
-      // @ts-ignore
-      localStorage.getItem(
-        `axios-cache:${localStorage.getItem("province-cache")}`
-      )
-    ).data;
-  else {
-    localStorage.removeItem(
-      `axios-cache:${localStorage.getItem("province-cache")}`
-    );
-    let parameters = "";
-    if (page || count || orderBy.length) {
-      parameters += "?";
-      if (page) parameters += `page=${page}&`;
-      if (count) parameters += `count=${count}&`;
-      if (orderBy.length) parameters += `orderBy=${orderBy}&`;
-      parameters += `lang=${getUserLanguage()}`;
-    }
-    // @ts-ignore
-    const response = await Axios({
-      url: `${config.apiUrl}activity-type/list${parameters}`,
-      method: "get",
-      headers: {
-        ...getAuth,
-        Authorization: `Bearer ${getCookie(config.basicKeyCookie)}`,
-      },
-    });
-    // @ts-ignore
-    localStorage.setItem("province-cache", response.id);
-    return await response.data;
+  try {
+    if (!cleanCache)
+      return JSON.parse(
+        // @ts-ignore
+        localStorage.getItem(
+          `axios-cache:${localStorage.getItem("province-cache")}`
+        )
+      ).data;
+  } catch (err) {}
+
+  localStorage.removeItem(
+    `axios-cache:${localStorage.getItem("province-cache")}`
+  );
+  let parameters = "";
+  if (page || count || orderBy.length) {
+    parameters += "?";
+    if (page) parameters += `page=${page}&`;
+    if (count) parameters += `count=${count}&`;
+    if (orderBy.length) parameters += `orderBy=${orderBy}&`;
+    parameters += `lang=${getUserLanguage()}`;
   }
+  // @ts-ignore
+  const response = await Axios({
+    url: `${config.apiUrl}province/list${parameters}`,
+    method: "get",
+    headers: {
+      ...getAuth,
+      Authorization: `Bearer ${getCookie(config.basicKeyCookie)}`,
+    },
+  });
+  // @ts-ignore
+  localStorage.setItem("province-cache", response.id);
+  return await response.data;
 };

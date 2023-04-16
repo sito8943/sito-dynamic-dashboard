@@ -30,47 +30,47 @@ export const provinceList = async (
   query = [],
   cleanCache = false
 ) => {
-  if (
-    !cleanCache &&
-    JSON.parse(
-      // @ts-ignore
-      localStorage.getItem(
-        `axios-cache:${localStorage.getItem("province-cache")}`
-      )
-    ) !== null
-  ) {
-    return JSON.parse(
-      // @ts-ignore
-      localStorage.getItem(
-        `axios-cache:${localStorage.getItem("province-cache")}`
-      )
-    ).data;
-  }
-  // @ts-ignore
-  else {
-    localStorage.removeItem(
-      `axios-cache:${localStorage.getItem("province-cache")}`
-    );
-    const response = await axios.post(
-      `${config.apiUrl}activity-type/list`,
-      {
-        page,
-        count,
-        orderBy,
-        attributes,
-        query,
-        lang: getUserLanguage(),
-      },
-      {
+  try {
+    if (
+      !cleanCache &&
+      JSON.parse(
         // @ts-ignore
-        headers: {
-          ...getAuth,
-          Authorization: `Bearer ${getCookie(config.basicKeyCookie)}`,
-        },
-      }
-    );
-    // @ts-ignore
-    localStorage.setItem("province-cache", response.id);
-    return response.data;
-  }
+        localStorage.getItem(
+          `axios-cache:${localStorage.getItem("province-cache")}`
+        )
+      ) !== null
+    ) {
+      return JSON.parse(
+        // @ts-ignore
+        localStorage.getItem(
+          `axios-cache:${localStorage.getItem("province-cache")}`
+        )
+      ).data;
+    }
+  } catch (err) {}
+
+  localStorage.removeItem(
+    `axios-cache:${localStorage.getItem("province-cache")}`
+  );
+  const response = await axios.post(
+    `${config.apiUrl}province/list`,
+    {
+      page,
+      count,
+      orderBy,
+      attributes,
+      query,
+      lang: getUserLanguage(),
+    },
+    {
+      // @ts-ignore
+      headers: {
+        ...getAuth,
+        Authorization: `Bearer ${getCookie(config.basicKeyCookie)}`,
+      },
+    }
+  );
+  // @ts-ignore
+  localStorage.setItem("province-cache", response.id);
+  return response.data;
 };

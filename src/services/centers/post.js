@@ -52,7 +52,7 @@ export const centerList = async (
       `axios-cache:${localStorage.getItem("center-cache")}`
     );
     const response = await axios.post(
-      `${config.apiUrl}activity-type/list`,
+      `${config.apiUrl}center/list`,
       {
         page,
         count,

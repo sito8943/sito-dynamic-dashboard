@@ -19,11 +19,26 @@ import {
   parseRows as municipalitiesParseRows,
   tableQuery as municipalitiesTableQuery,
 } from "./views/Dashboard/Municipalities/parseRows.js";
-//* activities
+//* provinces
 import {
   parseRows as provincesParseRows,
   tableQuery as provincesTableQuery,
 } from "./views/Dashboard/Provinces/parseRows.js";
+//* medicines
+import {
+  parseRows as medicinesParseRows,
+  tableQuery as medicinesTableQuery,
+} from "./views/Dashboard/Medicines/parseRows.js";
+//* descriptions
+import {
+  parseRows as descriptionsParseRows,
+  tableQuery as descriptionsTableQuery,
+} from "./views/Dashboard/Descriptions/parseRows.js";
+//* pharmaceuticGroups
+import {
+  parseRows as pharmaceuticGroupsParseRows,
+  tableQuery as pharmaceuticGroupsTableQuery,
+} from "./views/Dashboard/PharmaceuticGroups/parseRows.js";
 //* users
 import {
   parseRows as userParseRows,
@@ -47,10 +62,16 @@ import {
 
 // services
 import { validateBasicKey } from "./services/auth";
+//* medicines
+import { descriptionList } from "./services/descriptions/post.js";
+//* medicines
+import { pharmaceuticGroupList } from "./services/pharmaceuticGroups/post.js";
+//* medicines
+import { medicineList } from "./services/medicines/post.js";
 //* provinces
-import { provincesList } from "./services/provinces/post.js";
+import { provinceList } from "./services/provinces/post.js";
 //* municipalities
-import { municipalitiesList } from "./services/municipalities/post.js";
+import { municipalityList } from "./services/municipalities/post.js";
 //* users
 import { userList } from "./services/users/post.js";
 //* logs
@@ -182,6 +203,7 @@ function App() {
               {!userLogged() ? (
                 <>
                   <Route
+                    exact
                     path="/auth/"
                     element={
                       <Suspense>
@@ -192,11 +214,11 @@ function App() {
                     <Route index element={<SignIn />} />
                     <Route exact path="/auth/recovery" element={<Recovery />} />
                   </Route>
-                  <Route path="*" element={<NotFound index="/auth/" />} />
                 </>
               ) : (
                 <>
                   <Route
+                    exact
                     path="/"
                     element={
                       <Suspense>
@@ -207,6 +229,7 @@ function App() {
                     <Route index element={<Home />} />
                   </Route>
                   <Route
+                    exact
                     path="/backup/"
                     element={
                       <Suspense>
@@ -231,6 +254,7 @@ function App() {
                     />
                   </Route>
                   <Route
+                    exact
                     path="/texts/"
                     element={
                       <Suspense>
@@ -241,6 +265,7 @@ function App() {
                     <Route index element={<Texts />} />
                   </Route>
                   <Route
+                    exact
                     path="/profile/"
                     element={
                       <Suspense>
@@ -284,7 +309,7 @@ function App() {
                         element={
                           <List
                             model="province"
-                            modelFetch={provincesList}
+                            modelFetch={provinceList}
                             parseRows={provincesParseRows}
                             tableQuery={provincesTableQuery}
                           />
@@ -312,7 +337,7 @@ function App() {
                         element={
                           <List
                             model="municipality"
-                            modelFetch={municipalitiesList}
+                            modelFetch={municipalityList}
                             parseRows={municipalitiesParseRows}
                             tableQuery={municipalitiesTableQuery}
                           />
@@ -324,7 +349,90 @@ function App() {
                         element={<Form model="municipality" />}
                       />
                     </Route>
-
+                    <Route
+                      exact
+                      path="/medicines/"
+                      element={
+                        <Suspense>
+                          <SettingsProvider>
+                            <TableContainer tabs={tabsText.medicines} />
+                          </SettingsProvider>
+                        </Suspense>
+                      }
+                    >
+                      <Route
+                        index
+                        element={
+                          <List
+                            model="medicine"
+                            modelFetch={medicineList}
+                            parseRows={medicinesParseRows}
+                            tableQuery={medicinesTableQuery}
+                          />
+                        }
+                      />
+                      <Route
+                        exact
+                        path="/medicines/form"
+                        element={<Form model="medicine" />}
+                      />
+                    </Route>
+                    <Route
+                      exact
+                      path="/descriptions/"
+                      element={
+                        <Suspense>
+                          <SettingsProvider>
+                            <TableContainer tabs={tabsText.descriptions} />
+                          </SettingsProvider>
+                        </Suspense>
+                      }
+                    >
+                      <Route
+                        index
+                        element={
+                          <List
+                            model="description"
+                            modelFetch={descriptionList}
+                            parseRows={descriptionsParseRows}
+                            tableQuery={descriptionsTableQuery}
+                          />
+                        }
+                      />
+                      <Route
+                        exact
+                        path="/descriptions/form"
+                        element={<Form model="description" />}
+                      />
+                    </Route>
+                    <Route
+                      exact
+                      path="/pharmaceuticGroups/"
+                      element={
+                        <Suspense>
+                          <SettingsProvider>
+                            <TableContainer tabs={tabsText.pharmaceuticGroups} />
+                          </SettingsProvider>
+                        </Suspense>
+                      }
+                    >
+                      <Route
+                        index
+                        element={
+                          <List
+                            model="pharmaceuticGroup"
+                            modelFetch={pharmaceuticGroupList}
+                            parseRows={pharmaceuticGroupsParseRows}
+                            tableQuery={pharmaceuticGroupsTableQuery}
+                          />
+                        }
+                      />
+                      <Route
+                        exact
+                        path="/pharmaceuticGroups/form"
+                        element={<Form model="pharmaceuticGroup" />}
+                      />
+                    </Route>
                     <Route
                       exact
                       path="/users/"
@@ -354,8 +462,44 @@ function App() {
                   </>
                 </>
               )}
-
               <Route
+                exact
+                path="/terms-conditions"
+                element={
+                  <Suspense>
+                    <Printer text="terms" />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="/about"
+                element={
+                  <Suspense>
+                    <Printer text="about" />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="/privacy-policy"
+                element={
+                  <Suspense>
+                    <Printer text="privacyPolicy" />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="/cookie-policy"
+                element={
+                  <Suspense>
+                    <Printer text="cookiesPolicy" />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
                 path="/auth/sign-out"
                 element={
                   <Suspense>

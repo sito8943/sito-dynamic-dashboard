@@ -52,7 +52,7 @@ export const pharmaceuticGroupList = async (
       `axios-cache:${localStorage.getItem("pharmaceuticGroup-cache")}`
     );
     const response = await axios.post(
-      `${config.apiUrl}activity-type/list`,
+      `${config.apiUrl}pharmaceuticGroup/list`,
       {
         page,
         count,

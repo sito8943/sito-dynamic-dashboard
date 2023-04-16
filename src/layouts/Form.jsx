@@ -244,7 +244,7 @@ export default function Form({ model }) {
       }
     }
   };
-  
+
   const onSubmit = async (data) => {
     setLoading(true);
     setHelperTexts({ type: "clear" });
@@ -300,6 +300,7 @@ export default function Form({ model }) {
         if (headerImages.length && headerImages[0].url !== "")
           toSaveData.headerImages = headerImages;
 
+        return;
         //* services call
         toSaveData.date = new Date().getTime();
         if (idToModify) await modifyModel(parsePluralName(model), toSaveData);

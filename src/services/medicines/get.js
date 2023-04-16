@@ -49,7 +49,7 @@ export const medicineList = async (
     }
     // @ts-ignore
     const response = await Axios({
-      url: `${config.apiUrl}activity-type/list${parameters}`,
+      url: `${config.apiUrl}medicine/list${parameters}`,
       method: "get",
       headers: {
         ...getAuth,

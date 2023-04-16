@@ -49,7 +49,7 @@ export const descriptionList = async (
     }
     // @ts-ignore
     const response = await Axios({
-      url: `${config.apiUrl}activity-type/list${parameters}`,
+      url: `${config.apiUrl}description/list${parameters}`,
       method: "get",
       headers: {
         ...getAuth,

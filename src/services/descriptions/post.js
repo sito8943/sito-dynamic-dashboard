@@ -52,7 +52,7 @@ export const descriptionList = async (
       `axios-cache:${localStorage.getItem("description-cache")}`
     );
     const response = await axios.post(
-      `${config.apiUrl}activity-type/list`,
+      `${config.apiUrl}description/list`,
       {
         page,
         count,

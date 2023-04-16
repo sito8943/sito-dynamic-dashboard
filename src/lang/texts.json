@@ -485,6 +485,12 @@
           "width": "100%",
           "minWidth": "200px"
         },
+        "provinces": {
+          "label": "Provincia",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
         "types": {
           "label": "Categoria",
           "type": "string",
@@ -604,10 +610,10 @@
           "insert": "Insertando nueva provincia "
         }
       },
-      "muncipilality": {
+      "municipality": {
         "canPromotion": false,
         "table": {
-          "columns": ["photo", "name", "visibility", "date", "id"]
+          "columns": ["photo", "name", "provinces", "visibility", "date", "id"]
         },
         "responsiveList": {
           "rows": ["name"]
@@ -696,15 +702,15 @@
             "photo": {
               "initial": true,
               "props": { "id": "medicine-photo", "type": "photo" },
-              "label": "Imagen de la medicina"
+              "label": "Imagen del medicamento"
             }
           }
         },
-        "empty": "No hay medicina",
+        "empty": "No hay medicamentos",
         "titles": {
-          "modifying": "Modificando medicina",
-          "list": "Lista de Medicinas",
-          "insert": "Insertando nueva medicina "
+          "modifying": "Modificando medicamento",
+          "list": "Lista de Medicamentos",
+          "insert": "Insertando nuevo medicamento "
         }
       },
       "description": {
@@ -744,14 +750,14 @@
             }
           }
         },
-        "empty": "No hay descripción",
+        "empty": "No hay descripciones",
         "titles": {
           "modifying": "Modificando descripción",
           "list": "Lista de Descripción",
           "insert": "Insertando nueva descripción "
         }
       },
-      "pharmaceuticGroups": {
+      "pharmaceuticGroup": {
         "canPromotion": false,
         "table": {
           "columns": ["photo", "name", "visibility", "date", "id"]
@@ -788,7 +794,7 @@
             }
           }
         },
-        "empty": "No hay grupo farmaceútico",
+        "empty": "No hay grupos farmaceúticos",
         "titles": {
           "modifying": "Modificando grupo farmaceútico",
           "list": "Lista de Grupos farmaceúticos",
@@ -866,35 +872,90 @@
           "to": "/backup/logs"
         }
       ],
-      "activityTypes": [
+      "municipalities": [
         {
           "label": "Lista",
           "icon": "list",
-          "to": "/activityTypes/"
+          "to": "/municipalities/"
         },
         {
           "label": "Insertar",
           "modifying": "Modificando",
           "icon": "insert",
           "altIcon": "modify",
-          "to": "/activityTypes/form"
+          "to": "/municipalities/form"
         }
       ],
-      "activities": [
+      "provinces": [
         {
           "label": "Lista",
           "icon": "list",
-          "to": "/activities/"
+          "to": "/provinces/"
         },
         {
           "label": "Insertar",
           "modifying": "Modificando",
           "icon": "insert",
           "altIcon": "modify",
-          "to": "/activities/form"
+          "to": "/provinces/form"
         }
       ],
-
+      "medicines": [
+        {
+          "label": "Lista",
+          "icon": "list",
+          "to": "/medicines/"
+        },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/medicines/form"
+        }
+      ],
+      "descriptions": [
+        {
+          "label": "Lista",
+          "icon": "list",
+          "to": "/descriptions/"
+        },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/descriptions/form"
+        }
+      ],
+      "pharmaceuticGroups": [
+        {
+          "label": "Lista",
+          "icon": "list",
+          "to": "/pharmaceuticGroups/"
+        },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/pharmaceuticGroups/form"
+        }
+      ],
+      "centers": [
+        {
+          "label": "Lista",
+          "icon": "list",
+          "to": "/centers/"
+        },
+        {
+          "label": "Insertar",
+          "modifying": "Modificando",
+          "icon": "insert",
+          "altIcon": "modify",
+          "to": "/centers/form"
+        }
+      ],
       "users": [
         { "label": "Lista", "icon": "list", "to": "/users/" },
         {
