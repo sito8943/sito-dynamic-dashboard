@@ -699,6 +699,51 @@
               },
               "label": "Descripción corta"
             },
+            "descriptions": {
+              "initial": true,
+              "extensible": true,
+              "remote": ["user", "descriptions"],
+              "list": "descriptions",
+              "empty": "No hay descripciones",
+              "single": true,
+              "props": {
+                "id": "descriptions",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Colirios"
+              },
+              "label": "Descripción"
+            },
+            "pharmaceuticShapes": {
+              "initial": true,
+              "extensible": true,
+              "remote": ["user", "pharmaceuticShapes"],
+              "list": "pharmaceuticGroups",
+              "empty": "No hay forma farmaceúticas",
+              "single": true,
+              "props": {
+                "id": "pharmaceuticShapes",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Suspenciones"
+              },
+              "label": "Formas Farmaceúticas"
+            },
+            "pharmaceuticGroups": {
+              "initial": true,
+              "extensible": true,
+              "remote": ["user", "pharmaceuticGroups"],
+              "list": "pharmaceuticGroups",
+              "empty": "No hay groups farmaceúticos",
+              "single": true,
+              "props": {
+                "id": "pharmaceuticGroups",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Anticoagulantes"
+              },
+              "label": "Grupos Farmaceúticos"
+            },
             "photo": {
               "initial": true,
               "props": { "id": "medicine-photo", "type": "photo" },
@@ -757,6 +802,50 @@
           "insert": "Insertando nueva descripción "
         }
       },
+      "pharmaceuticShape": {
+        "canPromotion": false,
+        "table": {
+          "columns": ["photo", "name", "visibility", "date", "id"]
+        },
+        "responsiveList": {
+          "rows": ["name"]
+        },
+        "form": {
+          "inputs": {
+            "name": {
+              "initial": true,
+              "props": {
+                "id": "name",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Suspenciones"
+              },
+              "label": "Nombre"
+            },
+            "description": {
+              "initial": true,
+              "props": {
+                "id": "description",
+                "type": "textarea",
+                "required": true,
+                "placeholder": "Alguna descripción"
+              },
+              "label": "Descripción corta"
+            },
+            "photo": {
+              "initial": true,
+              "props": { "id": "pharmaceuticGroup-photo", "type": "photo" },
+              "label": "Imagen del forma farmaceútica"
+            }
+          }
+        },
+        "empty": "No hay forma farmaceúticas",
+        "titles": {
+          "modifying": "Modificando forma farmaceútica",
+          "list": "Lista de Formas farmaceúticas",
+          "insert": "Insertando nueva forma farmaceútica "
+        }
+      },
       "pharmaceuticGroup": {
         "canPromotion": false,
         "table": {
@@ -790,15 +879,15 @@
             "photo": {
               "initial": true,
               "props": { "id": "pharmaceuticGroup-photo", "type": "photo" },
-              "label": "Imagen del grupo farmaceútico"
+              "label": "Imagen del grupo farmacológico"
             }
           }
         },
-        "empty": "No hay grupos farmaceúticos",
+        "empty": "No hay grupos farmacológicos",
         "titles": {
-          "modifying": "Modificando grupo farmaceútico",
+          "modifying": "Modificando grupo farmacológico",
           "list": "Lista de Grupos farmaceúticos",
-          "insert": "Insertando nueva grupo farmaceútico "
+          "insert": "Insertando nueva grupo farmacológico "
         }
       },
       "center": {
