@@ -477,19 +477,22 @@
           "label": "Descripción",
           "type": "string",
           "width": "100%",
-          "minWidth": "200px"
+          "minWidth": "200px",
+          "textAlign": "center"
         },
         "pharmaceuticShapes": {
-          "label": "Formas Farmaceúticas",
+          "label": "Formas Farmaceútica",
           "type": "string",
           "width": "100%",
-          "minWidth": "200px"
+          "minWidth": "200px",
+          "textAlign": "center"
         },
         "pharmaceuticGroups": {
           "label": "Grupos Farmacológicos",
           "type": "string",
           "width": "100%",
-          "minWidth": "200px"
+          "minWidth": "200px",
+          "textAlign": "center"
         },
         "provinces": {
           "label": "Provincia",
@@ -750,7 +753,7 @@
               "remote": ["user", "pharmaceuticGroups"],
               "list": "pharmaceuticGroups",
               "empty": "No hay groups farmaceúticos",
-              "single": true,
+              "single": false,
               "props": {
                 "id": "pharmaceuticGroups",
                 "type": "text",

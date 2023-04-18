@@ -20,11 +20,17 @@ export const parseRows = async (item, texts) => {
     }`;
   else parsedItem.name = texts.table.values.false;
   //* descriptions
-  if (item.descriptions) {
+  if (item.descriptions && item.descriptions.length) {
     parsedItem.descriptions = item.descriptions[0].name;
   } else parsedItem.descriptions = texts.table.values.false;
   //* pharmaceuticGroups
+  if (item.pharmaceuticGroups && item.pharmaceuticGroups.length) {
+    parsedItem.pharmaceuticGroups = item.pharmaceuticGroups[0].name;
+  } else parsedItem.pharmaceuticGroups = texts.table.values.false;
   //* pharmaceuticShapes
+  if (item.pharmaceuticShapes && item.pharmaceuticShapes.length) {
+    parsedItem.pharmaceuticShapes = item.pharmaceuticShapes[0].name;
+  } else parsedItem.pharmaceuticShapes = texts.table.values.false;
   return parsedItem;
 };
 

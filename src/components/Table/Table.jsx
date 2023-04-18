@@ -73,14 +73,16 @@ export default function Table({
   const printColumns = useCallback(() => {
     const parseActiveColumn =
       activeColumn[0] === "-" ? activeColumn.substring(1) : activeColumn;
-    console.log(models[model]);
     return models[model].table.columns
       .filter((item) => item !== "id")
       .map((item) => (
         <th
-          className={`p-5 text-left ${css({
+          className={`p-5 ${css({
             minWidth: columns[item].minWidth,
             width: columns[item].width,
+            textAlign: columns[item].textAlign
+              ? columns[item].textAlign
+              : "left",
           })}`}
           key={item}
         >
@@ -135,7 +137,11 @@ export default function Table({
           .filter((jtem) => jtem !== "id")
           .map((jtem, j) => (
             <td
-              className="p-5 text-left"
+              className={`p-5 ${css({
+                textAlign: columns[jtem].textAlign
+                  ? columns[jtem].textAlign
+                  : "left",
+              })}`}
               key={jtem}
               onClick={() => setActiveRows({ type: "toggle", index: item.id })}
             >
