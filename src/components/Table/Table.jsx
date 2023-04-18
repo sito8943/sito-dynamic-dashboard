@@ -73,6 +73,7 @@ export default function Table({
   const printColumns = useCallback(() => {
     const parseActiveColumn =
       activeColumn[0] === "-" ? activeColumn.substring(1) : activeColumn;
+    console.log(models[model]);
     return models[model].table.columns
       .filter((item) => item !== "id")
       .map((item) => (

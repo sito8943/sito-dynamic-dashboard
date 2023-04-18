@@ -19,9 +19,12 @@ export const parseRows = async (item, texts) => {
       item.name.length > 40 ? "..." : ""
     }`;
   else parsedItem.name = texts.table.values.false;
-  //* province
-  if (item.provinces) parsedItem.provinces = item.provinces[0].name;
-  else parsedItem.provinces = texts.table.values.false;
+  //* descriptions
+  if (item.descriptions) {
+    parsedItem.descriptions = item.descriptions[0].name;
+  } else parsedItem.descriptions = texts.table.values.false;
+  //* pharmaceuticGroups
+  //* pharmaceuticShapes
   return parsedItem;
 };
 

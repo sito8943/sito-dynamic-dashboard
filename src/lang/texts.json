@@ -167,7 +167,7 @@
         },
         "/pharmaceuticGroups/": {
           "to": "/pharmaceuticGroups/",
-          "label": "Grupos Farmaceúticos",
+          "label": "Grupos Farmacológicos",
           "admin": 1
         },
         "/centers/": {
@@ -473,14 +473,20 @@
           "width": "50%",
           "minWidth": "200px"
         },
-        "apps": {
-          "label": "Aplicaciones",
+        "descriptions": {
+          "label": "Descripción",
           "type": "string",
           "width": "100%",
           "minWidth": "200px"
         },
-        "category": {
-          "label": "Categoria",
+        "pharmaceuticShapes": {
+          "label": "Formas Farmaceúticas",
+          "type": "string",
+          "width": "100%",
+          "minWidth": "200px"
+        },
+        "pharmaceuticGroups": {
+          "label": "Grupos Farmacológicos",
           "type": "string",
           "width": "100%",
           "minWidth": "200px"
@@ -497,7 +503,7 @@
           "width": "100%",
           "minWidth": "200px"
         },
-        "price": {
+        "count": {
           "label": "Precio",
           "type": "number",
           "width": "100%",
@@ -672,7 +678,16 @@
       "medicine": {
         "canPromotion": false,
         "table": {
-          "columns": ["photo", "name", "visibility", "date", "id"]
+          "columns": [
+            "photo",
+            "name",
+            "descriptions",
+            "pharmaceuticGroups",
+            "pharmaceuticShapes",
+            "visibility",
+            "date",
+            "id"
+          ]
         },
         "responsiveList": {
           "rows": ["name"]
@@ -689,15 +704,15 @@
               },
               "label": "Nombre"
             },
-            "description": {
+            "uses": {
               "initial": true,
               "props": {
-                "id": "description",
+                "id": "uses",
                 "type": "textarea",
                 "required": true,
-                "placeholder": "Alguna descripción"
+                "placeholder": "Alguna descripción de su uso"
               },
-              "label": "Descripción corta"
+              "label": "Uso"
             },
             "descriptions": {
               "initial": true,
@@ -742,7 +757,7 @@
                 "required": true,
                 "placeholder": "ej: Anticoagulantes"
               },
-              "label": "Grupos Farmaceúticos"
+              "label": "Grupos Farmacológicos"
             },
             "photo": {
               "initial": true,
@@ -924,6 +939,21 @@
               "initial": true,
               "props": { "id": "center-photo", "type": "photo" },
               "label": "Imagen del centro"
+            },
+            "descriptions": {
+              "initial": true,
+              "extensible": true,
+              "remote": ["user", "descriptions"],
+              "list": "descriptions",
+              "empty": "No hay descripciones",
+              "single": true,
+              "props": {
+                "id": "descriptions",
+                "type": "text",
+                "required": true,
+                "placeholder": "ej: Colirios"
+              },
+              "label": "Descripción"
             }
           }
         },
